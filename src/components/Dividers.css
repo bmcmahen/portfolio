@@ -1,0 +1,14 @@
+.LeftArrow {
+  height: 100px;
+  width: 100%;
+  display: block;
+  background: transparent;
+  position: absolute;
+  bottom: 0;
+  z-index: 500;
+  left: 0;
+}
+
+.LeftArrow path {
+  fill: white;
+}
