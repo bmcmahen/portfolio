@@ -1,14 +1,30 @@
 import React from 'react'
+import debounce from 'lodash.debounce'
 
 export default class CanvasEraser extends React.Component {
-  state = {
-    lastMouse: null,
+  constructor(props) {
+    super(props)
+    this.state = {
+      lastMouse: null,
+    }
+
+    this.resizeCanvasDb = debounce(this.resizeCanvas, 100)
   }
 
   componentDidMount() {
+    this.resizeCanvas()
+    this.update()
+
+    // window.addEventListener('resize', this.resizeCanvasDb)
+  }
+
+  componentWillUnmount() {
+    // window.removeEventListener('resize', this.resizeCanvasDb)
+  }
+
+  resizeCanvas = () => {
     const parent = this.refs.canvas.parentNode
     this.resize(parent.clientWidth, parent.clientHeight)
-    this.update()
   }
 
   componentDidUpdate(prevProps) {
@@ -24,9 +40,9 @@ export default class CanvasEraser extends React.Component {
   resize = (width, height) => {
     const canvas = this.refs.canvas
     const ctx = canvas.getContext('2d')
-    canvas.width = width * 2
+    canvas.width = width * 4
     canvas.height = height * 2
-    canvas.style.width = width + 'px'
+    canvas.style.width = width * 2 + 'px'
     canvas.style.height = height + 'px'
     // ctx.scale(window.devicePixelRatio, window.devicePixelRatio)
     this.paint(canvas.width, canvas.height, this.props.color)

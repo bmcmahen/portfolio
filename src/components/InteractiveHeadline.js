@@ -76,18 +76,37 @@ export class InteractiveHeader extends React.Component {
           }}
           src="/static/640707050.mp4"
         />
+        <div
+          style={{
+            height: '100%',
+            width: '100%',
+            display: 'flex',
+            color: 'white',
+            justifyContent: 'center',
+            alignItems: 'center',
+            position: 'relative',
+          }}
+        >
+          <h1>Hello world!</h1>
+        </div>
         <Keyframes frames={frames}>
           {(frame, finished) => {
             return (
               <Canvas
-                color={'#eee'}
-                style={{ position: 'absolute', top: 0, left: 0, opacity: 0.8 }}
+                color={'#7f7f7f'}
+                style={{
+                  pointerEvents: 'none',
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  opacity: 0.8,
+                }}
                 mouse={
                   finished || !this.state.width || !frame
                     ? mouse
                     : {
                         pageX: frame.pageX * this.state.width,
-                        pageY: frame.pageY * this.state.height,
+                        pageY: frame.pageY * 700,
                         type: 'keyframes',
                       }
                 }
@@ -95,9 +114,7 @@ export class InteractiveHeader extends React.Component {
             )
           }}
         </Keyframes>
-        <div style={{ position: 'relative' }}>
-          <h1>Hello world!</h1>
-        </div>
+
         <InvertedArrow
           style={{ position: 'absolute', left: 0, width: '100%', bottom: 0 }}
         />
