@@ -1,0 +1,11 @@
+.InteractiveHeadline--lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.InteractiveHeadline--lead > div:first-child {
+  margin-bottom: 1rem;
+}

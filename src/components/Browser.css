@@ -1,0 +1,52 @@
+.Browser {
+  transform: scale(0.8);
+}
+
+.browser-window {
+  margin: 20px;
+  width: 100%;
+  height: auto;
+  max-width: 700px;
+  display: inline-block;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  box-shadow: 0 0 40px #a3a2c0;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.browser-window .top-bar {
+  border-radius: 5px 5px 0 0;
+  background: white;
+}
+
+.browser-window .circle {
+  height: 8px;
+  width: 8px;
+  display: inline-block;
+  margin-right: 4px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.browser-window .circles {
+  margin: 0px 11px;
+}
+
+.browser-window .content {
+  margin: 0;
+  width: 100%;
+
+  display: block;
+  border-radius: 0 0 5px 5px;
+  background-color: #fafafa;
+}
+
+.browser-window img {
+  margin: 0;
+  display: block;
+}
+
+.browser-window .clear {
+  clear: both;
+}

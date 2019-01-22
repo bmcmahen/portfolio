@@ -1,0 +1,32 @@
+.Website {
+  display: flex;
+  margin: 0 72px;
+  align-items: flex-start;
+  margin-top: 72px;
+}
+
+.Website .Browser {
+  flex: 1 1 40%;
+  margin-right: 48px;
+}
+
+.Website__content {
+  flex: 1 1 50%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.Website h6 {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 0.7rem;
+  margin-bottom: 0.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.Website p {
+  font-size: 0.8rem;
+  line-height: 1.5;
+}

@@ -1,0 +1,42 @@
+.Navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  background: transparent;
+  width: 100%;
+  color: white;
+  display: flex;
+  padding: 0 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Navbar--brand {
+  font-weight: bold;
+}
+
+.Navbar ul {
+  display: flex;
+
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.Navbar ul li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 1rem;
+}
+
+.Navbar ul li a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: small;
+  font-weight: bold;
+  letter-spacing: 0.07em;
+  font-size: 0.65rem;
+}

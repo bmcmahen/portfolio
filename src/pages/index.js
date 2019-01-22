@@ -4,6 +4,11 @@ import './Index.css'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { InteractiveHeader } from '../components/InteractiveHeadline'
+import { Browser } from '../components/Browser'
+import { Navbar } from '../components/Navbar'
+import { Website } from '../components/Portfolio/Website'
+
+import watershedImage from '../components/Portfolio/watershed.png'
 
 const IndexPage = () => (
   <div className="Index">
@@ -11,14 +16,12 @@ const IndexPage = () => (
 
     <Layout>
       <div classname="Index" />
-      <InteractiveHeader />
-      <div>
-        Hello my name is Ben. I love building interactive experiences for the
-        web and mobile. view projects
-      </div>
-      <div>recent blog posts</div>
-      <div>recent open source projects</div>
 
+      <InteractiveHeader />
+      <h1 style={{ textAlign: 'center', margin: '72px 72px' }}>
+        Some recent projects
+      </h1>
+      <Website background={watershedImage} />
       <div>
         <h1>projects</h1>
         <div>Watershed</div>

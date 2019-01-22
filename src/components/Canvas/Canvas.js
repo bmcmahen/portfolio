@@ -2,6 +2,10 @@ import React from 'react'
 import debounce from 'lodash.debounce'
 
 export default class CanvasEraser extends React.Component {
+  static defaultProps = {
+    responsive: true,
+  }
+
   constructor(props) {
     super(props)
     this.state = {
@@ -39,11 +43,11 @@ export default class CanvasEraser extends React.Component {
 
   resize = (width, height) => {
     const canvas = this.refs.canvas
-    const ctx = canvas.getContext('2d')
-    canvas.width = width * 4
-    canvas.height = height * 2
+    canvas.width = width * (this.props.responsive ? 4 : 2)
+    canvas.height = height * (this.props.responsive ? 2 : 1)
     canvas.style.width = width * 2 + 'px'
     canvas.style.height = height + 'px'
+    // const ctx = canvas.getContext('2d')
     // ctx.scale(window.devicePixelRatio, window.devicePixelRatio)
     this.paint(canvas.width, canvas.height, this.props.color)
   }
@@ -59,9 +63,16 @@ export default class CanvasEraser extends React.Component {
     const { canvas } = this.refs
     const { mouse } = this.props
     if (mouse) {
+      const rect = this.refs.canvas.getBoundingClientRect()
       const ctx = canvas.getContext('2d')
-      const x = mouse.pageX - canvas.offsetLeft
-      const y = mouse.pageY - canvas.offsetTop
+      let x = mouse.pageX - rect.left - window.scrollX
+      let y = mouse.pageY - rect.top - window.scrollY
+      // x /= rect.width
+      // y /= rect.height
+
+      // x *= this.refs.canvas.width
+      // y *= this.refs.canvas.height
+
       const currentPoint = { x, y }
       const radius = 50
       ctx.globalCompositeOperation = 'destination-out'
