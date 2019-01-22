@@ -89,7 +89,10 @@ export default class CanvasEraser extends React.Component {
   render() {
     return (
       <canvas
-        style={this.props.style}
+        style={{
+          ...this.props.style,
+          opacity: this.props.opacity,
+        }}
         className={this.props.className}
         ref="canvas"
       />

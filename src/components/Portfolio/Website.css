@@ -23,7 +23,6 @@
   line-height: 1.5;
   font-size: 0.7rem;
   margin-bottom: 0.5rem;
-  font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.07em;
 }
@@ -35,6 +34,7 @@
 
 .Website .label {
   margin-left: 1rem;
+  margin-bottom: 1rem;
 }
 
 .Website h4 {
@@ -43,5 +43,5 @@
 
 .Website .lead {
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 300;
 }

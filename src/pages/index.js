@@ -18,12 +18,27 @@ const IndexPage = () => (
       <div classname="Index" />
 
       <InteractiveHeader />
-      <h1 style={{ textAlign: 'center', margin: '72px 72px' }}>
+      <h3 style={{ textAlign: 'center', margin: '72px 72px' }}>
         Some recent projects
-      </h1>
+      </h3>
       <Website
         title="Watershed"
         subtitle="A collaborative course delivery platform"
+        task="We wanted to create a course delivery platform that embodied the
+        best of Visual Teaching Strategies, which emphasizes observation and
+        collaboration."
+        solution="We created a course delivery system which can be thought of as a
+        collaborative canvas. As you watch videos you are asked questions.
+        You are encourage to annotate text, videos, and images.
+        Visualizations aid in marking course progress and the interactions
+        of your collaborators. The result is a highly dynamic, interactive
+        course taking experience which updates visually as you use it.
+        Everyone then, in a sense, builds their own course throughout the
+        process."
+        technology="Watershed uses React on the front-end and consumes an Express
+        delivered GraphQL API on the backend. We utilize websockets to
+        provide real-time chat functionality. We use Styled-components to
+        develop our own design system."
         background={watershedImage}
       />
       <div>

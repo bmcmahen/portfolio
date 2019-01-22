@@ -49,7 +49,6 @@ export default class Keyframes extends React.Component {
       if (frameNum <= this.props.frames.length) {
         this.setState({ frameNum })
       } else {
-        console.log('less than. finished')
         this.setState({ finished: true })
       }
     })
@@ -58,7 +57,6 @@ export default class Keyframes extends React.Component {
   waitForDelay(fn) {
     const currentFrame = this.getFrame()
     if (!currentFrame) {
-      console.log('finished. no more frames')
       return this.setState({ finished: true })
     }
     const delay = currentFrame.delay || 0

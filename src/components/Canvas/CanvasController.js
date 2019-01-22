@@ -10,6 +10,7 @@ export class CanvasController extends React.Component {
   static defaultProps = {
     color: 'white',
     keyframes: [],
+    opacity: 0.8,
   }
 
   state = {
@@ -90,6 +91,7 @@ export class CanvasController extends React.Component {
             {(frame, finished) => (
               <Canvas
                 color={color}
+                opacity={this.props.opacity}
                 style={canvasStyle}
                 className="CanvasController__canvas"
                 mouse={
