@@ -25,7 +25,9 @@ export default class Keyframes extends React.Component {
   }
 
   componentDidUpdate() {
-    this.requestNextFrame()
+    if (!this.state.finished) {
+      this.requestNextFrame()
+    }
   }
 
   render() {
@@ -35,9 +37,11 @@ export default class Keyframes extends React.Component {
 
   requestNextFrame() {
     if (!this.props.frames.length) return
+
     this.waitForDelay(() => {
       const frameNum = this.state.frameNum + 1
-      if (this.props.frames.length <= frameNum) {
+
+      if (frameNum <= this.props.frames.length) {
         this.setState({ frameNum })
       } else {
         this.setState({ finished: true })
@@ -47,7 +51,10 @@ export default class Keyframes extends React.Component {
 
   waitForDelay(fn) {
     const currentFrame = this.getFrame()
-    const delay = currentFrame.delay
+    if (!currentFrame) {
+      return this.setState({ finished: true })
+    }
+    const delay = currentFrame.delay || 0
     clearTimeout(this.timer)
     this.timer = setTimeout(fn, delay)
   }
