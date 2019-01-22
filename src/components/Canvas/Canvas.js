@@ -18,7 +18,7 @@ export default class CanvasEraser extends React.Component {
   componentDidMount() {
     this.resizeCanvas()
     this.update()
-
+    // resizing the canvas effectively wipes user input, which isn't ideal
     // window.addEventListener('resize', this.resizeCanvasDb)
   }
 
@@ -63,22 +63,16 @@ export default class CanvasEraser extends React.Component {
     const { canvas } = this.refs
     const { mouse } = this.props
     if (mouse) {
+      // for performance this should be cached
       const rect = this.refs.canvas.getBoundingClientRect()
       const ctx = canvas.getContext('2d')
       let x = mouse.pageX - rect.left - window.scrollX
       let y = mouse.pageY - rect.top - window.scrollY
-      // x /= rect.width
-      // y /= rect.height
-
-      // x *= this.refs.canvas.width
-      // y *= this.refs.canvas.height
-
       const currentPoint = { x, y }
-      const radius = 50
       ctx.globalCompositeOperation = 'destination-out'
       const { lastMouse } = this.state
       if (lastMouse) {
-        ctx.lineWidth = 90
+        ctx.lineWidth = 140
         ctx.shadowBlur = 10
         ctx.shadowColor = 'rgb(0,0,0)'
         ctx.lineJoin = ctx.lineCap = 'round'
@@ -93,6 +87,12 @@ export default class CanvasEraser extends React.Component {
   }
 
   render() {
-    return <canvas style={this.props.style} ref="canvas" />
+    return (
+      <canvas
+        style={this.props.style}
+        className={this.props.className}
+        ref="canvas"
+      />
+    )
   }
 }

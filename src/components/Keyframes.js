@@ -6,8 +6,9 @@ export default class Keyframes extends React.Component {
     super(props)
     this.state = {
       frameNum: 0,
-      finished: props.frames.length === 0 ? true : false,
+      finished: false,
     }
+
     this.timer = null
   }
 
@@ -21,11 +22,15 @@ export default class Keyframes extends React.Component {
   // }
 
   componentDidMount() {
-    this.requestNextFrame()
+    if (this.props.shouldRun) {
+      this.requestNextFrame()
+    }
   }
 
-  componentDidUpdate() {
-    if (!this.state.finished) {
+  componentDidUpdate(prevProps) {
+    if (!this.state.finished && this.props.shouldRun) {
+      this.requestNextFrame()
+    } else if (!prevProps.shouldRun && this.props.shouldRun) {
       this.requestNextFrame()
     }
   }
@@ -44,6 +49,7 @@ export default class Keyframes extends React.Component {
       if (frameNum <= this.props.frames.length) {
         this.setState({ frameNum })
       } else {
+        console.log('less than. finished')
         this.setState({ finished: true })
       }
     })
@@ -52,6 +58,7 @@ export default class Keyframes extends React.Component {
   waitForDelay(fn) {
     const currentFrame = this.getFrame()
     if (!currentFrame) {
+      console.log('finished. no more frames')
       return this.setState({ finished: true })
     }
     const delay = currentFrame.delay || 0
@@ -60,6 +67,9 @@ export default class Keyframes extends React.Component {
   }
 
   getFrame() {
+    if (!this.props.shouldRun) {
+      return null
+    }
     return this.props.frames[this.state.frameNum]
   }
 }

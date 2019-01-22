@@ -1,12 +1,14 @@
 .Website {
   display: flex;
-  margin: 0 72px;
+  padding: 0 72px;
+  margin: 0 auto;
   align-items: flex-start;
   margin-top: 72px;
+  max-width: 1200px;
 }
 
-.Website .Browser {
-  flex: 1 1 40%;
+.Website__preview {
+  flex: 1 0 50%;
   margin-right: 48px;
 }
 
@@ -29,4 +31,17 @@
 .Website p {
   font-size: 0.8rem;
   line-height: 1.5;
+}
+
+.Website .label {
+  margin-left: 1rem;
+}
+
+.Website h4 {
+  margin: 0;
+}
+
+.Website .lead {
+  font-size: 1rem;
+  font-weight: bold;
 }

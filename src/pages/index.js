@@ -21,7 +21,11 @@ const IndexPage = () => (
       <h1 style={{ textAlign: 'center', margin: '72px 72px' }}>
         Some recent projects
       </h1>
-      <Website background={watershedImage} />
+      <Website
+        title="Watershed"
+        subtitle="A collaborative course delivery platform"
+        background={watershedImage}
+      />
       <div>
         <h1>projects</h1>
         <div>Watershed</div>

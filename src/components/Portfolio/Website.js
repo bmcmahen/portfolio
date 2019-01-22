@@ -2,66 +2,22 @@ import React from 'react'
 import { Browser } from '../Browser'
 import Canvas from '../Canvas/Canvas'
 import './Website.css'
+import { CanvasController } from '../Canvas/CanvasController'
 
 export class Website extends React.Component {
-  state = {
-    mouse: null,
-  }
-
-  canvas = React.createRef()
-
-  onMouseMove = e => {
-    if (this.state.recordInput) {
-      const oldTime = this.time
-      const newTime = new Date()
-
-      if (this.positions.length > 0) {
-        this.positions[this.positions.length - 1].delay =
-          newTime.getTime() - oldTime.getTime()
-      }
-
-      this.positions.push({
-        pageX: e.pageX,
-        pageY: e.pageY,
-      })
-
-      this.time = newTime
-
-      window.positions = this.positions
-    }
-    this.setState({
-      mouse: {
-        pageX: e.pageX,
-        pageY: e.pageY,
-        type: 'mouse',
-      },
-    })
-  }
-
   render() {
-    const { background } = this.props
-    const { mouse } = this.state
+    const { background, title, subtitle } = this.props
+
     return (
       <div className="Website">
-        <div
-          onMouseMove={this.onMouseMove}
-          style={{ position: 'relative', height: '400px', overflow: 'hidden' }}
-        >
-          <Browser background={background} />
-
-          <Canvas
-            innerRef={this.canvas}
-            color="white"
-            style={{
-              pointerEvents: 'none',
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              right: 0,
-              opacity: 0.8,
-            }}
-            mouse={mouse}
-          />
+        <div className="Website__preview">
+          <div className="label">
+            {title && <h4>{title}</h4>}
+            {subtitle && <div className="lead">{subtitle}</div>}
+          </div>
+          <CanvasController>
+            <Browser background={background} />
+          </CanvasController>
         </div>
         <div className="Website__content">
           <h6>Task</h6>

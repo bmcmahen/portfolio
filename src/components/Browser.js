@@ -13,6 +13,7 @@ export const Browser = ({ children, background }) => (
       </div>
       <div className="content">
         <img width="490" height="298" src={background} />
+
         {children}
       </div>
     </div>
