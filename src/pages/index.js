@@ -22,6 +22,7 @@ class IndexPage extends React.Component {
   }
   render() {
     const { data } = this.props
+
     return (
       <div className="Index">
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
@@ -78,12 +79,10 @@ class IndexPage extends React.Component {
           >
             <Github
               username="bmcmahen"
-              repos={[
-                'toasted-notes',
-                'image-zoom',
-                'scroll-creep',
-                'selection-range',
-              ]}
+              repos={
+                data.allGithubData.edges[0].node.data.viewer.pinnedRepositories
+                  .edges
+              }
             />
 
             <ListSummary title="Blogging">
@@ -175,6 +174,29 @@ export const pageQuery = graphql`
         title
       }
     }
+    allGithubData {
+      edges {
+        node {
+          data {
+            viewer {
+              pinnedRepositories {
+                edges {
+                  node {
+                    name
+                    description
+                    url
+                    stargazers {
+                      totalCount
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
@@ -183,7 +205,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "MMMM D, YYYY")
             title
           }
         }

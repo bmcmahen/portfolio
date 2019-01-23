@@ -4,30 +4,22 @@
   margin: 0 auto;
 }
 .Contact input[type='text'],
+.Contact input[type='email'],
 .Contact textarea {
   outline: none;
   border: none;
   border-radius: 3px;
-  -webkit-box-shadow: 0 0 0 0 rgba(19, 124, 189, 0),
-    0 0 0 0 rgba(19, 124, 189, 0), inset 0 0 0 1px rgba(16, 22, 26, 0.15),
-    inset 0 1px 1px rgba(16, 22, 26, 0.2);
-  box-shadow: 0 0 0 0 rgba(19, 124, 189, 0), 0 0 0 0 rgba(19, 124, 189, 0),
-    inset 0 0 0 1px rgba(16, 22, 26, 0.15),
-    inset 0 1px 1px rgba(16, 22, 26, 0.2);
-  background: #fff;
-  height: 30px;
+
+  background: #eaeaf0;
+  height: 38px;
   padding: 0 10px;
   vertical-align: middle;
   line-height: 30px;
-  color: #182026;
+
   font-size: 14px;
   width: 100%;
   font-weight: 400;
-  -webkit-transition: -webkit-box-shadow 0.1s cubic-bezier(0.4, 1, 0.75, 0.9);
-  transition: -webkit-box-shadow 0.1s cubic-bezier(0.4, 1, 0.75, 0.9);
-  transition: box-shadow 0.1s cubic-bezier(0.4, 1, 0.75, 0.9);
-  transition: box-shadow 0.1s cubic-bezier(0.4, 1, 0.75, 0.9),
-    -webkit-box-shadow 0.1s cubic-bezier(0.4, 1, 0.75, 0.9);
+
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -40,6 +32,7 @@
 .Contact label {
   display: block;
   margin-top: 0;
+  margin-bottom: 0.25rem;
 }
 
 .Contact .field {

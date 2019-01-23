@@ -1,3 +1,5 @@
+const config = require('./config')
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -57,9 +59,33 @@ module.exports = {
         //trackingId: `ADD YOUR TRACKING ID HERE`,
       },
     },
-    // `gatsby-plugin-feed`,
-    // {
-    //   resolve: `gatsby-plugin-manifest`,
+    {
+      // https://developer.github.com/v4/explorer/
+      // https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/
+      resolve: 'gatsby-source-github-api',
+      options: {
+        token: config.GITHUB_API,
+        graphQLQuery: `query { 
+          viewer { 
+            login
+            pinnedRepositories(first: 6) {
+              edges {
+                node {
+                  name
+                  url
+                  description
+                  stargazers {
+                    totalCount
+                  }
+                }
+              }
+            }
+          }
+        }`,
+      },
+    },
+
+    //   resolve: `gatsby-plugin-manifest`, // { // `gatsby-plugin-feed`,
     //   options: {
     //     name: `gatsby-starter-default`,
     //     short_name: `starter`,

@@ -3,50 +3,10 @@ import './Github.css'
 import { ListSummary } from './ListSummary'
 import { ListItem } from './ListItem'
 
-const getURL = (username, repo) =>
-  `https://api.github.com/repos/${username}/${repo}`
-
-async function fetchGithubRepo(username, repo) {
-  try {
-    const res = await fetch(getURL(username, repo))
-    if (res.ok) {
-      const json = await res.json()
-      return json
-    } else {
-      throw new Error('Unable to fetch github profile')
-    }
-  } catch (err) {
-    console.error(err)
-    throw err
-  }
-}
-
 export class Github extends React.Component {
   static defaultProps = {
     username: 'bmcmahen',
     repos: [],
-  }
-
-  state = {
-    repos: [],
-    loading: false,
-    error: false,
-  }
-
-  componentDidMount = async () => {
-    this.setState({ loading: true, error: false })
-    try {
-      const promises = this.props.repos.map(repo =>
-        fetchGithubRepo(this.props.username, repo)
-      )
-      const results = await Promise.all(promises)
-      this.setState({
-        repos: results,
-        loading: false,
-      })
-    } catch (err) {
-      this.setState({ loading: false, error: true })
-    }
   }
 
   render() {
@@ -71,30 +31,26 @@ export class Github extends React.Component {
   }
 
   renderContent() {
-    if (this.state.repos.length > 0) {
-      return this.state.repos.map(repo => {
-        return (
-          <ListItem
-            title={repo.name}
-            subtitle={repo.description}
-            href={repo.html_url}
-            className="Github__repo"
-            key={repo.id}
-          >
-            <div className="Github__star">
-              <div className="Github__star_count">{repo.stargazers_count}</div>
-              <Star />
+    return this.props.repos.map(repo => {
+      const { node } = repo
+
+      return (
+        <ListItem
+          title={node.name}
+          subtitle={node.description}
+          href={node.url}
+          className="Github__repo"
+          key={node.name}
+        >
+          <div className="Github__star">
+            <div className="Github__star_count">
+              {node.stargazers.totalCount}
             </div>
-          </ListItem>
-        )
-      })
-    }
-
-    if (this.state.error) {
-      return null
-    }
-
-    return <div>Loading...</div>
+            <Star />
+          </div>
+        </ListItem>
+      )
+    })
   }
 }
 
