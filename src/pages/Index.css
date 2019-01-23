@@ -15,12 +15,13 @@
 .Index__lists {
   display: flex;
   padding: 72px 0;
-  padding-bottom: 150px;
+
   background-size: cover;
+  /* box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.1); */
 }
 
 .Index__websites {
-  padding-bottom: 72px;
+  padding-bottom: 115px;
 }
 
 .Index__show_more {
@@ -32,7 +33,6 @@
   text-decoration: none;
   padding: 8px 20px;
   outline: none;
-  font-size: 0.8rem;
   cursor: pointer;
   font-weight: 600;
 }
@@ -48,4 +48,30 @@
 .Index__show-more-container {
   margin-top: 1.5rem;
   text-align: center;
+}
+
+.Index__contact {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 72px;
+}
+
+.Index__contact > div {
+  display: block;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.Index__contact-boxes {
+  display: flex;
+}
+
+.Index__contact-boxes > * {
+  flex: 1 1 50%;
+}
+
+.Index__contact-social {
+  max-width: 400px;
+  margin: 0 auto;
 }

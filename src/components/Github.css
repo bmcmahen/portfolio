@@ -13,7 +13,7 @@
 
 .Github strong,
 .Github__intro a {
-  color: #08e;
+  color: var(--link-color);
   text-decoration: none;
 }
 

@@ -13,6 +13,8 @@ import blur from '../components/Portfolio/blur.png'
 import { LeftArrow } from '../components/Dividers'
 import { graphql } from 'gatsby'
 import { ListItem } from '../components/ListItem'
+import { Contact, Social } from '../components/Contact'
+import { CanvasController } from '../components/Canvas/CanvasController'
 
 class IndexPage extends React.Component {
   state = {
@@ -117,15 +119,47 @@ class IndexPage extends React.Component {
               )}
             </ListSummary>
 
+            {/*
             <LeftArrow
               style={{
                 position: 'absolute',
                 left: 0,
+                fill: '#60617b',
                 width: '100%',
                 bottom: 0,
               }}
             />
+            */}
           </div>
+
+          <CanvasController
+            // color="#5c5f7f"
+            color="rgb(239, 242, 245)"
+            opacity={1}
+            keyframes={[]}
+          >
+            <div>
+              <div className="Index__contact">
+                <div>
+                  <div className="Index__contact-boxes">
+                    <div className="Index__contact-social">
+                      <h3>Contact me</h3>
+                      <p>
+                        Adipisicing laboris labore voluptate sint. Reprehenderit
+                        nulla irure sit exercitation officia magna exercitation
+                        excepteur sunt. Mollit proident sint minim occaecat
+                        magna consequat laborum culpa id nostrud. Incididunt
+                        laboris aliquip non qui.
+                      </p>
+                      <Social />
+                    </div>
+
+                    <Contact />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </CanvasController>
         </Layout>
       </div>
     )

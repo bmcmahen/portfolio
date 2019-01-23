@@ -22,7 +22,10 @@ export const LeftArrow = ({ background, fill, style }) => (
         </feMerge>
       </filter>
     </defs>
-    <path filter="url(#dropshadow)" d="M0,0 l250,450 l250,-450 v500 H0 V0" />
+    <path
+      // filter="url(#dropshadow)"
+      d="M0,0 l250,450 l250,-450 v500 H0 V0"
+    />
   </svg>
 )
 

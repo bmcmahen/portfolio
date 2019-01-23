@@ -6,10 +6,9 @@
   justify-content: space-between;
   padding: 1rem;
   background-color: #ffffffde;
-  box-shadow: 0px 0 10px #00000026;
+  /* box-shadow: 0px 0 10px #00000026; */
   border-radius: 8px;
   margin-bottom: 2px;
-  font-size: 0.8rem;
   text-decoration: none;
   color: inherit;
 }
@@ -19,6 +18,6 @@
 }
 
 .ListItem strong {
-  color: #08e;
+  color: var(--link-color);
   text-decoration: none;
 }

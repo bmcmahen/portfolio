@@ -2,7 +2,6 @@
   max-width: 400px;
   margin: 0 auto;
   flex: 1 1 100%;
-  line-height: 1.5;
 }
 
 .ListSummary__intro {
@@ -17,9 +16,5 @@
 }
 
 .ListSummary h4 {
-  background: white;
   display: inline-block;
-  border-radius: 8px;
-  padding: 8px;
-  box-shadow: 0px 0 10px #00000026;
 }
