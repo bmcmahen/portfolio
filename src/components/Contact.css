@@ -60,3 +60,14 @@
   cursor: pointer;
   font-weight: 600;
 }
+
+.Contact__social-link {
+  display: inline-block;
+  color: #7a7e9f;
+  margin-right: 1rem;
+}
+
+.Contact__social-link svg {
+  width: 25px !important;
+  height: 25px !important;
+}

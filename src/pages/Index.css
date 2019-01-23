@@ -55,6 +55,7 @@
   max-width: 1100px;
   margin: 0 auto;
   padding-top: 72px;
+  padding-bottom: 72px;
 }
 
 .Index__contact > div {
@@ -65,6 +66,7 @@
 
 .Index__contact-boxes {
   display: flex;
+  align-items: center;
 }
 
 .Index__contact-boxes > * {
@@ -72,6 +74,6 @@
 }
 
 .Index__contact-social {
-  max-width: 400px;
+  max-width: 450px;
   margin: 0 auto;
 }

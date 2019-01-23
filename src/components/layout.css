@@ -390,7 +390,7 @@ form {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
 }
 noscript {
   margin-left: 0;
@@ -439,7 +439,7 @@ b {
   font-weight: bold;
 }
 strong {
-  font-weight: bold;
+  font-weight: 600;
 }
 dt {
   font-weight: bold;

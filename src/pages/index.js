@@ -142,13 +142,34 @@ class IndexPage extends React.Component {
                 <div>
                   <div className="Index__contact-boxes">
                     <div className="Index__contact-social">
-                      <h3>Contact me</h3>
+                      <h3>I'm available for hire</h3>
                       <p>
-                        Adipisicing laboris labore voluptate sint. Reprehenderit
-                        nulla irure sit exercitation officia magna exercitation
-                        excepteur sunt. Mollit proident sint minim occaecat
-                        magna consequat laborum culpa id nostrud. Incididunt
-                        laboris aliquip non qui.
+                        Having spent much of my time working with small teams,
+                        I've been forced to wear many hats and develop many
+                        different skillsets. I specialize in{' '}
+                        <strong>front end development</strong> with technologies
+                        like <strong>react</strong>, but I also have experience
+                        working on the <strong>server side</strong> having built
+                        numerous servers in node.js to host{' '}
+                        <strong>express</strong> applications, build{' '}
+                        <strong>graphql apis</strong>, and interface with{' '}
+                        <strong>mongodb</strong> and <strong>postgres</strong>.
+                        I've also built numerous iOS and Android applications
+                        using <strong>react native</strong>.
+                      </p>
+                      <p>
+                        Beyond that, I also have experience creating{' '}
+                        <strong>design systems</strong>, working with{' '}
+                        <strong>html</strong> and <strong>css</strong>, in
+                        addition to improving <strong>seo</strong>,{' '}
+                        <strong>accessibility</strong>, and{' '}
+                        <strong>writing copy</strong>.
+                      </p>
+                      <p>
+                        Above all, I love building innovative and intuitive
+                        products that help people learn and connect. If you
+                        share a similar passion, please contact me through
+                        social media or the contact form.
                       </p>
                       <Social />
                     </div>
