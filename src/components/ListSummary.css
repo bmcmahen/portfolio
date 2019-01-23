@@ -1,0 +1,15 @@
+.ListSummary {
+  max-width: 400px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.ListSummary__intro {
+  margin-bottom: 1rem;
+}
+
+.ListSummary__intro a {
+  color: #08e;
+  font-weight: 600;
+  text-decoration: none;
+}

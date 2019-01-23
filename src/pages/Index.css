@@ -11,3 +11,14 @@
 
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewbox='0 0 100 25'%3e%3cpath fill='%239EAFFD' opacity='0.5' d='M0 30 V15 Q30 3 60 15 V30z' /%3e%3cpath fill='%239EAFFD' d='M0 30 V12 Q30 17 55 12 T100 11 V30z' /%3e%3c/svg%3e");
 }
+
+.Index__lists {
+  display: flex;
+  padding: 72px 0;
+  padding-top: 150px;
+  background-size: cover;
+}
+
+.Index__websites {
+  padding-bottom: 72px;
+}

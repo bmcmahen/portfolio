@@ -1,0 +1,67 @@
+.Github a.Github__repo {
+  text-decoration: none;
+  color: inherit;
+}
+
+.Github__repo:hover {
+  background-color: #d7d3f1f5;
+}
+
+.Github__intro {
+  margin-bottom: 1rem;
+}
+
+.Github {
+  font-size: 0.8rem;
+}
+
+.Github strong,
+.Github__intro a {
+  color: #08e;
+  text-decoration: none;
+}
+
+.Github__repo {
+  transform: scale(1);
+  transition: transform 0.1s linear;
+  line-height: 1.5;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #ffffffde;
+  box-shadow: 0px 10px 30px #00000026;
+  border-radius: 8px;
+  margin-bottom: 2px;
+}
+
+.Github__repo:hover {
+  transform: scale(0.97);
+}
+
+.Github__repo:last-child {
+  border-bottom: none;
+}
+
+.Github__meta {
+}
+
+.Github__star {
+  flex: 0 0 auto;
+  display: flex;
+  margin-left: 0.25rem;
+  align-items: center;
+}
+
+.Github__star svg {
+  transform: scale(0.8);
+}
+
+.Github__star_count {
+  padding-right: 0.25rem;
+  font-size: small;
+  margin-top: 1px;
+}
+
+.Github h5 {
+  margin: 0;
+}
