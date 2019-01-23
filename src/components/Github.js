@@ -1,6 +1,7 @@
 import React from 'react'
 import './Github.css'
 import { ListSummary } from './ListSummary'
+import { ListItem } from './ListItem'
 
 const getURL = (username, repo) =>
   `https://api.github.com/repos/${username}/${repo}`
@@ -50,17 +51,21 @@ export class Github extends React.Component {
 
   render() {
     return (
-      <ListSummary
-        title="Open source"
-        subtitle={
-          <div>
-            I love contributing open source! Be sure to check out my{' '}
-            <a href="http://github.com/bmcmahen">Github profile</a> for all of
-            my work.
-          </div>
-        }
-      >
+      <ListSummary title="Open source">
         <div className="Github">{this.renderContent()}</div>
+        <div className="Index__show-more-container">
+          <a
+            href="http://github.com/bmcmahen"
+            onClick={() =>
+              this.setState({
+                renderTotal: this.state.renderTotal + 10,
+              })
+            }
+            className="Index__show_more"
+          >
+            More on GitHub
+          </a>
+        </div>
       </ListSummary>
     )
   }
@@ -69,16 +74,18 @@ export class Github extends React.Component {
     if (this.state.repos.length > 0) {
       return this.state.repos.map(repo => {
         return (
-          <a href={repo.html_url} className="Github__repo" key={repo.id}>
-            <div className="Github__meta">
-              <strong>{repo.name}</strong>
-              <div>{repo.description}</div>
-            </div>
+          <ListItem
+            title={repo.name}
+            subtitle={repo.description}
+            href={repo.html_url}
+            className="Github__repo"
+            key={repo.id}
+          >
             <div className="Github__star">
               <div className="Github__star_count">{repo.stargazers_count}</div>
               <Star />
             </div>
-          </a>
+          </ListItem>
         )
       })
     }

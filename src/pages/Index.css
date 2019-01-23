@@ -22,3 +22,29 @@
 .Index__websites {
   padding-bottom: 72px;
 }
+
+.Index__show_more {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  box-shadow: none;
+  color: white;
+  border-radius: 16px;
+  text-decoration: none;
+  padding: 8px 20px;
+  outline: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.Index__show_more:focus {
+  box-shadow: inset 0 0 4px rgba(255, 255, 255, 0.4);
+}
+
+.Index__show_more:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.Index__show-more-container {
+  margin-top: 1rem;
+  text-align: center;
+}

@@ -28,11 +28,18 @@ export default class Keyframes extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
+    if (this.cancel) {
+      return
+    }
     if (!this.state.finished && this.props.shouldRun) {
       this.requestNextFrame()
     } else if (!prevProps.shouldRun && this.props.shouldRun) {
       this.requestNextFrame()
     }
+  }
+
+  componentWillUnmount() {
+    this.cancel = true
   }
 
   render() {

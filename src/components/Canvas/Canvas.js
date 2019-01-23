@@ -23,7 +23,8 @@ export default class CanvasEraser extends React.Component {
   }
 
   componentWillUnmount() {
-    // window.removeEventListener('resize', this.resizeCanvasDb)
+    window.cancelAnimationFrame(this.update)
+    this.cancel = true
   }
 
   resizeCanvas = () => {
@@ -60,6 +61,7 @@ export default class CanvasEraser extends React.Component {
   }
 
   update = () => {
+    if (this.cancel) return
     const { canvas } = this.refs
     const { mouse } = this.props
     if (mouse) {

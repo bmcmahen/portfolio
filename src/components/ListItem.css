@@ -1,0 +1,24 @@
+.ListItem {
+  transform: scale(1);
+  transition: transform 0.1s linear;
+  line-height: 1.5;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #ffffffde;
+  box-shadow: 0px 10px 30px #00000026;
+  border-radius: 8px;
+  margin-bottom: 2px;
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.ListItem:hover {
+  transform: scale(0.97);
+}
+
+.ListItem strong {
+  color: #08e;
+  text-decoration: none;
+}

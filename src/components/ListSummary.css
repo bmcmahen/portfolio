@@ -1,15 +1,17 @@
 .ListSummary {
   max-width: 400px;
   margin: 0 auto;
+  flex: 1 1 100%;
   line-height: 1.5;
 }
 
 .ListSummary__intro {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .ListSummary__intro a {
-  color: #08e;
+  color: white;
   font-weight: 600;
   text-decoration: none;
 }

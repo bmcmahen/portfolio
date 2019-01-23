@@ -4,7 +4,7 @@ import './ListSummary.css'
 export const ListSummary = ({ children, title, subtitle }) => (
   <div className="ListSummary">
     <div className="ListSummary__intro">
-      <h5>{title}</h5>
+      <h4>{title}</h4>
       <div>{subtitle}</div>
     </div>
     {children}
