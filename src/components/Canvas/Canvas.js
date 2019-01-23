@@ -73,6 +73,7 @@ export default class CanvasEraser extends React.Component {
       const currentPoint = { x, y }
       ctx.globalCompositeOperation = 'destination-out'
       const { lastMouse } = this.state
+
       if (lastMouse) {
         ctx.lineWidth = 140
         ctx.shadowBlur = 10

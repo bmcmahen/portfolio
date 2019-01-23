@@ -15,7 +15,7 @@
 .Index__lists {
   display: flex;
   padding: 72px 0;
-  padding-top: 150px;
+  padding-bottom: 150px;
   background-size: cover;
 }
 
@@ -32,6 +32,7 @@
   text-decoration: none;
   padding: 8px 20px;
   outline: none;
+  font-size: 0.8rem;
   cursor: pointer;
   font-weight: 600;
 }
@@ -45,6 +46,6 @@
 }
 
 .Index__show-more-container {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   text-align: center;
 }

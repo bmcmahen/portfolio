@@ -15,3 +15,11 @@
   font-weight: 600;
   text-decoration: none;
 }
+
+.ListSummary h4 {
+  background: white;
+  display: inline-block;
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0px 0 10px #00000026;
+}

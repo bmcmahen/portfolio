@@ -16,7 +16,7 @@ import { ListItem } from '../components/ListItem'
 
 class IndexPage extends React.Component {
   state = {
-    renderTotal: 10,
+    renderTotal: 5,
   }
   render() {
     const { data } = this.props
@@ -74,16 +74,6 @@ class IndexPage extends React.Component {
             }}
             className="Index__lists"
           >
-            <LeftArrow
-              style={{
-                position: 'absolute',
-                left: 0,
-                width: '100%',
-                top: 0,
-                transform: 'rotate(180deg)',
-              }}
-            />
-
             <Github
               username="bmcmahen"
               repos={[
@@ -105,16 +95,18 @@ class IndexPage extends React.Component {
                       title={title}
                       to={node.fields.slug}
                     >
-                      <div>{node.frontmatter.date}</div>
+                      <div style={{ flex: '0 0 auto' }}>
+                        {node.frontmatter.date}
+                      </div>
                     </ListItem>
                   )
                 })}
-              {data.allMarkdownRemark.edges.length > 10 && (
+              {data.allMarkdownRemark.edges.length > 5 && (
                 <div className="Index__show-more-container">
                   <button
                     onClick={() =>
                       this.setState({
-                        renderTotal: this.state.renderTotal + 10,
+                        renderTotal: this.state.renderTotal + 5,
                       })
                     }
                     className="Index__show_more"
@@ -124,6 +116,15 @@ class IndexPage extends React.Component {
                 </div>
               )}
             </ListSummary>
+
+            <LeftArrow
+              style={{
+                position: 'absolute',
+                left: 0,
+                width: '100%',
+                bottom: 0,
+              }}
+            />
           </div>
         </Layout>
       </div>

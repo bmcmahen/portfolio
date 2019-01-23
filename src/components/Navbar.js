@@ -1,8 +1,9 @@
 import React from 'react'
 import './Navbar.css'
+import cx from 'classnames'
 
-export const Navbar = () => (
-  <nav className="Navbar">
+export const Navbar = ({ dark }) => (
+  <nav className={cx('Navbar', dark ? 'Navbar--dark' : '')}>
     <div className="Navbar--brand">Ben McMahen</div>
     <ul>
       <li>

@@ -12,8 +12,12 @@
   justify-content: space-between;
 }
 
+.Navbar--dark {
+  color: #333;
+}
+
 .Navbar--brand {
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .Navbar ul {
@@ -36,7 +40,11 @@
   color: white;
   text-transform: uppercase;
   font-size: small;
-  font-weight: bold;
+  font-weight: 600;
   letter-spacing: 0.07em;
   font-size: 0.65rem;
+}
+
+.Navbar--dark ul li a {
+  color: #333;
 }

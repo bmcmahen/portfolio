@@ -2,6 +2,11 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import SEO from '../components/seo'
 import Layout from '../components/layout'
+import './Blog.css'
+import './prism-theme.css'
+
+import { LeftArrow } from '../components/Dividers'
+import { Navbar } from '../components/Navbar'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -11,17 +16,22 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout>
+        <Navbar dark />
         <SEO title={post.frontmatter.title} description={post.excerpt} />
-        <h1>{post.frontmatter.title}</h1>
-        <p
+        <div
           style={{
-            display: `block`,
+            position: 'relative',
           }}
+          className="Blog_heading"
         >
-          {post.frontmatter.date}
-        </p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr />
+          <div>
+            <h3>{post.frontmatter.title}</h3>
+            <div className="Blog_date">{post.frontmatter.date}</div>
+          </div>
+        </div>
+        <div className="Blog_container">
+          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        </div>
 
         <ul
           style={{
