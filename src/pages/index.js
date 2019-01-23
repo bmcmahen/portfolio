@@ -11,8 +11,9 @@ import { Github } from '../components/Github'
 import { ListSummary } from '../components/ListSummary'
 import blur from '../components/Portfolio/blur.png'
 import { LeftArrow } from '../components/Dividers'
+import { graphql } from 'gatsby'
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <div className="Index">
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
 
@@ -89,10 +90,39 @@ const IndexPage = () => (
         <ListSummary
           title="Blog posts"
           subtitle="The Sisyphian endeavour in maintaining a blog"
-        />
+        >
+          {data.allMarkdownRemark.edges.map(({ node }) => {
+            const title = node.frontmatter.title || node.fields.slug
+            return <div key={node.fields.slug}>{title}</div>
+          })}
+        </ListSummary>
       </div>
     </Layout>
   </div>
 )
 
 export default IndexPage
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+          }
+        }
+      }
+    }
+  }
+`
