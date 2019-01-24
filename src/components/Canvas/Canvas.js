@@ -89,7 +89,7 @@ export default class CanvasEraser extends React.Component {
       const { lastMouse } = this.state
 
       if (lastMouse) {
-        ctx.lineWidth = 140
+        ctx.lineWidth = 180
         ctx.shadowBlur = 10
         ctx.shadowColor = 'rgb(0,0,0)'
         ctx.lineJoin = ctx.lineCap = 'round'

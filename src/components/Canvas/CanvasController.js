@@ -24,18 +24,27 @@ export class CanvasController extends React.Component {
   }
 
   componentDidMount() {
-    this.container.current.addEventListener('keyup', this.onKeyUp)
+    if (this.props.enableRecord) {
+      document.addEventListener('keyup', this.onKeyUp)
+    }
+
+    const rect = this.container.current.getBoundingClientRect()
+
     this.setState({
-      width: window.innerWidth,
+      width: rect.width,
+      height: rect.height,
     })
   }
 
   componentWillUnmount() {
-    this.container.current.removeEventListener('keyup', this.onKeyUp)
+    document.removeEventListener('keyup', this.onKeyUp)
   }
 
   onKeyUp = e => {
     if (e.shiftKey && e.which === 82) {
+      if (!this.state.recordInput) {
+        this.positions = []
+      }
       this.setState({ recordInput: !this.state.recordInput })
     }
   }
@@ -51,8 +60,8 @@ export class CanvasController extends React.Component {
       }
 
       this.positions.push({
-        pageX: e.pageX,
-        pageY: e.pageY,
+        pageX: e.pageX / this.state.width,
+        pageY: e.pageY / this.state.height,
       })
 
       this.time = newTime
@@ -112,7 +121,7 @@ export class CanvasController extends React.Component {
                     ? mouse
                     : {
                         pageX: frame.pageX * this.state.width,
-                        pageY: frame.pageY * 700,
+                        pageY: frame.pageY * this.state.height,
                         type: 'keyframes',
                       }
                 }

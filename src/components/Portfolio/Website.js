@@ -19,7 +19,7 @@ export class Website extends React.Component {
             </div>
             {subtitle && <div className="lead">{subtitle}</div>}
           </div>
-          <CanvasController opacity={1}>
+          <CanvasController opacity={0.97}>
             <Browser background={background} video={this.props.video} />
           </CanvasController>
         </div>
