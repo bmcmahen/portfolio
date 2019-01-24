@@ -7,6 +7,8 @@ import Waypoint from 'react-waypoint'
 export class CanvasController extends React.Component {
   container = React.createRef()
 
+  canvas = React.createRef()
+
   static defaultProps = {
     color: 'white',
     keyframes: [],
@@ -72,6 +74,16 @@ export class CanvasController extends React.Component {
       entered: true,
       frames: this.props.keyframes,
     })
+
+    if (this.canvas.current) {
+      this.canvas.current.startRunning()
+    }
+  }
+
+  onWaypointLeave = () => {
+    if (this.canvas.current) {
+      this.canvas.current.stopRunning()
+    }
   }
 
   render() {
@@ -79,7 +91,7 @@ export class CanvasController extends React.Component {
     const { frames, mouse } = this.state
 
     return (
-      <Waypoint onEnter={this.onWaypointEnter}>
+      <Waypoint onLeave={this.onWaypointLeave} onEnter={this.onWaypointEnter}>
         <div
           ref={this.container}
           className="CanvasController"
@@ -91,6 +103,7 @@ export class CanvasController extends React.Component {
             {(frame, finished) => (
               <Canvas
                 color={color}
+                ref={this.canvas}
                 opacity={this.props.opacity}
                 style={canvasStyle}
                 className="CanvasController__canvas"

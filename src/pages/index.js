@@ -31,19 +31,19 @@ class IndexPage extends React.Component {
           <div classname="Index" />
 
           <InteractiveHeader />
-          <h3 style={{ textAlign: 'center', margin: '72px 72px' }}>
-            Some recent projects
-          </h3>
-          <div className="Index__websites">
-            <Website
-              title="Watershed"
-              primaryLink="http://www.watershed-ed.org"
-              video="/static/watershed.mp4"
-              subtitle="A collaborative and interactive course delivery platform."
-              task="We wanted to create a course delivery platform that embodied the
+          <section id="portfolio">
+            <h3 className="Index__center-header">Some recent projects</h3>
+            <div className="Index__websites">
+              <Website
+                title="Watershed"
+                linkLabel="watershed-ed.org"
+                primaryLink="http://www.watershed-ed.org"
+                video="/static/watershed.mp4"
+                subtitle="A collaborative and interactive course delivery platform."
+                task="We wanted to create a course delivery platform that embodied the
         best of Visual Teaching Strategies, which emphasizes observation and
         collaboration."
-              solution="We created a course delivery system which can be thought of as a
+                solution="We created a course delivery system which can be thought of as a
         collaborative canvas. As you watch videos you are asked questions.
         You are encourage to annotate text, videos, and images.
         Visualizations aid in marking course progress and the interactions
@@ -51,26 +51,67 @@ class IndexPage extends React.Component {
         course taking experience which updates visually as you use it.
         Everyone then, in a sense, builds their own course throughout the
         process."
-              technology="Watershed uses React on the front-end and consumes an Express
+                technology="Watershed uses React on the front-end and consumes an Express
         delivered GraphQL API on the backend. We utilize websockets to
         provide real-time chat functionality. We use Styled-components to
         develop our own design system."
-              background={watershedImage}
-            />
+                background={watershedImage}
+              />
 
-            <Website
-              primaryLink="http://www.eugenicsarchive.ca"
-              title="Eugenics archive"
-              video="/static/eugenics-archive.mp4"
-              subtitle="An exploratory database about the history of eugenics"
-              task="Ad consequat voluptate pariatur eu nostrud eu in ullamco magna. Cillum incididunt veniam reprehenderit irure eiusmod quis veniam aliquip excepteur. Lorem dolore laboris id ex ea et quis amet est sunt. Enim cillum sit amet reprehenderit non deserunt cupidatat eiusmod. Minim elit ut esse labore. Eiusmod anim adipisicing ad excepteur."
-              solution="Labore aute sit non ad sit. Officia deserunt adipisicing mollit consequat enim officia reprehenderit velit. Mollit exercitation occaecat aute veniam quis adipisicing. Id adipisicing laborum dolor officia ut nulla officia Lorem sint ullamco pariatur. Velit duis ad ex do minim cupidatat id minim veniam amet nulla veniam esse. Id mollit ullamco non qui pariatur eiusmod minim laboris deserunt. Voluptate Lorem nisi nulla eu voluptate."
-              technology="Aliqua fugiat adipisicing nulla in velit. Anim eu pariatur consectetur pariatur sit tempor eu nisi ea dolore sunt excepteur. Adipisicing fugiat incididunt proident tempor."
-              background={eugenicsImage}
-            />
-          </div>
+              <Website
+                primaryLink="http://www.eugenicsarchive.ca"
+                title="Eugenics archive"
+                linkLabel="eugenicsarchive.ca"
+                video="/static/eugenics-archive.mp4"
+                subtitle="An exploratory database about the history of eugenics"
+                task="The Living Archives on Eugenics project wanted to create a database of Eugenics related information, both its history in Canada and around the world, and its ongoing significance today."
+                solution={
+                  <span>
+                    We decided to build a highly extensible and interactive
+                    database that encourages users to explore the history in
+                    their own way. Content in the database can partake in
+                    different modules, like a{' '}
+                    <a href="http://eugenicsarchive.ca/discover/timeline">
+                      Timeline
+                    </a>
+                    ,{' '}
+                    <a href="http://eugenicsarchive.ca/discover/connections/">
+                      MindMap
+                    </a>{' '}
+                    or{' '}
+                    <a href="http://eugenicsarchive.ca/discover/world">Globe</a>
+                    , which reveals different connections between database
+                    entries. It’s easy to switch between these modules to
+                    explore different contexts. We also developed a more
+                    traditional database interface to allow team members to
+                    input and edit content and include content in different
+                    modules.
+                  </span>
+                }
+                technology={
+                  <span>
+                    The Eugenics Archive uses an Express hosted backend backed
+                    with a MongoDB database. The front end is a javascript
+                    application built entirely with smaller modules, with an
+                    emphasis on using native dom interfaces. We built many
+                    libraries in the process, including{' '}
+                    <a href="https://github.com/bmcmahen/image-zoom">
+                      image-zoom
+                    </a>
+                    , <a href="https://github.com/bmcmahen/tour">tour</a>,{' '}
+                    <a href="https://github.com/bmcmahen/transit">transit</a>,
+                    <a href="https://github.com/bmcmahen/network">network</a>,
+                    and{' '}
+                    <a href="https://github.com/bmcmahen/transit">youtube</a>.
+                  </span>
+                }
+                background={eugenicsImage}
+              />
+            </div>
+          </section>
 
-          <div
+          <section
+            id="blog"
             style={{
               position: 'relative',
               backgroundImage: `url(${blur})`,
@@ -129,7 +170,7 @@ class IndexPage extends React.Component {
               }}
             />
             */}
-          </div>
+          </section>
 
           <CanvasController
             // color="#5c5f7f"
@@ -137,7 +178,7 @@ class IndexPage extends React.Component {
             opacity={1}
             keyframes={[]}
           >
-            <div>
+            <section id="contact">
               <div className="Index__contact">
                 <div>
                   <div className="Index__contact-boxes">
@@ -178,7 +219,7 @@ class IndexPage extends React.Component {
                   </div>
                 </div>
               </div>
-            </div>
+            </section>
           </CanvasController>
         </Layout>
       </div>

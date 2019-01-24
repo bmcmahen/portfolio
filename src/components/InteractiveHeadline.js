@@ -14,7 +14,7 @@ const frames = JSON.parse(
 export class InteractiveHeader extends React.Component {
   render() {
     return (
-      <div className="Header">
+      <section className="Header">
         <CanvasController
           keyframes={frames}
           color="rgb(239, 242, 245)"
@@ -27,7 +27,7 @@ export class InteractiveHeader extends React.Component {
               backgroundImage: `url(${blur})`,
             }}
           />
-          <Navbar />
+
           <div className="Header__text">
             <div className="InteractiveHeadline--lead">
               <img src={me} />
@@ -37,6 +37,7 @@ export class InteractiveHeader extends React.Component {
                 experiences for the web and mobile.
               </div>
             </div>
+            <Navbar />
             <InvertedArrow
               style={{
                 position: 'absolute',
@@ -47,7 +48,7 @@ export class InteractiveHeader extends React.Component {
             />
           </div>
         </CanvasController>
-      </div>
+      </section>
     )
   }
 }

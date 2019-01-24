@@ -13,16 +13,27 @@ export default class CanvasEraser extends React.Component {
     }
 
     this.resizeCanvasDb = debounce(this.resizeCanvas, 100)
+    this.debouncedStop = debounce(this.stopRunning, 500)
   }
 
   componentDidMount() {
     this.resizeCanvas()
-    this.update()
+    // this.update()
     // resizing the canvas effectively wipes user input, which isn't ideal
     // window.addEventListener('resize', this.resizeCanvasDb)
   }
 
   componentWillUnmount() {
+    this.stopRunning()
+  }
+
+  startRunning() {
+    this.cancel = false
+    this.update()
+  }
+
+  stopRunning() {
+    this.setState({ lastMouse: null })
     window.cancelAnimationFrame(this.update)
     this.cancel = true
   }
@@ -61,7 +72,10 @@ export default class CanvasEraser extends React.Component {
   }
 
   update = () => {
-    if (this.cancel) return
+    if (this.cancel) {
+      return
+    }
+
     const { canvas } = this.refs
     const { mouse } = this.props
     if (mouse) {

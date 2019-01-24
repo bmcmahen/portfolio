@@ -24,6 +24,11 @@
   padding-bottom: 115px;
 }
 
+.Index__center-header {
+  text-align: center;
+  margin: 72px;
+}
+
 .Index__show_more {
   background: rgba(255, 255, 255, 0.1);
   border: none;

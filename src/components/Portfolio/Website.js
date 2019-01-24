@@ -1,18 +1,22 @@
 import React from 'react'
 import { Browser } from '../Browser'
-import Canvas from '../Canvas/Canvas'
 import './Website.css'
 import { CanvasController } from '../Canvas/CanvasController'
 
 export class Website extends React.Component {
   render() {
-    const { background, title, subtitle } = this.props
+    const { background, title, subtitle, primaryLink, linkLabel } = this.props
 
     return (
       <div className="Website">
         <div className="Website__preview">
           <div className="label">
-            {title && <h4>{title}</h4>}
+            <div>
+              {title && <h4>{title}</h4>}
+              <div>
+                <a href={primaryLink}>{linkLabel}</a>
+              </div>
+            </div>
             {subtitle && <div className="lead">{subtitle}</div>}
           </div>
           <CanvasController opacity={1}>

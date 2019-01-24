@@ -36,8 +36,28 @@
   margin-bottom: 1rem;
 }
 
+.Website .label a {
+  background: var(--link-color);
+  color: white;
+  border-radius: 8px;
+  padding: 4px;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 0.6rem;
+  font-weight: 600;
+  padding: 4px 10px;
+
+  letter-spacing: 0.07em;
+}
+
+.Website .label > div {
+  display: flex;
+  align-items: center;
+}
+
 .Website h4 {
   margin: 0;
+  margin-right: 1rem;
 }
 
 .Website .lead {

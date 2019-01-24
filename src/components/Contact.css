@@ -71,3 +71,12 @@
   width: 25px !important;
   height: 25px !important;
 }
+
+.Social-white .Contact__social-link {
+  margin-right: 0.4rem !important;
+}
+
+.Social-white .Contact__social-link svg {
+  width: 18px !important;
+  height: 18px !important;
+}

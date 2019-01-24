@@ -32,8 +32,8 @@ export class Contact extends React.Component {
   }
 }
 
-export const Social = () => (
-  <div>
+export const Social = ({ white }) => (
+  <div className="Social-white">
     <SocialLink label="Twitter" href="https://twitter.com/BenMcMahen">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +93,12 @@ export const Social = () => (
 )
 
 const SocialLink = ({ label, href, children }) => (
-  <a className="Contact__social-link" href={href} aria-label={label}>
+  <a
+    title={'View me on ' + label}
+    className="Contact__social-link"
+    href={href}
+    aria-label={label}
+  >
     {children}
   </a>
 )
