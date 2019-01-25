@@ -1,5 +1,6 @@
 import React from 'react'
 import debounce from 'lodash.debounce'
+import './Canvas.css'
 
 export default class CanvasEraser extends React.Component {
   static defaultProps = {
@@ -89,7 +90,7 @@ export default class CanvasEraser extends React.Component {
       const { lastMouse } = this.state
 
       if (lastMouse) {
-        ctx.lineWidth = 180
+        ctx.lineWidth = 225
         ctx.shadowBlur = 10
         ctx.shadowColor = 'rgb(0,0,0)'
         ctx.lineJoin = ctx.lineCap = 'round'
@@ -105,14 +106,20 @@ export default class CanvasEraser extends React.Component {
 
   render() {
     return (
-      <canvas
+      <div
         style={{
           ...this.props.style,
-          opacity: this.props.opacity,
         }}
-        className={this.props.className}
-        ref="canvas"
-      />
+        className="Canvas"
+      >
+        <canvas
+          style={{
+            opacity: this.props.opacity,
+          }}
+          className={this.props.className}
+          ref="canvas"
+        />
+      </div>
     )
   }
 }

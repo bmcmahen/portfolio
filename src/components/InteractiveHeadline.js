@@ -23,7 +23,7 @@ export class InteractiveHeader extends React.Component {
     return (
       <section className="Header">
         <CanvasController
-          keyframes={frames}
+          keyframes={[]}
           color="rgb(239, 242, 245)"
           opacity={0.9}
           containerStyle={{ height: '400px' }}

@@ -2,7 +2,7 @@ const config = require('./config')
 
 module.exports = {
   siteMetadata: {
-    title: `Ben McMahen - Web developer`,
+    title: `Ben McMahen - Freelance web and mobile developer`,
     description: `Hello, my name is Ben. I'm a full-stack developer and love building interactive experiences for the web and mobile.`,
     author: `@benmcmahen`,
   },
