@@ -26,13 +26,12 @@ export class Browser extends React.Component {
                 <div className="circle circle-green" />
               </div>
             </div>
-            <div className="content">
-              <img alt={title} width="490" height="274" src={background} />
-              {this.state.showVideo && (
-                <div className="Browser__video">
-                  <BackgroundVideo src={this.props.video} />
-                </div>
-              )}
+            <div className="content ">
+              <div className="Browser__video embed-responsive-16by9 embed-responsive">
+                {this.state.showVideo && (
+                  <video autoPlay src={this.props.video} />
+                )}
+              </div>
               {children}
             </div>
           </div>

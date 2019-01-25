@@ -45,7 +45,7 @@ class IndexPage extends React.Component {
             <h3 className="Index__center-header">Some recent projects</h3>
             <div className="Index__websites">
               <Website
-                keyframes={watershedFrames}
+                keyframes={[]}
                 key="watershed"
                 title="Watershed"
                 linkLabel="watershed-ed.org"
@@ -73,7 +73,7 @@ class IndexPage extends React.Component {
               <Website
                 primaryLink="http://www.eugenicsarchive.ca"
                 title="Eugenics archive"
-                keyframes={eugenicsFrames}
+                keyframes={[]}
                 key="eugenics"
                 linkLabel="eugenicsarchive.ca"
                 video="/static/eugenics-archive.mp4"

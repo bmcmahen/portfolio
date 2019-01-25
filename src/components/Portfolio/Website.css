@@ -1,6 +1,5 @@
 .Website {
   display: block;
-  padding: 0 1.5rem;
   margin: 0 auto;
   align-items: flex-start;
   margin-top: 72px;
@@ -10,7 +9,7 @@
 .Website__content {
   flex: 1 1 50%;
   max-width: 500px;
-  margin: 0 auto;
+  margin: 0 1.5rem;
 }
 
 .Website h6 {
@@ -27,6 +26,7 @@
 }
 
 .Website .label {
+  margin: 0 1.5rem;
   margin-bottom: 1rem;
 }
 
