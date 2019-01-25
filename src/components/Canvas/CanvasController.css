@@ -1,6 +1,7 @@
 .CanvasController {
   position: relative;
   overflow: hidden;
+  touch-action: none;
 }
 
 .CanvasController__canvas {

@@ -139,7 +139,6 @@ class IndexPage extends React.Component {
           </section>
 
           <section
-            id="blog"
             style={{
               position: 'relative',
               backgroundImage: `url(${blur})`,
@@ -154,7 +153,7 @@ class IndexPage extends React.Component {
               }
             />
 
-            <ListSummary title="Blogging">
+            <ListSummary id="blog" title="Blogging">
               {data.allMarkdownRemark.edges
                 .slice(0, this.state.renderTotal)
                 .map(({ node }) => {

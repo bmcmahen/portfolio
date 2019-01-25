@@ -2,18 +2,13 @@ import React from 'react'
 import { LeftArrow as InvertedArrow } from './Dividers'
 import { Navbar } from './Navbar'
 import './InteractiveHeadline.css'
-// import blur from './Portfolio/blur.png'
+import blur from './Portfolio/blur.png'
 import { CanvasController } from './Canvas/CanvasController'
 import './Header.css'
 import me from './me.jpg'
 import { BackgroundVideo } from './BackgroundVideo'
 import sky from './Canvas/videos/640707050.mp4'
-
-// const frames = JSON.parse(
-//   `[{"pageX":0.38028169014084506,"pageY":0.26857142857142857,"delay":9},{"pageX":0.3853118712273642,"pageY":0.26142857142857145,"delay":12},{"pageX":0.3893360160965795,"pageY":0.2557142857142857,"delay":20},{"pageX":0.41146881287726356,"pageY":0.22,"delay":16},{"pageX":0.4215291750503018,"pageY":0.2042857142857143,"delay":10},{"pageX":0.42655935613682094,"pageY":0.19714285714285715,"delay":28},{"pageX":0.43561368209255535,"pageY":0.18571428571428572,"delay":19},{"pageX":0.43661971830985913,"pageY":0.18571428571428572,"delay":37},{"pageX":0.43561368209255535,"pageY":0.19142857142857142,"delay":21},{"pageX":0.42857142857142855,"pageY":0.21571428571428572,"delay":19},{"pageX":0.4164989939637827,"pageY":0.25857142857142856,"delay":13},{"pageX":0.4134808853118712,"pageY":0.2642857142857143,"delay":20},{"pageX":0.4044265593561368,"pageY":0.2957142857142857,"delay":21},{"pageX":0.4024144869215292,"pageY":0.3028571428571429,"delay":14},{"pageX":0.4024144869215292,"pageY":0.3028571428571429,"delay":12},{"pageX":0.4024144869215292,"pageY":0.30428571428571427,"delay":37},{"pageX":0.4074446680080483,"pageY":0.29428571428571426,"delay":35},{"pageX":0.43158953722334004,"pageY":0.2542857142857143,"delay":12},{"pageX":0.44567404426559354,"pageY":0.2357142857142857,"delay":14},{"pageX":0.448692152917505,"pageY":0.23285714285714285,"delay":23},{"pageX":0.45774647887323944,"pageY":0.22142857142857142,"delay":23},{"pageX":0.4597585513078471,"pageY":0.21857142857142858,"delay":20},{"pageX":0.4597585513078471,"pageY":0.21857142857142858,"delay":24},{"pageX":0.4476861167002012,"pageY":0.2557142857142857,"delay":30},{"pageX":0.4336016096579477,"pageY":0.2857142857142857,"delay":16},{"pageX":0.4305835010060362,"pageY":0.29428571428571426,"delay":14},{"pageX":0.4295774647887324,"pageY":0.29714285714285715,"delay":33},{"pageX":0.4295774647887324,"pageY":0.2985714285714286,"delay":30},{"pageX":0.44064386317907445,"pageY":0.2857142857142857,"delay":14},{"pageX":0.44969818913480886,"pageY":0.27285714285714285,"delay":19},{"pageX":0.47484909456740443,"pageY":0.24142857142857144,"delay":24},{"pageX":0.4909456740442656,"pageY":0.22428571428571428,"delay":15},{"pageX":0.49899396378269617,"pageY":0.21571428571428572,"delay":14},{"pageX":0.5020120724346077,"pageY":0.21142857142857144,"delay":28},{"pageX":0.5020120724346077,"pageY":0.21142857142857144,"delay":35},{"pageX":0.4688128772635815,"pageY":0.2957142857142857,"delay":16},{"pageX":0.4647887323943662,"pageY":0.3057142857142857,"delay":15},{"pageX":0.4537223340040241,"pageY":0.3314285714285714,"delay":16},{"pageX":0.44567404426559354,"pageY":0.3514285714285714,"delay":23},{"pageX":0.4426559356136821,"pageY":0.36,"delay":16},{"pageX":0.4426559356136821,"pageY":0.36142857142857143,"delay":34},{"pageX":0.46277665995975853,"pageY":0.3414285714285714,"delay":37},{"pageX":0.5010060362173038,"pageY":0.2757142857142857,"delay":14},{"pageX":0.5090543259557344,"pageY":0.26285714285714284,"delay":19},{"pageX":0.5211267605633803,"pageY":0.24,"delay":14},{"pageX":0.5241448692152918,"pageY":0.23714285714285716,"delay":17},{"pageX":0.5271629778672032,"pageY":0.23142857142857143,"delay":40},{"pageX":0.5271629778672032,"pageY":0.23142857142857143,"delay":48},{"pageX":0.49899396378269617,"pageY":0.3242857142857143,"delay":16},{"pageX":0.48993963782696176,"pageY":0.3485714285714286,"delay":16},{"pageX":0.48490945674044267,"pageY":0.3628571428571429,"delay":15},{"pageX":0.4818913480885312,"pageY":0.3742857142857143,"delay":16},{"pageX":0.4818913480885312,"pageY":0.37714285714285717,"delay":16},{"pageX":0.48390342052313884,"pageY":0.37714285714285717,"delay":32},{"pageX":0.5211267605633803,"pageY":0.3142857142857143,"delay":46},{"pageX":0.5714285714285714,"pageY":0.21428571428571427,"delay":23},{"pageX":0.5835010060362174,"pageY":0.19428571428571428,"delay":22},{"pageX":0.5865191146881288,"pageY":0.19,"delay":14},{"pageX":0.5875251509054326,"pageY":0.19,"delay":50},{"pageX":0.5714285714285714,"pageY":0.23714285714285716,"delay":47},{"pageX":0.5523138832997988,"pageY":0.28714285714285714,"delay":12},{"pageX":0.5503018108651911,"pageY":0.2914285714285714,"delay":24},{"pageX":0.5503018108651911,"pageY":0.29428571428571426,"delay":17},{"pageX":0.5503018108651911,"pageY":0.29428571428571426,"delay":16},{"pageX":0.5583501006036218,"pageY":0.2857142857142857,"delay":18},{"pageX":0.5724346076458753,"pageY":0.26571428571428574,"delay":14},{"pageX":0.5935613682092555,"pageY":0.23285714285714285,"delay":15},{"pageX":0.6046277665995976,"pageY":0.21714285714285714,"delay":46},{"pageX":0.6338028169014085,"pageY":0.17142857142857143,"delay":47},{"pageX":0.6368209255533199,"pageY":0.16714285714285715,"delay":17},{"pageX":0.6338028169014085,"pageY":0.18142857142857144,"delay":27},{"pageX":0.6066398390342053,"pageY":0.2557142857142857,"delay":18},{"pageX":0.5955734406438632,"pageY":0.2842857142857143,"delay":17},{"pageX":0.5905432595573441,"pageY":0.3,"delay":15},{"pageX":0.5855130784708249,"pageY":0.31285714285714283,"delay":18},{"pageX":0.5845070422535211,"pageY":0.31857142857142856,"delay":19},{"pageX":0.5855130784708249,"pageY":0.31857142857142856,"delay":18},{"pageX":0.596579476861167,"pageY":0.30857142857142855,"delay":19},{"pageX":0.6237424547283702,"pageY":0.2671428571428571,"delay":19},{"pageX":0.6378269617706237,"pageY":0.24285714285714285,"delay":29},{"pageX":0.6639839034205232,"pageY":0.19857142857142857,"delay":21},{"pageX":0.6710261569416499,"pageY":0.18571428571428572,"delay":13},{"pageX":0.6720321931589537,"pageY":0.18428571428571427,"delay":15},{"pageX":0.6730382293762576,"pageY":0.18428571428571427,"delay":20},{"pageX":0.6720321931589537,"pageY":0.1957142857142857,"delay":16},{"pageX":0.6670020120724346,"pageY":0.20857142857142857,"delay":15},{"pageX":0.6589537223340041,"pageY":0.23285714285714285,"delay":14},{"pageX":0.6498993963782697,"pageY":0.2642857142857143,"delay":16},{"pageX":0.6428571428571429,"pageY":0.2842857142857143,"delay":15},{"pageX":0.6378269617706237,"pageY":0.3,"delay":15},{"pageX":0.635814889336016,"pageY":0.30857142857142855,"delay":15},{"pageX":0.635814889336016,"pageY":0.31142857142857144,"delay":71},{"pageX":0.6649899396378269,"pageY":0.2742857142857143,"delay":99},{"pageX":0.6981891348088531,"pageY":0.23142857142857143,"delay":15},{"pageX":0.6921529175050302,"pageY":0.25285714285714284,"delay":17},{"pageX":0.6851106639839034,"pageY":0.27,"delay":16},{"pageX":0.6800804828973843,"pageY":0.2885714285714286,"delay":16},{"pageX":0.6730382293762576,"pageY":0.3057142857142857,"delay":16},{"pageX":0.670020120724346,"pageY":0.32,"delay":50},{"pageX":0.6670020120724346,"pageY":0.3385714285714286,"delay":60},{"pageX":0.6670020120724346,"pageY":0.34285714285714286}]`
-// )
-
-// const frames = []
+import Media from 'react-media'
 
 const frames = JSON.parse(
   `[{"pageX":0.42562724014336917,"pageY":0.3875,"delay":18},{"pageX":0.43548387096774194,"pageY":0.3775,"delay":18},{"pageX":0.4507168458781362,"pageY":0.36,"delay":19},{"pageX":0.47491039426523296,"pageY":0.3325,"delay":16},{"pageX":0.49551971326164873,"pageY":0.31,"delay":16},{"pageX":0.5152329749103942,"pageY":0.29,"delay":18},{"pageX":0.5259856630824373,"pageY":0.285,"delay":16},{"pageX":0.5367383512544803,"pageY":0.28,"delay":15},{"pageX":0.5439068100358423,"pageY":0.2775,"delay":17},{"pageX":0.5474910394265233,"pageY":0.2775,"delay":18},{"pageX":0.5483870967741935,"pageY":0.2775,"delay":15},{"pageX":0.5501792114695341,"pageY":0.2775,"delay":33},{"pageX":0.5501792114695341,"pageY":0.2825,"delay":18},{"pageX":0.5456989247311828,"pageY":0.295,"delay":18},{"pageX":0.532258064516129,"pageY":0.3225,"delay":17},{"pageX":0.5062724014336918,"pageY":0.3625,"delay":17},{"pageX":0.46863799283154123,"pageY":0.4175,"delay":15},{"pageX":0.4292114695340502,"pageY":0.4675,"delay":17},{"pageX":0.40591397849462363,"pageY":0.5025,"delay":17},{"pageX":0.3844086021505376,"pageY":0.5275,"delay":15},{"pageX":0.3790322580645161,"pageY":0.535,"delay":18},{"pageX":0.3772401433691756,"pageY":0.535,"delay":16},{"pageX":0.3772401433691756,"pageY":0.5375,"delay":15},{"pageX":0.3790322580645161,"pageY":0.5375,"delay":17},{"pageX":0.3888888888888889,"pageY":0.5375,"delay":22},{"pageX":0.4274193548387097,"pageY":0.5175,"delay":17},{"pageX":0.4650537634408602,"pageY":0.485,"delay":22},{"pageX":0.5134408602150538,"pageY":0.4425,"delay":14},{"pageX":0.5618279569892473,"pageY":0.4,"delay":18},{"pageX":0.5905017921146953,"pageY":0.3725,"delay":22},{"pageX":0.6200716845878136,"pageY":0.35,"delay":17},{"pageX":0.6281362007168458,"pageY":0.345,"delay":16},{"pageX":0.6308243727598566,"pageY":0.345,"delay":16},{"pageX":0.6209677419354839,"pageY":0.3625,"delay":19},{"pageX":0.5967741935483871,"pageY":0.4,"delay":22},{"pageX":0.5421146953405018,"pageY":0.4725,"delay":15},{"pageX":0.48566308243727596,"pageY":0.54,"delay":22},{"pageX":0.43637992831541217,"pageY":0.5925,"delay":14},{"pageX":0.3718637992831541,"pageY":0.6575,"delay":17},{"pageX":0.35125448028673834,"pageY":0.68,"delay":18},{"pageX":0.33512544802867383,"pageY":0.6975,"delay":19},{"pageX":0.3333333333333333,"pageY":0.7,"delay":18},{"pageX":0.3333333333333333,"pageY":0.7,"delay":19},{"pageX":0.3387096774193548,"pageY":0.7,"delay":20},{"pageX":0.3521505376344086,"pageY":0.7,"delay":18},{"pageX":0.3906810035842294,"pageY":0.6825,"delay":19},{"pageX":0.4444444444444444,"pageY":0.645,"delay":18},{"pageX":0.4883512544802867,"pageY":0.615,"delay":22},{"pageX":0.5277777777777778,"pageY":0.5825,"delay":18},{"pageX":0.5636200716845878,"pageY":0.555,"delay":19},{"pageX":0.5779569892473119,"pageY":0.545,"delay":19},{"pageX":0.5887096774193549,"pageY":0.535,"delay":17},{"pageX":0.5949820788530465,"pageY":0.535,"delay":21},{"pageX":0.5958781362007168,"pageY":0.535,"delay":19},{"pageX":0.5860215053763441,"pageY":0.555,"delay":19},{"pageX":0.5528673835125448,"pageY":0.6125,"delay":19},{"pageX":0.5125448028673835,"pageY":0.685,"delay":19},{"pageX":0.4543010752688172,"pageY":0.785,"delay":16},{"pageX":0.44175627240143367,"pageY":0.805,"delay":20},{"pageX":0.4265232974910394,"pageY":0.83,"delay":20},{"pageX":0.41935483870967744,"pageY":0.845,"delay":20},{"pageX":0.4283154121863799,"pageY":0.845,"delay":20},{"pageX":0.47580645161290325,"pageY":0.7875,"delay":21},{"pageX":0.5367383512544803,"pageY":0.7075,"delay":19},{"pageX":0.5967741935483871,"pageY":0.6325,"delay":22},{"pageX":0.6433691756272402,"pageY":0.5775,"delay":19},{"pageX":0.671146953405018,"pageY":0.5475,"delay":22},{"pageX":0.6845878136200717,"pageY":0.535,"delay":19},{"pageX":0.6899641577060932,"pageY":0.5325,"delay":19},{"pageX":0.6845878136200717,"pageY":0.5375,"delay":21},{"pageX":0.6397849462365591,"pageY":0.62,"delay":24},{"pageX":0.5824372759856631,"pageY":0.725,"delay":27},{"pageX":0.5510752688172043,"pageY":0.795,"delay":21},{"pageX":0.5304659498207885,"pageY":0.8425,"delay":23},{"pageX":0.5277777777777778,"pageY":0.8525,"delay":21},{"pageX":0.53584229390681,"pageY":0.8475,"delay":20},{"pageX":0.568100358422939,"pageY":0.7925,"delay":21},{"pageX":0.5878136200716846,"pageY":0.7575,"delay":22},{"pageX":0.6084229390681004,"pageY":0.725,"delay":20},{"pageX":0.6236559139784946,"pageY":0.7025,"delay":22},{"pageX":0.6290322580645161,"pageY":0.695,"delay":21},{"pageX":0.6326164874551972,"pageY":0.6925,"delay":23},{"pageX":0.6335125448028673,"pageY":0.6925,"delay":20},{"pageX":0.6335125448028673,"pageY":0.695,"delay":22},{"pageX":0.6254480286738351,"pageY":0.7225,"delay":42},{"pageX":0.6218637992831542,"pageY":0.74,"delay":20},{"pageX":0.6227598566308243,"pageY":0.75,"delay":20},{"pageX":0.6362007168458781,"pageY":0.75,"delay":22},{"pageX":0.671146953405018,"pageY":0.7025,"delay":23},{"pageX":0.6917562724014337,"pageY":0.675,"delay":20},{"pageX":0.7060931899641577,"pageY":0.66,"delay":25},{"pageX":0.7096774193548387,"pageY":0.655,"delay":20},{"pageX":0.7096774193548387,"pageY":0.6575,"delay":24},{"pageX":0.6998207885304659,"pageY":0.6875,"delay":21},{"pageX":0.6899641577060932,"pageY":0.715,"delay":22},{"pageX":0.6845878136200717,"pageY":0.73,"delay":21},{"pageX":0.6845878136200717,"pageY":0.7325,"delay":38},{"pageX":0.6890681003584229,"pageY":0.72,"delay":23},{"pageX":0.6935483870967742,"pageY":0.705}]`
@@ -27,50 +22,55 @@ export class InteractiveHeader extends React.Component {
   render() {
     return (
       <section className="Header">
-        <CanvasController
-          keyframes={frames}
-          mobileFrames={mobileFrames}
-          color="rgb(239, 242, 245)"
-          opacity={0.9}
-          containerStyle={{ height: '400px' }}
-        >
-          <BackgroundVideo
-            style={{
-              position: 'absolute',
-              left: 0,
-              top: 0,
-            }}
-            src={sky}
-          />
-          {/*
-          <div
-            className="Header__background"
-            style={{
-              backgroundImage: `url(${blur})`,
-            }}
-          />
-          */}
+        <Media query="(max-width: 500px)">
+          {isMobile => (
+            <CanvasController
+              keyframes={frames}
+              mobileFrames={mobileFrames}
+              color="rgb(239, 242, 245)"
+              opacity={0.9}
+              containerStyle={{ height: '400px' }}
+            >
+              {isMobile ? (
+                <div
+                  className="Header__background"
+                  style={{
+                    backgroundImage: `url(${blur})`,
+                  }}
+                />
+              ) : (
+                <BackgroundVideo
+                  style={{
+                    position: 'absolute',
+                    left: 0,
+                    top: 0,
+                  }}
+                  src={sky}
+                />
+              )}
 
-          <div className="Header__text">
-            <div className="InteractiveHeadline--lead">
-              <img src={me} />
-              <div>Hello, my name is Ben.</div>
-              <div>
-                I'm a full-stack developer and love building interactive
-                experiences for the web and mobile.
+              <div className="Header__text">
+                <div className="InteractiveHeadline--lead">
+                  <img src={me} />
+                  <div>Hello, my name is Ben.</div>
+                  <div>
+                    I'm a full-stack developer and love building interactive
+                    experiences for the web and mobile.
+                  </div>
+                </div>
+                <Navbar />
+                <InvertedArrow
+                  style={{
+                    position: 'absolute',
+                    left: 0,
+                    width: '100%',
+                    bottom: 0,
+                  }}
+                />
               </div>
-            </div>
-            <Navbar />
-            <InvertedArrow
-              style={{
-                position: 'absolute',
-                left: 0,
-                width: '100%',
-                bottom: 0,
-              }}
-            />
-          </div>
-        </CanvasController>
+            </CanvasController>
+          )}
+        </Media>
       </section>
     )
   }
