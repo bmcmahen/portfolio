@@ -3,6 +3,7 @@ import Keyframes from '../Keyframes'
 import Canvas from './Canvas'
 import './CanvasController.css'
 import Waypoint from 'react-waypoint'
+import Media from 'react-media'
 
 export class CanvasController extends React.Component {
   container = React.createRef()
@@ -13,6 +14,7 @@ export class CanvasController extends React.Component {
     color: 'white',
     keyframes: [],
     opacity: 0.8,
+    mobileFrames: [],
   }
 
   state = {
@@ -47,6 +49,11 @@ export class CanvasController extends React.Component {
       }
       this.setState({ recordInput: !this.state.recordInput })
     }
+  }
+
+  onTouchMove = e => {
+    // e.preventDefault()
+    this.onMouseMove(e.changedTouches[0])
   }
 
   onMouseMove = e => {
@@ -96,40 +103,51 @@ export class CanvasController extends React.Component {
   }
 
   render() {
-    const { color, containerStyle, canvasStyle } = this.props
+    const { color, containerStyle, canvasStyle, mobileFrames } = this.props
     const { frames, mouse } = this.state
 
     return (
-      <Waypoint onLeave={this.onWaypointLeave} onEnter={this.onWaypointEnter}>
-        <div
-          ref={this.container}
-          className="CanvasController"
-          style={containerStyle}
-          onMouseMove={this.onMouseMove}
-        >
-          {this.props.children}
-          <Keyframes shouldRun={this.state.entered} frames={frames}>
-            {(frame, finished) => (
-              <Canvas
-                color={color}
-                ref={this.canvas}
-                opacity={this.props.opacity}
-                style={canvasStyle}
-                className="CanvasController__canvas"
-                mouse={
-                  finished || !this.state.width || !frame
-                    ? mouse
-                    : {
-                        pageX: frame.pageX * this.state.width,
-                        pageY: frame.pageY * this.state.height,
-                        type: 'keyframes',
-                      }
-                }
-              />
-            )}
-          </Keyframes>
-        </div>
-      </Waypoint>
+      <Media query="(max-width: 500px)">
+        {matches => (
+          <Waypoint
+            onLeave={this.onWaypointLeave}
+            onEnter={this.onWaypointEnter}
+          >
+            <div
+              ref={this.container}
+              className="CanvasController"
+              style={containerStyle}
+              onTouchMove={this.onTouchMove}
+              onMouseMove={this.onMouseMove}
+            >
+              {this.props.children}
+              <Keyframes
+                shouldRun={this.state.entered}
+                frames={matches ? this.props.mobileFrames : frames}
+              >
+                {(frame, finished) => (
+                  <Canvas
+                    color={color}
+                    ref={this.canvas}
+                    opacity={this.props.opacity}
+                    style={canvasStyle}
+                    className="CanvasController__canvas"
+                    mouse={
+                      finished || !this.state.width || !frame
+                        ? mouse
+                        : {
+                            pageX: frame.pageX * this.state.width,
+                            pageY: frame.pageY * this.state.height,
+                            type: 'keyframes',
+                          }
+                    }
+                  />
+                )}
+              </Keyframes>
+            </div>
+          </Waypoint>
+        )}
+      </Media>
     )
   }
 }

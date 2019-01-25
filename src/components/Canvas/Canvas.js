@@ -56,9 +56,9 @@ export default class CanvasEraser extends React.Component {
 
   resize = (width, height) => {
     const canvas = this.refs.canvas
-    canvas.width = width * (this.props.responsive ? 4 : 2)
+    canvas.width = width * (this.props.responsive ? 2 : 1)
     canvas.height = height * (this.props.responsive ? 2 : 1)
-    canvas.style.width = width * 2 + 'px'
+    canvas.style.width = width + 'px'
     canvas.style.height = height + 'px'
     // const ctx = canvas.getContext('2d')
     // ctx.scale(window.devicePixelRatio, window.devicePixelRatio)

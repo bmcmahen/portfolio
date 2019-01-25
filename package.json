@@ -29,6 +29,7 @@
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0",
+    "react-media": "^1.9.2",
     "react-waypoint": "^8.1.0"
   },
   "keywords": [

@@ -20,6 +20,7 @@ export class Website extends React.Component {
             {subtitle && <div className="lead">{subtitle}</div>}
           </div>
           <CanvasController
+            mobileFrames={this.props.mobileFrames}
             keyframes={this.props.keyframes}
             enableRecord={this.props.enableRecord}
             opacity={0.97}
