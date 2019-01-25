@@ -13,7 +13,7 @@
 }
 
 .Index__lists {
-  display: flex;
+  display: block;
   padding: 72px 0;
 
   background-size: cover;
@@ -21,12 +21,12 @@
 }
 
 .Index__websites {
-  padding-bottom: 115px;
+  padding-bottom: 72px;
 }
 
 .Index__center-header {
   text-align: center;
-  margin: 72px;
+  margin: 72px 0;
 }
 
 .Index__show_more {
@@ -69,16 +69,38 @@
   margin: 0 auto;
 }
 
-.Index__contact-boxes {
-  display: flex;
-  align-items: center;
-}
-
-.Index__contact-boxes > * {
-  flex: 1 1 50%;
-}
-
 .Index__contact-social {
   max-width: 450px;
   margin: 0 auto;
+}
+
+.Index__lists .ListSummary:first-child {
+  margin-bottom: 3rem;
+}
+
+.Index__contact-boxes > * {
+  margin: 0 1.5rem;
+}
+
+.Index .Contact {
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .Index__lists {
+    display: flex;
+  }
+
+  .Index__contact-boxes {
+    display: flex;
+    align-items: center;
+  }
+
+  .Index__contact-boxes > * {
+    flex: 1 1 50%;
+  }
+
+  .Index .Contact {
+    margin-top: 0;
+  }
 }

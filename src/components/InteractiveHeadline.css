@@ -1,6 +1,7 @@
 .InteractiveHeadline--lead {
   font-size: 1.25rem;
   font-weight: 300;
+  padding: 0 1.5rem;
   max-width: 400px;
   margin: 0 auto;
   text-align: center;

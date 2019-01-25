@@ -17,7 +17,11 @@
 }
 
 .Navbar--brand {
-  font-weight: 500;
+  display: block;
+}
+
+.Navbar .Social-white {
+  display: none;
 }
 
 .Navbar ul {
@@ -47,4 +51,10 @@
 
 .Navbar--dark ul li a {
   color: #333;
+}
+
+@media (min-width: 768px) {
+  .Navbar .Social-white {
+    display: flex;
+  }
 }

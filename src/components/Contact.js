@@ -25,7 +25,7 @@ export class Contact extends React.Component {
             <textarea required name="message" id="message" rows="6" />
           </div>
 
-          <input type="submit" value="Send Message" className="special" />
+          <input type="submit" value="Send me a message" className="special" />
         </form>
       </div>
     )
