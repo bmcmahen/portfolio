@@ -22,17 +22,17 @@ export class InteractiveHeader extends React.Component {
   render() {
     return (
       <section className="Header">
-        <Media query="(max-width: 500px)">
-          {isMobile => (
-            <CanvasController
-              disableOnTouch={false}
-              keyframes={frames}
-              mobileFrames={mobileFrames}
-              color="rgb(239, 242, 245)"
-              opacity={0.9}
-              containerStyle={{ height: '400px' }}
-            >
-              {isMobile ? (
+        <CanvasController
+          disableOnTouch={this.props.disableAnimation}
+          keyframes={this.props.disableAnimation ? [] : frames}
+          mobileFrames={mobileFrames}
+          color="rgb(239, 242, 245)"
+          opacity={0.9}
+          containerStyle={{ height: '400px' }}
+        >
+          <Media query="(max-width: 500px)">
+            {isMobile =>
+              isMobile ? (
                 <div
                   className="Header__background"
                   style={{
@@ -48,30 +48,30 @@ export class InteractiveHeader extends React.Component {
                   }}
                   src={sky}
                 />
-              )}
+              )
+            }
+          </Media>
 
-              <div className="Header__text">
-                <div className="InteractiveHeadline--lead">
-                  <img src={me} />
-                  <div>Hello, my name is Ben.</div>
-                  <div>
-                    I'm a full-stack developer and love building interactive
-                    experiences for the web and mobile.
-                  </div>
-                </div>
-                <Navbar />
-                <InvertedArrow
-                  style={{
-                    position: 'absolute',
-                    left: 0,
-                    width: '100%',
-                    bottom: 0,
-                  }}
-                />
+          <div className="Header__text">
+            <div className="InteractiveHeadline--lead">
+              <img alt="Ben's profile" src={me} />
+              <div>Hello, my name is Ben.</div>
+              <div>
+                I'm a full-stack developer and love building interactive
+                experiences for the web and mobile.
               </div>
-            </CanvasController>
-          )}
-        </Media>
+            </div>
+            <Navbar />
+            <InvertedArrow
+              style={{
+                position: 'absolute',
+                left: 0,
+                width: '100%',
+                bottom: 0,
+              }}
+            />
+          </div>
+        </CanvasController>
       </section>
     )
   }

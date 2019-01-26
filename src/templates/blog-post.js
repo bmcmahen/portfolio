@@ -4,8 +4,6 @@ import SEO from '../components/seo'
 import Layout from '../components/layout'
 import './Blog.css'
 import './prism-theme.css'
-
-import { LeftArrow } from '../components/Dividers'
 import { Navbar } from '../components/Navbar'
 
 class BlogPostTemplate extends React.Component {

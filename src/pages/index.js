@@ -12,15 +12,24 @@ import blur from '../components/Portfolio/blur.png'
 import { graphql } from 'gatsby'
 import { ListItem } from '../components/ListItem'
 import { Contact, Social } from '../components/Contact'
-import { CanvasController } from '../components/Canvas/CanvasController'
-
 import watershedVideo from './watershed.mp4'
 import eugenicsVideo from './eugenics-archive.mp4'
+import damme from '../images/damme-thumbs.jpg'
 
 class IndexPage extends React.Component {
   state = {
     renderTotal: 5,
+    successMessage: false,
   }
+
+  componentDidMount() {
+    const urlParams = new URLSearchParams(window.location.search)
+    const success = urlParams.get('success')
+    if (success) {
+      this.setState({ successMessage: true })
+    }
+  }
+
   render() {
     const { data } = this.props
 
@@ -41,9 +50,17 @@ class IndexPage extends React.Component {
         />
 
         <Layout>
-          <div classname="Index" />
-
-          <InteractiveHeader />
+          <div className="Index" />
+          {this.state.successMessage && (
+            <div className="Index__success">
+              <img src={damme} alt="Van Damme thumbs up!" />
+              <div>
+                Thanks for your enquiry!
+                <br /> I'll get back to you soon.
+              </div>
+            </div>
+          )}
+          <InteractiveHeader disableAnimation={this.state.successMessage} />
           <section id="portfolio">
             <h5 className="Index__center-header">Some recent projects</h5>
             <div className="Index__websites">

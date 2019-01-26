@@ -1,7 +1,6 @@
 import React from 'react'
 import './Browser.css'
 import Waypoint from 'react-waypoint'
-import { BackgroundVideo } from './BackgroundVideo'
 
 export class Browser extends React.Component {
   state = {

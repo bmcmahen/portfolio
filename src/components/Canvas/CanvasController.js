@@ -125,25 +125,22 @@ export class CanvasController extends React.Component {
   }
 
   render() {
-    const { color, containerStyle, canvasStyle, mobileFrames } = this.props
+    const { color, containerStyle, canvasStyle } = this.props
     const { frames, mouse } = this.state
 
     return (
-      <Media query="(max-width: 500px)">
-        {matches => (
-          <Waypoint
-            onLeave={this.onWaypointLeave}
-            onEnter={this.onWaypointEnter}
-          >
-            <div
-              ref={this.container}
-              className="CanvasController"
-              style={containerStyle}
-              onTouchMove={this.onTouchMove}
-              onMouseMove={this.onMouseMove}
-            >
-              {this.props.children}
-              {!this.state.disabled && (
+      <Waypoint onLeave={this.onWaypointLeave} onEnter={this.onWaypointEnter}>
+        <div
+          ref={this.container}
+          className="CanvasController"
+          style={containerStyle}
+          onTouchMove={this.onTouchMove}
+          onMouseMove={this.onMouseMove}
+        >
+          {this.props.children}
+          {!this.state.disabled && (
+            <Media query="(max-width: 500px)">
+              {matches => (
                 <Keyframes
                   shouldRun={this.state.entered}
                   frames={matches ? this.props.mobileFrames : frames}
@@ -168,10 +165,10 @@ export class CanvasController extends React.Component {
                   )}
                 </Keyframes>
               )}
-            </div>
-          </Waypoint>
-        )}
-      </Media>
+            </Media>
+          )}
+        </div>
+      </Waypoint>
     )
   }
 }
