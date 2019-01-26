@@ -57,6 +57,7 @@
 
 .Index__contact {
   width: 100%;
+  position: relative;
   margin: 0 auto;
   padding-top: 72px;
   padding-bottom: 72px;
@@ -129,6 +130,26 @@
   outline: none;
 }
 
+.Index__coffee {
+  position: absolute;
+  top: -3rem;
+  right: 100px;
+  display: none;
+}
+
+.Index__coffee .Hint {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: rotate(90deg) scale(1, -1);
+  transform: rotate(180deg) scale(1, -1);
+  z-index: 3333;
+  top: -100px;
+}
+
+#portfolio {
+  position: relative;
+}
+
 @media (min-width: 768px) {
   .Index__success {
     display: inline-block;
@@ -155,5 +176,15 @@
 
   .Index__center-header {
     margin: 3rem 0;
+  }
+
+  .Index__coffee {
+    display: block;
+  }
+}
+
+@media (min-width: 992px) {
+  .Index__coffee {
+    right: 22%;
   }
 }

@@ -1,6 +1,6 @@
 ---
 title: Mastering React component composition using children
-date: '2018-29-01T22:12:03.284Z'
+date: '2019-01-26T07:42:49.791Z'
 ---
 
 When I first started developing with React I had a superficial understanding of composition and the power of the React component model, but I often ended up running into the same problem again and again — the pain of having to pass state down through each branch of my component tree in an effort to implement some particular UI pattern. I bet you’ve experienced the same. To illustrate the problem, consider how I pass the friends prop through the component tree in the code below.

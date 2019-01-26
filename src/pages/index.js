@@ -16,6 +16,9 @@ import { Dialog } from '@reach/dialog'
 import watershedVideo from './watershed.mp4'
 import eugenicsVideo from './eugenics-archive.mp4'
 import damme from '../images/damme-thumbs.jpg'
+import { Hint } from '../components/Portfolio/Hint'
+import { CanvasController } from '../components/Canvas/CanvasController'
+import iNeedCoffee from './ms-z5A56m.gif'
 
 class IndexPage extends React.Component {
   state = {
@@ -57,9 +60,10 @@ class IndexPage extends React.Component {
             isOpen={this.state.successMessage}
           >
             <div className="Index__success">
-              <div style={{
-                backgroundImage: `url(${damme})`
-              }}
+              <div
+                style={{
+                  backgroundImage: `url(${damme})`,
+                }}
               />
               <div>
                 Thanks for your enquiry!
@@ -77,6 +81,28 @@ class IndexPage extends React.Component {
           </Dialog>
           <InteractiveHeader disableAnimation={this.state.successMessage} />
           <section id="portfolio">
+            <div className="Index__coffee">
+              <Hint />
+              <div
+                style={{
+                  width: '200px',
+                  borderRadius: '50%',
+                }}
+              >
+                <CanvasController opacity={0.99}>
+                  <div
+                    className="embed-responsive"
+                    style={{ borderRadius: '50%', padding: '2px' }}
+                  >
+                    <img
+                      className="embed-responsive-item"
+                      alt="A cat with too much coffee"
+                      src={iNeedCoffee}
+                    />
+                  </div>
+                </CanvasController>
+              </div>
+            </div>
             <h5 className="Index__center-header">Some recent projects</h5>
             <div className="Index__websites">
               <Website
@@ -183,11 +209,8 @@ class IndexPage extends React.Component {
                       key={node.fields.slug}
                       title={title}
                       to={node.fields.slug}
-                    >
-                      <div style={{ flex: '0 0 auto' }}>
-                        {node.frontmatter.date}
-                      </div>
-                    </ListItem>
+                      subtitle={node.excerpt}
+                    />
                   )
                 })}
               {data.allMarkdownRemark.edges.length > 5 && (

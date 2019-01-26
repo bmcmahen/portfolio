@@ -1,6 +1,6 @@
 ---
-title: Mastering React component composition using children
-date: '2018-13-06T22:12:03.284Z'
+title: Using render functions to build flexible, reusable React components
+date: '2019-01-26T07:42:49.791Z'
 ---
 
 In my last article I wrote about how to use React children to build flexible, reusable components. I want to go one step further and demonstrate how render functions (or children as functions) can provide even more flexibility and power. If you use popular React components then you’ll likely have come across the render function technique — React-motion, Apollo-client, and React-router all make excellent use of render functions to build flexible, reusable components.
