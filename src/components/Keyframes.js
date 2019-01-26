@@ -2,10 +2,6 @@ import React from 'react'
 // keys = { x, y, delay }
 
 export default class Keyframes extends React.Component {
-  static defaultProps = {
-    delay: 750,
-  }
-
   constructor(props) {
     super(props)
     this.state = {
@@ -27,9 +23,7 @@ export default class Keyframes extends React.Component {
 
   componentDidMount() {
     if (this.props.shouldRun) {
-      setTimeout(() => {
-        this.requestNextFrame()
-      }, this.props.delay)
+      this.requestNextFrame()
     }
   }
 
