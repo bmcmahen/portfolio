@@ -26,7 +26,19 @@ class IndexPage extends React.Component {
 
     return (
       <div className="Index">
-        <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+        <SEO
+          title=""
+          keywords={[
+            `Ben McMahen`,
+            `full-stack`,
+            `developer`,
+            'javascript',
+            'html',
+            'css',
+            'design',
+            'freelance',
+          ]}
+        />
 
         <Layout>
           <div classname="Index" />
