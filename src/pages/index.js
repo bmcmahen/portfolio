@@ -53,7 +53,7 @@ class IndexPage extends React.Component {
 
           <InteractiveHeader />
           <section id="portfolio">
-            <h3 className="Index__center-header">Some recent projects</h3>
+            <h5 className="Index__center-header">Some recent projects</h5>
             <div className="Index__websites">
               <Website
                 keyframes={watershedFrames}

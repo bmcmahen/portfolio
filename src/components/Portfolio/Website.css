@@ -38,17 +38,18 @@
 
 .Website .label a {
   background: var(--link-color);
+  font-family: var(--heading-font);
   color: white;
   border-radius: 8px;
   padding: 4px;
   margin-top: 0.15rem;
-  text-transform: uppercase;
+
   display: inline-block;
-  font-size: 0.6rem;
-  font-weight: 600;
+  font-size: small;
+  /* font-weight: 600; */
   padding: 4px 10px;
 
-  letter-spacing: 0.07em;
+  /* letter-spacing: 0.07em; */
 }
 
 .Website .label > div {

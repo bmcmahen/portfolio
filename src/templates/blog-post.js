@@ -16,7 +16,7 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout>
-        <Navbar dark />
+        <Navbar dark breadcrumb="blog" />
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         <div
           style={{
@@ -25,8 +25,11 @@ class BlogPostTemplate extends React.Component {
           className="Blog_heading"
         >
           <div>
-            <h3>{post.frontmatter.title}</h3>
+            <h1>{post.frontmatter.title}</h1>
             <div className="Blog_date">{post.frontmatter.date}</div>
+            <div style={{ textAlign: 'center', paddingBottom: '1rem' }}>
+              <strong>Posted by Ben McMahen</strong>
+            </div>
           </div>
         </div>
         <div className="Blog_container">
@@ -77,7 +80,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "MMMM D, YYYY")
       }
     }
   }
