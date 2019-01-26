@@ -1,0 +1,11 @@
+.Hint {
+  display: none;
+  width: 50px;
+  height: 95px;
+}
+
+@media (min-width: 768px) {
+  .Hint {
+    display: block;
+  }
+}

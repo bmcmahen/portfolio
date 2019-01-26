@@ -65,6 +65,10 @@
   font-size: 1.25rem;
 }
 
+.Website__preview {
+  position: relative;
+}
+
 @media (min-width: 567px) {
   .Website__content,
   .Website__preview {

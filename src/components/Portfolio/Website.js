@@ -2,6 +2,7 @@ import React from 'react'
 import { Browser } from '../Browser'
 import './Website.css'
 import { CanvasController } from '../Canvas/CanvasController'
+import { Hint } from './Hint'
 
 export class Website extends React.Component {
   render() {
@@ -18,7 +19,16 @@ export class Website extends React.Component {
               </div>
             </div>
             {subtitle && <div className="lead">{subtitle}</div>}
+            <Hint
+              style={{
+                position: 'absolute',
+                left: '-10px',
+                top: '50px',
+                transform: 'translateX(-100%)',
+              }}
+            />
           </div>
+
           <CanvasController
             mobileFrames={this.props.mobileFrames}
             keyframes={this.props.keyframes}

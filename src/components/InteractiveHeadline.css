@@ -18,3 +18,7 @@
   margin: 0;
   border-radius: 50%;
 }
+
+.Head {
+  background-color: var(--text-color);
+}
