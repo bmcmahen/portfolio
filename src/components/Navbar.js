@@ -23,7 +23,7 @@ export const Navbar = ({ dark, breadcrumb }) => (
         <a href="/#blog">Blog</a>
       </li>
       <li>
-        <a href="/#contact">Contact me</a>
+        <a href="/#contact">Contact</a>
       </li>
     </ul>
   </nav>

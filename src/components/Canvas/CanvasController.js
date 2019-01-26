@@ -5,6 +5,25 @@ import './CanvasController.css'
 import Waypoint from 'react-waypoint'
 import Media from 'react-media'
 
+function isTouchDevice() {
+  var prefixes = ' -webkit- -moz- -o- -ms- '.split(' ')
+  var mq = function(query) {
+    return window.matchMedia(query).matches
+  }
+
+  if (
+    'ontouchstart' in window ||
+    (window.DocumentTouch && document instanceof window.DocumentTouch)
+  ) {
+    return true
+  }
+
+  // include the 'heartz' as a way to have a non matching MQ to help terminate the join
+  // https://git.io/vznFH
+  var query = ['(', prefixes.join('touch-enabled),('), 'heartz', ')'].join('')
+  return mq(query)
+}
+
 export class CanvasController extends React.Component {
   container = React.createRef()
 
@@ -14,10 +33,12 @@ export class CanvasController extends React.Component {
     color: 'white',
     keyframes: [],
     opacity: 0.8,
+    disableOnTouch: true,
     mobileFrames: [],
   }
 
   state = {
+    disabled: this.props.disableOnTouch && isTouchDevice(),
     mouse: null,
     frames: [],
     width: null,
@@ -121,29 +142,31 @@ export class CanvasController extends React.Component {
               onMouseMove={this.onMouseMove}
             >
               {this.props.children}
-              <Keyframes
-                shouldRun={this.state.entered}
-                frames={matches ? this.props.mobileFrames : frames}
-              >
-                {(frame, finished) => (
-                  <Canvas
-                    color={color}
-                    ref={this.canvas}
-                    opacity={this.props.opacity}
-                    style={canvasStyle}
-                    className="CanvasController__canvas"
-                    mouse={
-                      finished || !this.state.width || !frame
-                        ? mouse
-                        : {
-                            pageX: frame.pageX * this.state.width,
-                            pageY: frame.pageY * this.state.height,
-                            type: 'keyframes',
-                          }
-                    }
-                  />
-                )}
-              </Keyframes>
+              {!this.state.disabled && (
+                <Keyframes
+                  shouldRun={this.state.entered}
+                  frames={matches ? this.props.mobileFrames : frames}
+                >
+                  {(frame, finished) => (
+                    <Canvas
+                      color={color}
+                      ref={this.canvas}
+                      opacity={this.props.opacity}
+                      style={canvasStyle}
+                      className="CanvasController__canvas"
+                      mouse={
+                        finished || !this.state.width || !frame
+                          ? mouse
+                          : {
+                              pageX: frame.pageX * this.state.width,
+                              pageY: frame.pageY * this.state.height,
+                              type: 'keyframes',
+                            }
+                      }
+                    />
+                  )}
+                </Keyframes>
+              )}
             </div>
           </Waypoint>
         )}

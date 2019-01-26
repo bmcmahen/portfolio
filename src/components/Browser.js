@@ -6,11 +6,16 @@ import { BackgroundVideo } from './BackgroundVideo'
 export class Browser extends React.Component {
   state = {
     showVideo: false,
+    canPlay: false,
   }
   onEnter = () => {
     if (this.props.video) {
       this.setState({ showVideo: true })
     }
+  }
+
+  onCanPlay = () => {
+    this.setState({ canPlay: true })
   }
 
   render() {
@@ -28,9 +33,28 @@ export class Browser extends React.Component {
             </div>
             <div className="content ">
               <div className="Browser__video embed-responsive-16by9 embed-responsive">
-                {this.state.showVideo && (
-                  <video autoPlay muted src={this.props.video} />
-                )}
+                <img
+                  src={background}
+                  alt={title}
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                  }}
+                  className="embed-responsive-item"
+                />
+
+                <video
+                  loop
+                  onCanPlay={this.onCanPlay}
+                  style={{
+                    opacity: this.state.showVideo && this.state.canPlay ? 1 : 0,
+                    transition: 'opacity 0.3s ease',
+                  }}
+                  autoPlay
+                  muted
+                  src={this.props.video}
+                />
               </div>
               {children}
             </div>

@@ -3,10 +3,19 @@ const config = require('./config')
 module.exports = {
   siteMetadata: {
     title: `Ben McMahen - Freelance web and mobile developer`,
-    description: `Hello, my name is Ben. I'm a full-stack developer and love building interactive experiences for the web and mobile.`,
+    description: `I'm a full-stack developer and love building educational, interactive experiences for the web and mobile.`,
     author: `@benmcmahen`,
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-favicon',
+      options: {
+        logo: './src/images/favicon.png',
+        appName: 'Ben McMahen',
+        appDescription: `I'm a full-stack developer and love building educational, interactive experiences for the web and mobile.`,
+        developerName: 'Ben McMahen',
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

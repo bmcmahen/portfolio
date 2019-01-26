@@ -25,6 +25,7 @@ export class InteractiveHeader extends React.Component {
         <Media query="(max-width: 500px)">
           {isMobile => (
             <CanvasController
+              disableOnTouch={false}
               keyframes={frames}
               mobileFrames={mobileFrames}
               color="rgb(239, 242, 245)"

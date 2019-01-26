@@ -6,6 +6,7 @@
   justify-content: space-between;
   padding: 1rem;
   background-color: #ffffffde;
+  -webkit-tap-highlight-color: transparent;
   /* box-shadow: 0px 0 10px #00000026; */
   border-radius: 8px;
   margin-bottom: 2px;
@@ -13,8 +14,10 @@
   color: inherit;
 }
 
-.ListItem:hover {
-  transform: scale(0.97);
+@media (hover: hover) {
+  .ListItem:hover {
+    transform: scale(0.97);
+  }
 }
 
 .ListItem strong {
