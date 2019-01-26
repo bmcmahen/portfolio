@@ -29,7 +29,7 @@ export class Browser extends React.Component {
             <div className="content ">
               <div className="Browser__video embed-responsive-16by9 embed-responsive">
                 {this.state.showVideo && (
-                  <video autoPlay src={this.props.video} />
+                  <video autoPlay muted src={this.props.video} />
                 )}
               </div>
               {children}

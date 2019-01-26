@@ -1,6 +1,6 @@
 .InteractiveHeadline--lead {
   font-size: 1.25rem;
-  font-weight: 300;
+  font-weight: normal;
   padding: 0 1.5rem;
   max-width: 400px;
   margin: 0 auto;
@@ -9,7 +9,7 @@
 
 .InteractiveHeadline--lead > div:last-child {
   margin-top: 1rem;
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 
 .InteractiveHeadline--lead img {
