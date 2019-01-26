@@ -1,78 +1,33 @@
 ---
 title: Mastering React component composition using children
-date: '2015-05-01T22:12:03.284Z'
+date: '2018-29-01T22:12:03.284Z'
 ---
 
 When I first started developing with React I had a superficial understanding of composition and the power of the React component model, but I often ended up running into the same problem again and again — the pain of having to pass state down through each branch of my component tree in an effort to implement some particular UI pattern. I bet you’ve experienced the same. To illustrate the problem, consider how I pass the friends prop through the component tree in the code below.
 
-Irure aute dolore commodo nulla fugiat ullamco non esse minim tempor commodo officia adipisicing. Reprehenderit est elit nisi est pariatur cillum eu occaecat aliqua esse reprehenderit. Laboris Lorem ullamco laboris voluptate cupidatat in officia in ad. Et duis deserunt dolor officia adipisicing ipsum exercitation tempor do sit sit. Duis commodo quis ea dolore est ex incididunt amet sint.
-
 ```javascript
-const path = require(`path`)
-const { createFilePath } = require(`gatsby-source-filesystem`)
+const UserProfile = ({ friends, displayName }) => (
+  <div>
+    <h1>{displayName}</h1>
+    <UserFriends friends={friends} />
+  </div>
+)
 
-exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
+const UserFriends = ({ friends }) => (
+  <div>
+    <h2>Friends</h2>
+    {friends.map(friend => (
+      <Friend friend={friend} key={friend.id} />
+    ))}
+  </div>
+)
 
-  const blogPost = path.resolve(`./src/templates/blog-post.js`)
-
-  return graphql(
-    `
-      {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: DESC }
-          limit: 1000
-        ) {
-          edges {
-            node {
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-              }
-            }
-          }
-        }
-      }
-    `
-  ).then(result => {
-    if (result.errors) {
-      throw result.errors
-    }
-
-    // Create blog posts pages.
-    const posts = result.data.allMarkdownRemark.edges
-
-    posts.forEach((post, index) => {
-      const previous = index === posts.length - 1 ? null : posts[index + 1].node
-      const next = index === 0 ? null : posts[index - 1].node
-
-      createPage({
-        path: post.node.fields.slug,
-        component: blogPost,
-        context: {
-          slug: post.node.fields.slug,
-          previous,
-          next,
-        },
-      })
-    })
-  })
-}
-
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions
-
-  if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
-    createNodeField({
-      name: `slug`,
-      node,
-      value,
-    })
-  }
-}
+const Friend = ({ friend }) => (
+  <div>
+    <img src={profile.image} />
+    <div>{friend.name}</div>
+  </div>
+)
 ```
 
 This is a small example that demonstrates this particular component pattern, but you can imagine the component tree having even more branches with state needing to be passed all of the way down. The pattern works, but you end up frustrated because of all the unnecessary boilerplate. You might even mix up the names of the props. And so, inevitably, you look towards using something like React Context, or more likely, a tool like Redux to handle universal subscriptions. There’s certainly a place for these tools, but we tend to reach for them far too early and often.
