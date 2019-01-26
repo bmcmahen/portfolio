@@ -38,7 +38,7 @@ export class CanvasController extends React.Component {
   }
 
   state = {
-    disabled: this.props.disableOnTouch && isTouchDevice(),
+    disabled: false,
     mouse: null,
     frames: [],
     width: null,
@@ -56,6 +56,7 @@ export class CanvasController extends React.Component {
     this.setState({
       width: rect.width,
       height: rect.height,
+      disabled: this.props.disableOnTouch && isTouchDevice(),
     })
   }
 
