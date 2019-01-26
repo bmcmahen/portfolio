@@ -19,6 +19,10 @@
   border-radius: 50%;
 }
 
-.Head {
+.Header {
   background-color: #26484f;
+}
+
+.Header__background {
+  display: none;
 }

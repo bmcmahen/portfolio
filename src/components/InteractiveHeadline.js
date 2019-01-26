@@ -36,6 +36,7 @@ export class InteractiveHeader extends React.Component {
                 <div
                   className="Header__background"
                   style={{
+                    display: 'block',
                     backgroundImage: `url(${blur})`,
                   }}
                 />
