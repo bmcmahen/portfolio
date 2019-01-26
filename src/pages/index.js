@@ -12,6 +12,7 @@ import blur from '../components/Portfolio/blur.png'
 import { graphql } from 'gatsby'
 import { ListItem } from '../components/ListItem'
 import { Contact, Social } from '../components/Contact'
+import { Dialog } from '@reach/dialog'
 import watershedVideo from './watershed.mp4'
 import eugenicsVideo from './eugenics-archive.mp4'
 import damme from '../images/damme-thumbs.jpg'
@@ -51,15 +52,29 @@ class IndexPage extends React.Component {
 
         <Layout>
           <div className="Index" />
-          {this.state.successMessage && (
+          <Dialog
+            onDismiss={() => this.setState({ successMessage: false })}
+            isOpen={this.state.successMessage}
+          >
             <div className="Index__success">
-              <img src={damme} alt="Van Damme thumbs up!" />
+              <div style={{
+                backgroundImage: `url(${damme})`
+              }}
+              />
               <div>
                 Thanks for your enquiry!
                 <br /> I'll get back to you soon.
+                <div>
+                  <button
+                    onClick={() => this.setState({ successMessage: false })}
+                    className="Index__show_more"
+                  >
+                    Close
+                  </button>
+                </div>
               </div>
             </div>
-          )}
+          </Dialog>
           <InteractiveHeader disableAnimation={this.state.successMessage} />
           <section id="portfolio">
             <h5 className="Index__center-header">Some recent projects</h5>

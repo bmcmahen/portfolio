@@ -87,30 +87,51 @@
 
 .Index__success {
   text-align: center;
-  padding: 2rem;
+  overflow: hidden;
   color: white;
+  border-radius: 2em;
   background-color: black;
   font-weight: bold;
   font-size: 1.25rem;
 }
 
-.Index__success img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+.Index__success button {
+  background-color: rgba(255, 255, 255, 0.3);
+  font-size: 0.8rem;
+  margin-top: 1rem;
+}
+
+.Index__success > div:first-child {
+  height: 150px;
+  background-size: cover;
   margin-bottom: 0;
+}
+
+.Index__success > div:last-child {
+  padding: 2rem;
+}
+
+[data-reach-dialog-overlay] {
+  background: #000000ba;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  outline: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 4000;
+}
+
+[data-reach-dialog-content] {
+  text-align: center;
+  padding: 3rem;
+  outline: none;
 }
 
 @media (min-width: 768px) {
   .Index__success {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.75rem;
-  }
-
-  .Index__success img {
-    margin-right: 2rem;
+    display: inline-block;
   }
 
   .Index__lists {

@@ -14,9 +14,15 @@
   color: inherit;
 }
 
+.ListItem:active {
+  transform: scale(0.97);
+  background-color: #d7d3f1f5;
+}
+
 @media (hover: hover) {
   .ListItem:hover {
     transform: scale(0.97);
+    background-color: #d7d3f1f5;
   }
 }
 

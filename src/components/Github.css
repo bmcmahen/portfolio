@@ -3,10 +3,6 @@
   color: inherit;
 }
 
-.Github__repo:hover {
-  background-color: #d7d3f1f5;
-}
-
 .Github__intro {
   margin-bottom: 1rem;
 }

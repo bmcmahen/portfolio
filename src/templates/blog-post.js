@@ -26,7 +26,9 @@ class BlogPostTemplate extends React.Component {
             <h1>{post.frontmatter.title}</h1>
             <div className="Blog_date">{post.frontmatter.date}</div>
             <div style={{ textAlign: 'center', paddingBottom: '1rem' }}>
-              <strong>Posted by Ben McMahen</strong>
+              <strong>
+                Posted by <Link to="/">Ben McMahen</Link>
+              </strong>
             </div>
           </div>
         </div>

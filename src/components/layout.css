@@ -8,6 +8,12 @@
   --body-font: AvenirNextLTW01-Medium, Avenir Next, system-ui, -apple-system,
     BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
 }
+
+::selection {
+  color: white;
+  background: var(--link-color);
+}
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
