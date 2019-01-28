@@ -35,6 +35,7 @@ export class CanvasController extends React.Component {
     opacity: 0.8,
     disableOnTouch: true,
     mobileFrames: [],
+    delay: false,
   }
 
   state = {
@@ -44,6 +45,7 @@ export class CanvasController extends React.Component {
     width: null,
     entered: false,
     recordInput: false,
+    delayFinished: !this.props.delay,
   }
 
   componentDidMount() {
@@ -58,10 +60,17 @@ export class CanvasController extends React.Component {
       height: rect.height,
       disabled: this.props.disableOnTouch && isTouchDevice(),
     })
+
+    if (this.props.delay) {
+      this.delayTimeout = setTimeout(() => {
+        this.setState({ delayFinished: true })
+      }, this.props.delay)
+    }
   }
 
   componentWillUnmount() {
     document.removeEventListener('keyup', this.onKeyUp)
+    window.clearTimeout(this.delayTimeout)
   }
 
   onKeyUp = e => {
@@ -142,7 +151,7 @@ export class CanvasController extends React.Component {
             <Media query="(max-width: 500px)">
               {matches => (
                 <Keyframes
-                  shouldRun={this.state.entered}
+                  shouldRun={this.state.entered || this.state.delayFinished}
                   frames={matches ? this.props.mobileFrames : frames}
                 >
                   {(frame, finished) => (

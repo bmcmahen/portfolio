@@ -112,20 +112,21 @@ class IndexPage extends React.Component {
                 primaryLink="http://www.watershed-ed.org"
                 video={watershedVideo}
                 subtitle="A collaborative and interactive course delivery platform."
-                task="To create a course delivery platform that embodied the
-        best of Visual Thinking Strategies, which emphasizes observation and
-        collaboration."
-                solution="We created a course delivery system which can be thought of as a
-        collaborative canvas. As you watch videos you are asked questions.
-        You are encourage to annotate text, videos, and images.
-        Visualizations aid in marking course progress and the interactions
-        of your collaborators. The result is a highly dynamic, interactive
-        course taking experience which updates visually as you use it.
-        Everyone then, in a sense, builds their own course throughout the
-        process."
+                task={
+                  <span>
+                    To create a course delivery platform that embodies the best
+                    of{' '}
+                    <a href="https://vtshome.org/">
+                      Visual Thinking Strategies
+                    </a>
+                    , which emphasizes learning through collaboration and
+                    observation.
+                  </span>
+                }
+                solution="Our course delivery system operates as a collaborative canvas in which the user is encouraged to actively engage with course materials and their peers. As you engage with video, documents and images, you are asked questions and encouraged to create annotation. We use timeline visualizations that mark course progress and highlight interactions with your collaborators. The result is a highly dynamic, interactive course taking experience that visually reflects your contributions to the course."
                 technology="Watershed uses React on the front-end and consumes an Express
         delivered GraphQL API on the backend. We utilize websockets to
-        provide real-time chat functionality. We use Styled-components to
+        provide real-time chat functionality, Postgres and Redis for databases, and we use styled-components to
         develop our own design system."
                 background={watershedImage}
               />
@@ -138,13 +139,13 @@ class IndexPage extends React.Component {
                 linkLabel="eugenicsarchive.ca"
                 video={eugenicsVideo}
                 subtitle="An exploratory database about the history of eugenics."
-                task="The Living Archives on Eugenics project wanted to create a database of Eugenics related information, both its history in Canada and around the world, and its ongoing significance today."
+                task="The Living Archives on Eugenics project wanted to create a database of eugenics related information pertaining to its history in Canada and around the world and its continued significance today."
                 solution={
                   <span>
-                    We decided to build a highly extensible and interactive
-                    database that encourages users to explore the history in
-                    their own way. Content in the database can partake in
-                    different modules, like a{' '}
+                    Our highly extensible and interactive database encourages
+                    users to explore the topic of eugenics in their own way.
+                    Content in the database can partake in different modules,
+                    like a{' '}
                     <a href="http://eugenicsarchive.ca/discover/timeline">
                       Timeline
                     </a>
@@ -173,8 +174,8 @@ class IndexPage extends React.Component {
                       image-zoom
                     </a>
                     , <a href="https://github.com/bmcmahen/tour">tour</a>,{' '}
-                    <a href="https://github.com/bmcmahen/transit">transit</a>,
-                    <a href="https://github.com/bmcmahen/network">network</a>,
+                    <a href="https://github.com/bmcmahen/transit">transit</a>,{' '}
+                    <a href="https://github.com/bmcmahen/network">network</a>,{' '}
                     and{' '}
                     <a href="https://github.com/bmcmahen/transit">youtube</a>.
                   </span>
@@ -250,8 +251,8 @@ class IndexPage extends React.Component {
                     <h3>I'm available for hire</h3>
                     <p>
                       Having spent much of my time working with small teams,
-                      I've been forced to wear many hats and develop many
-                      different skillsets. I specialize in{' '}
+                      I've had to wear many hats and develop many different
+                      skillsets. I specialize in{' '}
                       <strong>front end development</strong> with technologies
                       like <strong>react</strong>, but I also have experience
                       working on the <strong>server</strong> having used node.js

@@ -26,32 +26,26 @@ export class InteractiveHeader extends React.Component {
           disableOnTouch={this.props.disableAnimation}
           keyframes={this.props.disableAnimation ? [] : frames}
           mobileFrames={mobileFrames}
+          delay={1000}
           color="rgb(239, 242, 245)"
           opacity={0.9}
           containerStyle={{ height: '400px' }}
         >
-          <Media query="(max-width: 500px)">
-            {isMobile =>
-              isMobile ? (
-                <div
-                  className="Header__background"
-                  style={{
-                    display: 'block',
-                    backgroundImage: `url(${blur})`,
-                  }}
-                />
-              ) : (
-                <BackgroundVideo
-                  style={{
-                    position: 'absolute',
-                    left: 0,
-                    top: 0,
-                  }}
-                  src={sky}
-                />
-              )
-            }
-          </Media>
+          <div
+            className="Header__background"
+            style={{
+              backgroundImage: `url(${blur})`,
+            }}
+          />
+
+          <BackgroundVideo
+            style={{
+              position: 'absolute',
+              left: 0,
+              top: 0,
+            }}
+            src={sky}
+          />
 
           <div className="Header__text">
             <div className="InteractiveHeadline--lead">

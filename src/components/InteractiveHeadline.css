@@ -26,3 +26,13 @@
 .Header__background {
   display: none;
 }
+
+@media (max-width: 500px) {
+  .Header .BackgroundVideo {
+    display: none;
+  }
+
+  .Header__background {
+    display: block;
+  }
+}
