@@ -35,7 +35,11 @@ export class Website extends React.Component {
             enableRecord={this.props.enableRecord}
             opacity={0.97}
           >
-            <Browser background={background} video={this.props.video} />
+            <Browser
+              title={title}
+              background={background}
+              video={this.props.video}
+            />
           </CanvasController>
         </div>
         <div className="Website__content">

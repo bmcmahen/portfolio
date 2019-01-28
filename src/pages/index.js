@@ -17,8 +17,8 @@ import watershedVideo from './watershed.mp4'
 import eugenicsVideo from './eugenics-archive.mp4'
 import damme from '../images/damme-thumbs.jpg'
 import { Hint } from '../components/Portfolio/Hint'
-import { CanvasController } from '../components/Canvas/CanvasController'
-import iNeedCoffee from './ms-z5A56m.gif'
+// import { CanvasController } from '../components/Canvas/CanvasController'
+// import clouds from '../components/Portfolio/clouds.svg'
 
 class IndexPage extends React.Component {
   state = {
@@ -40,7 +40,7 @@ class IndexPage extends React.Component {
     return (
       <div className="Index">
         <SEO
-          title=""
+          title={'Portfolio'}
           keywords={[
             `Ben McMahen`,
             `full-stack`,
@@ -80,6 +80,7 @@ class IndexPage extends React.Component {
             </div>
           </Dialog>
           <InteractiveHeader disableAnimation={this.state.successMessage} />
+
           <section id="portfolio">
             <div className="Index__coffee">
               <Hint />
@@ -89,21 +90,16 @@ class IndexPage extends React.Component {
                   borderRadius: '50%',
                 }}
               >
+                {/*
                 <CanvasController opacity={0.99}>
-                  <div
-                    className="embed-responsive"
-                    style={{ borderRadius: '50%', padding: '2px' }}
-                  >
-                    <img
-                      className="embed-responsive-item"
-                      alt="A cat with too much coffee"
-                      src={iNeedCoffee}
-                    />
-                  </div>
+                    <div style={{}}
                 </CanvasController>
+              */}
               </div>
             </div>
+
             <h5 className="Index__center-header">Some recent projects</h5>
+
             <div className="Index__websites">
               <Website
                 key="watershed"
