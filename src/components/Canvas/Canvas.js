@@ -114,7 +114,7 @@ export default class CanvasEraser extends React.Component {
 
     const { canvas } = this.refs
 
-    let mouse = this.props.mouse
+    let mouse = null
 
     if (this.keyframes) {
       const step = this.keyframes.next()
@@ -132,7 +132,10 @@ export default class CanvasEraser extends React.Component {
         this.keyframes = null
         this.setState({ lastMouse: null })
         window.requestAnimationFrame(this.update)
+        return
       }
+    } else {
+      mouse = this.props.mouse
     }
 
     if (mouse) {
