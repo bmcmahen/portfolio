@@ -1,5 +1,4 @@
 import React from 'react'
-import Keyframes from '../Keyframes'
 import Canvas from './Canvas'
 import './CanvasController.css'
 import Waypoint from 'react-waypoint'
@@ -41,7 +40,7 @@ export class CanvasController extends React.Component {
   state = {
     disabled: false,
     mouse: null,
-    frames: [],
+    frames: null,
     width: null,
     entered: false,
     recordInput: false,
@@ -147,32 +146,22 @@ export class CanvasController extends React.Component {
           onMouseMove={this.onMouseMove}
         >
           {this.props.children}
-          {!this.state.disabled && (
+          {!this.state.disabled && this.state.height && (
             <Media query="(max-width: 500px)">
               {matches => (
-                <Keyframes
-                  shouldRun={this.state.entered || this.state.delayFinished}
-                  frames={matches ? this.props.mobileFrames : frames}
-                >
-                  {(frame, finished) => (
-                    <Canvas
-                      color={color}
-                      ref={this.canvas}
-                      opacity={this.props.opacity}
-                      style={canvasStyle}
-                      className="CanvasController__canvas"
-                      mouse={
-                        finished || !this.state.width || !frame
-                          ? mouse
-                          : {
-                              pageX: frame.pageX * this.state.width,
-                              pageY: frame.pageY * this.state.height,
-                              type: 'keyframes',
-                            }
-                      }
-                    />
-                  )}
-                </Keyframes>
+                <Canvas
+                  color={color}
+                  ref={this.canvas}
+                  opacity={this.props.opacity}
+                  style={canvasStyle}
+                  dimensions={{
+                    width: this.state.width,
+                    height: this.state.height,
+                  }}
+                  keyframes={matches ? this.props.mobileFrames : frames}
+                  className="CanvasController__canvas"
+                  mouse={mouse}
+                />
               )}
             </Media>
           )}

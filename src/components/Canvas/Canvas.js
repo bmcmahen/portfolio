@@ -2,6 +2,35 @@ import React from 'react'
 import debounce from 'lodash.debounce'
 import './Canvas.css'
 
+class Keyframes {
+  constructor(frames = []) {
+    this.frames = frames
+    this.current = 0
+  }
+
+  start = () => {
+    this.then = Date.now()
+  }
+
+  next = () => {
+    const current = this.frames[this.current]
+
+    if (!current || !current.delay) {
+      return false
+    }
+
+    this.now = Date.now()
+    const elapsed = this.now - this.then
+    if (elapsed >= current.delay) {
+      this.then = Date.now()
+      this.current += 1
+      return current
+    }
+
+    return true
+  }
+}
+
 export default class CanvasEraser extends React.Component {
   static defaultProps = {
     responsive: true,
@@ -13,8 +42,17 @@ export default class CanvasEraser extends React.Component {
       lastMouse: null,
     }
 
+    this.startKeyframes(props)
+
     this.resizeCanvasDb = debounce(this.resizeCanvas, 100)
     this.debouncedStop = debounce(this.stopRunning, 500)
+  }
+
+  startKeyframes(props) {
+    if (props.keyframes) {
+      this.keyframes = new Keyframes(props.keyframes)
+      this.keyframes.start()
+    }
   }
 
   componentDidMount() {
@@ -45,12 +83,9 @@ export default class CanvasEraser extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.mouse && prevProps.mouse.type === 'keyframes') {
-      if (this.props.mouse && this.props.mouse.type !== 'keyframes') {
-        this.setState({ lastMouse: null })
-      } else if (!this.props.mouse) {
-        this.setState({ lastMouse: null })
-      }
+    if (prevProps.keyframes !== this.props.keyframes) {
+      this.setState({ lastMouse: null })
+      this.startKeyframes(this.props)
     }
   }
 
@@ -78,7 +113,28 @@ export default class CanvasEraser extends React.Component {
     }
 
     const { canvas } = this.refs
-    const { mouse } = this.props
+
+    let mouse = this.props.mouse
+
+    if (this.keyframes) {
+      const step = this.keyframes.next()
+
+      if (step && typeof step === 'object') {
+        mouse = {
+          pageX: step.pageX * this.props.dimensions.width,
+          pageY: step.pageY * this.props.dimensions.height,
+          type: 'keyframes',
+        }
+      } else if (typeof step === true) {
+        window.requestAnimationFrame(this.update)
+        return
+      } else if (step === false) {
+        this.keyframes = null
+        this.setState({ lastMouse: null })
+        window.requestAnimationFrame(this.update)
+      }
+    }
+
     if (mouse) {
       // for performance this should be cached
       const rect = this.refs.canvas.getBoundingClientRect()
