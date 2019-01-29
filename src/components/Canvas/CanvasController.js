@@ -82,7 +82,7 @@ export class CanvasController extends React.Component {
   }
 
   onTouchMove = e => {
-    // e.preventDefault()
+    e.preventDefault()
     this.onMouseMove(e.changedTouches[0])
   }
 
@@ -143,6 +143,8 @@ export class CanvasController extends React.Component {
           className="CanvasController"
           style={containerStyle}
           onTouchMove={this.onTouchMove}
+          onTouchStart={this.onTouchStart}
+          onTouchEnd={this.onTouchEnd}
           onMouseMove={this.onMouseMove}
         >
           {this.props.children}

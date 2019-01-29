@@ -150,7 +150,7 @@
   position: relative;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .Index__success {
     display: inline-block;
   }

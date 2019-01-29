@@ -81,7 +81,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .Website {
     display: flex;
     padding: 0 1.5rem;
