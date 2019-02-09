@@ -1,5 +1,5 @@
 ---
-title: Using render functions to build flexible, reusable React components
+title: Using Render Functions to Build Flexible, Reusable React Components
 date: '2019-01-26T07:42:49.791Z'
 ---
 

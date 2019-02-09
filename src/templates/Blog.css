@@ -6,7 +6,7 @@
   padding: 0 1.5rem;
   line-height: 24px;
   padding-top: 32px;
-
+  font-family: Georgia, 'Times New Roman', Times, serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
@@ -22,17 +22,34 @@
 }
 
 .Blog_date {
-  font-size: 0.7rem;
-  color: rgba(255, 255, 255, 0.4);
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 0.25rem;
+  font-size: small;
+}
+
+.Blog_attribution {
   font-weight: 600;
+
+  font-size: small;
+}
+
+.Blog_attribution a {
+  color: var(--text-color) !important;
 }
 
 .Blog_container code {
+}
+
+.Blog_meta {
+  display: flex;
+  margin-top: 2rem;
+  align-items: center;
+}
+
+.Blog_meta img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0;
+  margin-right: 0.75rem;
 }
 
 .Blog_container .gatsby-highlight {
@@ -40,21 +57,20 @@
 }
 
 .Blog_heading {
-  padding: 3.5rem 1.5rem 2rem 1.5rem;
-  background-color: black;
-  color: white;
-  text-align: center;
-  background-size: cover;
+  padding: 2rem 1.5rem 2rem 1.5rem;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.12);
 }
 
 .Blog_heading > div {
-  max-width: 675px;
+  max-width: 552px;
+
   margin: 0 auto;
 }
 
 .Blog_heading h1 {
-  font-size: 1.75rem;
-  font-weight: 600;
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .Blog_heading a {
@@ -68,7 +84,7 @@
   max-width: 700px;
   justify-content: space-between;
   padding: 2.5rem;
-  padding-top: 1rem;
+  padding-top: 2rem;
 }
 
 .Blog_next > * {
@@ -80,23 +96,42 @@
   margin-bottom: 1rem;
 }
 
-@media (min-width: 576px) {
-  .Blog_heading h1 {
-    font-size: 2rem;
-  }
+.Blog_meta_bottom {
+  text-align: center;
+  padding-bottom: 2rem;
+  max-width: 350px;
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+
+.Blog_bottom_border {
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+}
+
+.Blog_meta_bottom .Blog_meta {
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 768px) {
-  .Blog_heading h1 {
-    font-size: 2rem;
-  }
-
-  .Blog_heading {
-    padding: 5rem 1.5rem 4rem 1.5rem;
-  }
-
   .gatsby-highlight {
-    margin-left: -50px;
-    width: calc(100% + 100px);
+    margin-left: -32px;
+    width: calc(100% + 64px);
   }
+
+  .Blog_heading h1 {
+    font-size: 3rem;
+  }
+}
+
+pre {
+  background: white !important;
+  padding: 32px !important;
+  line-height: 1.4 !important;
+  direction: ltr;
+  font-size: 14px !important;
+  border-radius: 16px !important;
+  border: 1px dashed rgba(0, 0, 0, 0.07);
 }

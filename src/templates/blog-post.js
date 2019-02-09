@@ -24,11 +24,14 @@ class BlogPostTemplate extends React.Component {
         >
           <div>
             <h1>{post.frontmatter.title}</h1>
-            <div className="Blog_date">{post.frontmatter.date}</div>
-            <div style={{ textAlign: 'center', paddingBottom: '1rem' }}>
-              <strong>
-                Posted by <Link to="/">Ben McMahen</Link>
-              </strong>
+            <div className="Blog_meta">
+              <img alt="Ben" src={require('../components/me.jpg')} />
+              <div>
+                <div className="Blog_attribution">
+                  <Link to="/">Ben McMahen</Link>
+                </div>
+                <div className="Blog_date">{post.frontmatter.date}</div>
+              </div>
             </div>
           </div>
         </div>
@@ -36,6 +39,21 @@ class BlogPostTemplate extends React.Component {
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </div>
 
+        <div className="Blog_bottom_border">
+          <div className="Blog_meta_bottom">
+            Please{' '}
+            <a href="https://twitter.com/BenMcMahen/">contact me on Twitter</a>{' '}
+            with any thoughts or questions. I'd love to hear from you.
+            <div className="Blog_meta">
+              <img alt="Ben" src={require('../components/me.jpg')} />
+              <div>
+                <div className="Blog_attribution">
+                  <Link to="/">Ben McMahen</Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         {next && (
           <div className="Blog_next">
             <h4>Up next</h4>

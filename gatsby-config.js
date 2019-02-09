@@ -69,6 +69,14 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `source code pro`, // you can also specify font weights and styles
+        ],
+      },
+    },
+    {
       // https://developer.github.com/v4/explorer/
       // https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/
       resolve: 'gatsby-source-github-api',

@@ -1,5 +1,5 @@
 ---
-title: Mastering React component composition using children
+title: Mastering React Component Composition using Children
 date: '2019-01-26T07:42:49.791Z'
 ---
 
