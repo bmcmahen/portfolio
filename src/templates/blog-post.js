@@ -23,7 +23,6 @@ class BlogPostTemplate extends React.Component {
           className="Blog_heading"
         >
           <div>
-            <h1>{post.frontmatter.title}</h1>
             <div className="Blog_meta">
               <img alt="Ben" src={require('../components/me.jpg')} />
               <div>
@@ -33,6 +32,7 @@ class BlogPostTemplate extends React.Component {
                 <div className="Blog_date">{post.frontmatter.date}</div>
               </div>
             </div>
+            <h1>{post.frontmatter.title}</h1>
           </div>
         </div>
         <div className="Blog_container">
@@ -49,6 +49,10 @@ class BlogPostTemplate extends React.Component {
               <div>
                 <div className="Blog_attribution">
                   <Link to="/">Ben McMahen</Link>
+                </div>
+                <div className="Blog_date">
+                  I'm a web and mobile developer based in Vancouver, BC,
+                  specializing in React.
                 </div>
               </div>
             </div>
