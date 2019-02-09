@@ -1,0 +1,12 @@
+---
+title: Watching Silence
+date: '2019-02-09T05:43:06.766Z'
+---
+
+One common trait of wisdom, and one that may find you in your older years, is the humbled understanding of the distinction between truth and certainty. Truth is something that is absolute; it refers to statements that correctly reflect reality. Our level of certainty reflects the degree to which we believe our beliefs to be true, to accurately correspond with this reality. It suggests a lack of doubt, a degree of confidence which may be rightly or wrongly accorded. But too often certainty reflects a hubris and undermines our search for the truth. Why continue to investigate if we are certain to have the truth? Why listen to dissenters when we are certain in our beliefs?
+
+I was reminded of this distinction while watching Martin Scorcese’s beautiful film, “Silence”, which follows two young Catholic missionaries on their voyage to Japan in search of their rumoured-to-be apostatized master. It is a film which evokes a Conradian quality — an exploration of a darkness, a foreign land of pain and misery found both without and within our own hidden, subconscious depths. Father Ferreira is our Kurts, a rumoured defector of the faith. Japan is our Vietnam.
+
+Our protagonist, Rodrigues, begins his journey in Italy appearing young and faithful. God is in everything. God spoke to him, telling him to seek out his former teacher. God is found in the bird that flies high above, basking in the sunlight. Rodrigues exhibits a certain understated, youthful arrogance, and his faith comes easily to him. But when trouble emerges and Rodrigues encounters suffering, his desperate prayers go unanswered. God remains silent through his suffering, and it is this silence in the face of pain and suffering that challenges his faith and provides the main thematic topic of the movie.
+
+So why does Rodrigues first hear God’s voice speak (quite literally) to him after he decides to apostatize? To me this implies that his faith is actually restored through the act of doubt. Faith, in this context, is not so much a certainty, but is manifested more powerfully within the context of doubt — within the context of suffering, pain, and the apparent absence of a God when he is most needed. And while I’m not religious in any classic sense, I do think this speaks more generally to the power of humility and self-doubt in facilitating a certain porousness towards the world — a porousness that opens us up to those around us, to alternative ideas, and helps let the light in.
