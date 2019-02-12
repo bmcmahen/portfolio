@@ -1,12 +1,14 @@
 :root {
   --link-color: rgb(1, 108, 209);
-  --text-color: rgb(31, 65, 96);
+  --text-color: #343434;
   --faded-color: rgb(110, 140, 168);
   --success-color: rgb(71, 184, 129);
-  --heading-font: AvenirNextLTW01-Medium, Avenir Next, system-ui, -apple-system,
-    BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  --body-font: AvenirNextLTW01-Medium, Avenir Next, system-ui, -apple-system,
-    BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --heading-font: 'Lato', AvenirNextLTW01-Medium, Avenir Next, system-ui,
+    -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial,
+    sans-serif;
+  --body-font: 'Lato', AvenirNextLTW01-Medium, Avenir Next, system-ui,
+    -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial,
+    sans-serif;
 }
 
 ::selection {

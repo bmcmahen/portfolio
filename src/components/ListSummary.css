@@ -3,6 +3,7 @@
   margin: 0 auto;
   flex: 1 1 100%;
   padding: 0 1.5rem;
+  margin-block-end: 1.5rem;
 }
 
 .ListSummary__intro {

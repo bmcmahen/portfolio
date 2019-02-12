@@ -2,31 +2,86 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 50px;
-  background: transparent;
-  width: 100%;
-  color: white;
-  display: flex;
-  padding: 0 1rem;
-  align-items: center;
+  right: 0;
+  z-index: 500;
+
+  color: var(--text-color);
+
   font-family: var(--heading-font);
+}
+
+.Navbar-content {
+  position: relative;
+
+  height: 150px;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+
+  padding-bottom: 100px;
+  align-items: center;
+}
+
+.Navbar-top {
+  background: white;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 1rem;
+
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.Navbar--dark .Navbar-top {
+  background: var(--text-color);
+}
+
+.Navbar-top > div {
+  display: flex;
+  margin: 0 auto;
   justify-content: space-between;
+  align-items: center;
+  padding: 0.15rem 0;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.Navbar-clouds {
+  fill: white;
+  position: absolute;
+  transform: rotate(180deg);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-width: 1200px;
+}
+
+.Navbar--dark .Navbar-clouds {
+  fill: white;
+  background: var(--text-color);
+  transform: none;
 }
 
 .Navbar--dark {
   color: var(--text-color);
-  position: static;
 }
 
 .Navbar--brand {
-  display: block;
-  font-weight: 600;
-  letter-spacing: 0.07em;
-  font-size: 0.8rem;
+  display: flex;
+  font-weight: 800;
+  align-items: center;
+
+  font-size: 0.875rem;
+}
+
+.Navbar--brand a {
+  color: var(--text-color);
 }
 
 .Navbar .Social-white {
   display: none;
+  margin-left: 1.5rem;
 }
 
 .Navbar ul {
@@ -41,26 +96,25 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  margin-left: 1rem;
+  margin-left: 1.5rem;
 }
 
 .Navbar ul li a {
   text-decoration: none;
-  color: white;
-  text-transform: uppercase;
+  /* color: white; */
 
-  font-weight: 600;
-  letter-spacing: 0.07em;
-  font-size: 0.7rem;
+  font-weight: 800;
+
+  font-size: 0.875rem;
 }
 
 .Navbar .Navbar--brand a {
-  color: white;
+  /* color: white; */
 }
 
 .Navbar--dark ul li a,
 .Navbar--dark .Navbar--brand a {
-  color: var(--text-color);
+  color: white;
 }
 
 .Navbar .hide-mobile {

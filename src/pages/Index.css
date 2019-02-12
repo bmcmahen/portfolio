@@ -14,7 +14,7 @@
 
 .Index__lists {
   display: block;
-  padding: 72px 0;
+  padding: 100px 0;
 
   background-size: cover;
   /* box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.1); */
@@ -139,11 +139,11 @@
 
 .Index__coffee .Hint {
   position: absolute;
-  left: 50%;
+  left: 20%;
   -webkit-transform: rotate(90deg) scale(1, -1);
   transform: rotate(180deg) scale(1, -1);
   z-index: 3333;
-  top: -100px;
+  top: -80px;
 }
 
 #portfolio {

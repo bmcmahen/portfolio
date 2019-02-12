@@ -72,6 +72,8 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
+          `lato\:300,300i,400,400i,700,900`,
+          `merriweather`,
           `source code pro`, // you can also specify font weights and styles
         ],
       },

@@ -5,6 +5,7 @@
   background: transparent;
   position: absolute;
   bottom: 0;
+  overflow: hidden;
   z-index: 500;
   left: 0;
 }
@@ -15,4 +16,16 @@
 
 .Diagnol polygon {
   fill: white;
+}
+
+.LeftArrow-clouds {
+  min-width: 1200px;
+  fill: white;
+}
+
+.LeftArrow.top {
+  bottom: 100%;
+  top: 0;
+  bottom: unset;
+  transform: rotate(180deg);
 }

@@ -17,6 +17,7 @@ import watershedVideo from './watershed.mp4'
 import eugenicsVideo from './eugenics-archive.mp4'
 import damme from '../images/damme-thumbs.jpg'
 import { Hint } from '../components/Portfolio/Hint'
+import { LeftArrow } from '../components/Dividers'
 // import { CanvasController } from '../components/Canvas/CanvasController'
 // import clouds from '../components/Portfolio/clouds.svg'
 
@@ -188,6 +189,8 @@ class IndexPage extends React.Component {
             }}
             className="Index__lists"
           >
+            <LeftArrow top />
+            <LeftArrow />
             <Github
               username="bmcmahen"
               repos={

@@ -1,14 +1,13 @@
 .Blog_container {
-  max-width: 600px;
+  max-width: 630px;
   margin: 0 auto;
   font-weight: 400;
   font-size: 1rem;
   padding: 0 1.5rem;
-  line-height: 24px;
+  line-height: 1.75;
   padding-top: 1rem;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  /* font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif; */
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
 }
 
 .Blog_container video {
@@ -20,16 +19,25 @@
   text-align: center;
 
   margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.Blog_heading .Blog_date {
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 .Blog_date {
-  font-size: small;
+  font-size: 0.875rem;
+
+  /* margin-bottom: 1rem; */
   font-weight: 400;
 }
 
 .Blog_attribution {
-  font-size: small;
+  font-size: 0.875rem;
   font-weight: 500;
+  font-style: italic;
 }
 
 .Blog_attribution a {
@@ -44,8 +52,8 @@
 }
 
 .Blog_meta img {
-  width: 50px;
-  height: 50px;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
   margin: 0;
   margin-right: 0.75rem;
@@ -57,19 +65,23 @@
 
 .Blog_heading {
   padding: 2rem 1.5rem 0 1.5rem;
+  padding-top: 150px;
 }
 
 .Blog_heading > div {
-  max-width: 552px;
+  max-width: 800px;
 
   margin: 0 auto;
 }
 
 .Blog_heading h1 {
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 2rem;
+  font-weight: 900;
+  font-style: italic;
+  text-align: center;
   margin-top: 2rem;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: 2rem;
+  /* font-family: 'Roboto', 'Merriweather', 'Times New Roman', Times, serif; */
 }
 
 .Blog_heading a {
@@ -98,7 +110,7 @@
 .Blog_meta_bottom {
   text-align: center;
   padding-bottom: 2rem;
-  max-width: 350px;
+  max-width: 450px;
   margin: 0 auto;
   padding-top: 1rem;
 }
@@ -131,7 +143,8 @@ pre {
 
 @media (min-width: 768px) {
   .Blog_heading h1 {
-    font-size: 2rem;
+    font-size: 2.75rem;
+    text-align: center;
   }
 
   .gatsby-highlight {

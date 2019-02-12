@@ -29,7 +29,7 @@ export class InteractiveHeader extends React.Component {
           delay={1000}
           color="rgb(239, 242, 245)"
           opacity={0.9}
-          containerStyle={{ height: '400px' }}
+          containerStyle={{ height: '500px' }}
         >
           <div
             className="Header__background"

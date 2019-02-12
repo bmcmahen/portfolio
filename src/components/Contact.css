@@ -63,13 +63,14 @@
 
 .Contact__social-link {
   display: inline-block;
-  color: #7a7e9f;
-  margin-right: 1rem;
+  color: var(--text-color);
+  margin-top: 0.25rem;
+  margin-right: 0.5rem;
 }
 
 .Contact__social-link svg {
-  width: 25px !important;
-  height: 25px !important;
+  width: 20px !important;
+  height: 20px !important;
 }
 
 .Social-white .Contact__social-link {
