@@ -1,168 +1,159 @@
+p code.language-text {
+  background: rgba(0, 0, 0, 0.1) !important;
+  padding: 0;
+}
+
+code:before,
+code:after,
+tt:before,
+tt:after {
+  display: none;
+}
+
 code[class*='language-'],
 pre[class*='language-'] {
+  color: white;
+  background: none;
   font-family: Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace;
-  font-size: 14px;
-  line-height: 1.375;
-  direction: ltr;
+  font-feature-settings: normal;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  margin-bottom: 0;
+
   -moz-tab-size: 4;
   -o-tab-size: 4;
   tab-size: 4;
+
   -webkit-hyphens: none;
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
-  background: #1b2b34;
-  color: #c0c5ce;
-  margin: 30px 0 !important;
-  border-radius: 5px;
 }
 
+/* Code blocks */
 pre[class*='language-'] {
-  padding: 1em;
-  margin: 0.5em 0;
   overflow: auto;
+  padding: 1.3125rem;
 }
 
-p code.language-text {
-  background: rgba(0, 0, 0, 0.1);
-  color: black;
+pre[class*='language-']::-moz-selection {
+  /* Firefox */
+  background: hsl(207, 4%, 16%);
 }
 
+pre[class*='language-']::selection {
+  /* Safari */
+  background: hsl(207, 4%, 16%);
+}
+
+/* Text Selection colour */
 pre[class*='language-']::-moz-selection,
-pre[class*='language-'] ::-moz-selection,
-code[class*='language-']::-moz-selection,
-code[class*='language-'] ::-moz-selection {
+pre[class*='language-'] ::-moz-selection {
   text-shadow: none;
-  background: #a7adba;
+  background: hsla(0, 0%, 100%, 0.15);
 }
 
 pre[class*='language-']::selection,
-pre[class*='language-'] ::selection,
-code[class*='language-']::selection,
-code[class*='language-'] ::selection {
+pre[class*='language-'] ::selection {
   text-shadow: none;
-  background: #a7adba;
+  background: hsla(0, 0%, 100%, 0.15);
 }
 
+/* Inline code */
 :not(pre) > code[class*='language-'] {
-  padding: 0.1em;
   border-radius: 0.3em;
-}
-
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-  color: #65737e;
-}
-
-.token.namespace {
-  opacity: 0.7;
-}
-
-.token.operator,
-.token.boolean,
-.token.number {
-  color: #f99157;
-}
-
-.token.property {
-  color: #fac863;
-}
-
-.token.tag {
-  color: #69c;
-}
-
-.token.symbol,
-.token.string {
-  color: #99c794;
-}
-
-.token.selector {
-  color: #c594c5;
+  background: rgba(0, 0, 0, 0.1);
+  color: var(--text-color);
+  padding: 0.15em 0.2em 0.05em;
+  white-space: normal;
 }
 
 .token.attr-name {
-  color: #f99157;
-}
-
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string {
-  color: #5fb3b3;
-}
-
-.token.attr-value,
-.token.keyword,
-.token.control,
-.token.directive,
-.token.unit {
-  color: #b294bb;
-}
-
-.token.statement,
-.token.regex,
-.token.atrule {
-  color: #5fb3b3;
-}
-
-.token.placeholder,
-.token.variable {
-  color: #69c;
-}
-
-.token.punctuation,
-.token.operator {
-  color: #5fb3b3;
-}
-
-.token.deleted {
-  text-decoration: line-through;
-}
-
-.token.inserted {
-  border-bottom: 1px dotted #fff;
-  text-decoration: none;
-}
-
-.token.italic {
+  color: rgb(173, 219, 103);
   font-style: italic;
 }
 
-.token.important,
-.token.bold {
-  font-weight: bold;
+.token.comment {
+  color: rgb(128, 147, 147);
 }
 
+.token.string,
+.token.url {
+  color: rgb(173, 219, 103);
+}
+
+.token.variable {
+  color: rgb(214, 222, 235);
+}
+
+.token.number {
+  color: rgb(247, 140, 108);
+}
+
+.token.builtin,
+.token.char,
 .token.constant,
-.token.class-name {
-  color: #f99157;
-}
-
-.token.important {
-  color: #c66;
-}
-
-.token.entity {
-  cursor: help;
-}
-
 .token.function {
-  color: #69c;
+  color: rgb(130, 170, 255);
 }
 
-pre > code.highlight {
-  outline: 0.4em solid #c66;
-  outline-offset: 0.4em;
+.token.punctuation {
+  color: rgb(199, 146, 234);
+}
+
+.token.selector,
+.token.doctype {
+  color: rgb(199, 146, 234);
+  font-style: 'italic';
+}
+
+.token.class-name {
+  color: rgb(255, 203, 139);
+}
+
+.token.tag,
+.token.operator,
+.token.keyword {
+  color: #ffa7c4;
+}
+
+.token.boolean {
+  color: rgb(255, 88, 116);
+}
+
+.token.property {
+  color: rgb(128, 203, 196);
+}
+
+.token.namespace {
+  color: rgb(178, 204, 214);
+}
+
+pre[data-line] {
+  padding: 1em 0 1em 3em;
+  position: relative;
 }
 
 .gatsby-highlight-code-line {
+  background-color: hsla(207, 95%, 15%, 1);
   display: block;
-  background-color: rgb(51, 66, 76);
+  margin-right: -1.3125rem;
+  margin-left: -1.3125rem;
+  padding-right: 1em;
+  padding-left: 0.75em;
+  border-left: 0.25em solid #ffa7c4;
+}
+
+.gatsby-highlight {
+  margin-bottom: 1.75rem;
+  margin-left: -1.3125rem;
+  margin-right: -1.3125rem;
+  border-radius: 10px;
+  background: #292929;
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
 }
