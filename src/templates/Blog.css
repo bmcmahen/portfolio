@@ -22,6 +22,11 @@
   margin-bottom: 2rem;
 }
 
+.Blog_container h3 {
+  margin-top: 3rem;
+  margin-bottom: 1.45rem;
+}
+
 .Blog_heading .Blog_date {
   text-align: center;
   margin-bottom: 1rem;
