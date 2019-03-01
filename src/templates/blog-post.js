@@ -34,9 +34,10 @@ class BlogPostTemplate extends React.Component {
 
         <div className="Blog_bottom_border">
           <div className="Blog_meta_bottom">
-            Please{' '}
-            <a href="https://twitter.com/BenMcMahen/">contact me on Twitter</a>{' '}
-            with any thoughts or questions. I'd love to hear from you.
+            <a href="https://twitter.com/BenMcMahen/">Contact me on Twitter</a>{' '}
+            with any thoughts or questions.
+            <br />
+            I'd love to hear from you.
             <div className="Blog_meta">
               <img alt="Ben" src={require('../components/me.jpg')} />
               <div>
@@ -44,24 +45,36 @@ class BlogPostTemplate extends React.Component {
                   <Link to="/">Ben McMahen</Link>
                 </div>
                 <div className="Blog_date">
-                  I'm a web and mobile developer based in Vancouver. I love
-                  creating beautiful, fun, and interactive tools.
+                  I'm a web and mobile developer based in British Columbia. I
+                  love creating beautiful, fun, and interactive tools.
                   <Social />
                 </div>
               </div>
             </div>
           </div>
         </div>
-        {next && (
-          <div className="Blog_next">
-            <h4>Up next</h4>
-            <div>
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
+        <div className="Blog_pagination">
+          {previous && (
+            <div className="Blog_next">
+              <h4>Previously</h4>
+              <div>
+                <Link to={previous.fields.slug} rel="prev">
+                  ← {previous.frontmatter.title}
+                </Link>
+              </div>
             </div>
-          </div>
-        )}
+          )}
+          {next && (
+            <div className="Blog_next">
+              <h4>Up next</h4>
+              <div>
+                <Link to={next.fields.slug} rel="next">
+                  {next.frontmatter.title} →
+                </Link>
+              </div>
+            </div>
+          )}
+        </div>
       </Layout>
     )
   }
