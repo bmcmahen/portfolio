@@ -5,11 +5,11 @@ date: '2019-03-01T21:53:20.098Z'
 
 There have been many [great](https://www.youtube.com/watch?v=R1_nGU0x3Wk) [articles](<(https://mxstbr.com/thoughts/css-in-js/)>) and [videos](https://vimeo.com/116209150) about the benefits of writing css in Javascript. In brief, the benefits are:
 
-1. It's easier to alter and delete styles with uninteded consequences.
+- It's easier to alter and delete styles with uninteded consequences.
 
-2. You get the benefits of using a full programming language to manage variables, colour alterations, and calculations.
+- You get the benefits of using a full programming language to manage variables, colour alterations, and calculations.
 
-3. It generally plays nicer in React. Instead of combining strings of classNames depending on the props supplied to a component, you can combine objects of styles and alter individual attributes.
+- It generally plays nicer in React. Instead of combining strings of classNames depending on the props supplied to a component, you can combine objects of styles and alter individual attributes.
 
 But once you're on the CSS-in-JS bandwagon, which library do you choose?
 

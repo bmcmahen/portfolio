@@ -85,12 +85,12 @@
 }
 
 .Blog_heading h1 {
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-weight: 900;
   font-style: italic;
   text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
   /* font-family: 'Roboto', 'Merriweather', 'Times New Roman', Times, serif; */
 }
 
@@ -155,8 +155,59 @@ pre {
   /* border: 1px dashed rgba(0, 0, 0, 0.07); */
 }
 
-.Blog h4 {
-  margin-top: 2rem;
+.Blog_container h4 {
+  margin-top: 3rem;
+}
+
+.Blog_container {
+  line-height: 1.5;
+}
+
+.Blog_container p {
+  margin-bottom: 1.5rem;
+}
+
+.Blog_container ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.Blog_container li > p {
+  margin-bottom: 0;
+}
+
+.Blog_container h1 {
+  font-size: 3rem;
+}
+
+.Blog_container h2 {
+  font-size: 2.25rem;
+}
+
+.Blog_container h3 {
+  font-size: 2rem;
+}
+
+.Blog_container h4 {
+  font-size: 1.5rem;
+}
+
+.Blog_container h5 {
+  font-size: 1.125rem;
+}
+
+.Blog_container h6 {
+  font-size: 1rem;
+}
+
+.Blog_container h1,
+.Blog_container h2,
+.Blog_container h3,
+.Blog_container h4,
+.Blog_container h5,
+.Blog_container h6 {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 @media (min-width: 768px) {
