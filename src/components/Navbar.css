@@ -22,6 +22,46 @@
   align-items: center;
 }
 
+.Navbar--hire {
+  font-size: small;
+  font-weight: 400;
+  display: inline-block;
+  font-size: 0.875rem;
+  padding: 2px 12px;
+  background: var(--success-color);
+  color: white !important;
+  border-radius: 14px;
+  margin-left: 8px;
+}
+
+.Navbar--hire {
+  position: relative;
+  background: var(--success-color);
+}
+.Navbar--hire:after,
+.Navbar--hire:before {
+  right: calc(100% - 2px);
+  top: 50%;
+  border: solid transparent;
+  content: ' ';
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.Navbar--hire:after {
+  border-color: rgba(136, 183, 213, 0);
+  border-right-color: var(--success-color);
+  border-width: 6px;
+  margin-top: -6px;
+}
+.Navbar--hire:before {
+  border-color: rgba(0, 0, 0, 0);
+  border-width: 5px;
+  margin-top: -5px;
+}
+
 .Navbar-top {
   background: white;
   width: 100%;

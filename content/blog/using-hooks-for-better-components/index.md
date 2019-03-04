@@ -1,6 +1,7 @@
 ---
 title: Three Ways to use Hooks to Build Better React Components
 date: '2019-02-22T22:56:40.140Z'
+spoiler: Learn three ways in which you can replace various old React composition patterns with hooks to build simpler, more reusable components.
 ---
 
 This article provides three ways in which you can replace various old React composition patterns with hooks to build simpler, more reusable components. Before starting, it helps to have some experience with various patterns related to component composition, including making use of [children](https://benmcmahen.com/mastering-react-component-composition/), using [render props](https://benmcmahen.com/using-render-functions/), [higher order components](https://reactjs.org/docs/higher-order-components.html), and [cloning elements](https://reactjs.org/docs/react-api.html#cloneelement). And it helps if you have an [introductory understanding](https://reactjs.org/docs/hooks-intro.html) of hooks.

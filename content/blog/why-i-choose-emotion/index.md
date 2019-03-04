@@ -1,6 +1,7 @@
 ---
 title: The Benefits of Writing CSS with Emotion
 date: '2019-03-01T21:53:20.098Z'
+spoiler: Once you're on the CSS-in-JS bandwagon, which library do you choose?
 ---
 
 There have been many [great](https://www.youtube.com/watch?v=R1_nGU0x3Wk) [articles](<(https://mxstbr.com/thoughts/css-in-js/)>) and [videos](https://vimeo.com/116209150) about the benefits of writing css in Javascript. In brief, the benefits are:

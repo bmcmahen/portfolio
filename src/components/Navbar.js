@@ -23,6 +23,9 @@ export const Navbar = ({ dark, breadcrumb }) => (
         <div>
           <div className="Navbar--brand">
             <Link to="/">Ben McMahen</Link>
+            <a href="/#contact" className="Navbar--hire">
+              Available for hire
+            </a>
           </div>
           <ul>
             <li>
@@ -31,7 +34,7 @@ export const Navbar = ({ dark, breadcrumb }) => (
               </a>
             </li>
             <li className="hide-mobile">
-              <a href="/#blog">Blog</a>
+              <Link to="/blog">Blog</Link>
             </li>
             <li>
               <a href="/#contact">Contact</a>
