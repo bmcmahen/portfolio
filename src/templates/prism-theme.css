@@ -147,9 +147,15 @@ pre[data-line] {
 }
 
 .gatsby-highlight {
-  margin-bottom: 1.75rem;
-  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  /* border-radius: 10px; */
   background: #292929;
   -webkit-overflow-scrolling: touch;
   overflow: auto;
+}
+
+@media (min-width: 768px) {
+  .gatsby-highlight {
+    border-radius: 10px;
+  }
 }
