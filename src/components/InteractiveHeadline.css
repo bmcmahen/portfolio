@@ -24,7 +24,6 @@
 }
 
 .Header__background {
-  display: none;
 }
 
 @media (max-width: 500px) {

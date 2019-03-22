@@ -1,9 +1,15 @@
 .ListSummary {
-  max-width: 450px;
   margin: 0 auto;
   flex: 1 1 100%;
-  padding: 0 1.5rem;
+  overflow-x: scroll;
+
   margin-block-end: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.ListSummary::-webkit-scrollbar {
+  width: 0px; /* remove scrollbar space */
+  background: transparent; /* optional: just make scrollbar invisible */
 }
 
 .ListSummary__intro {
@@ -19,4 +25,15 @@
 
 .ListSummary h4 {
   display: inline-block;
+}
+
+.ListSummary__container {
+  min-width: 1800px;
+  display: flex;
+}
+
+@media only screen and (min-width: 480px) {
+  .ListSummary {
+    padding: 0 1.5rem;
+  }
 }

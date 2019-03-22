@@ -1,7 +1,6 @@
 import React from 'react'
 import { Browser } from '../Browser'
 import './Website.css'
-import { CanvasController } from '../Canvas/CanvasController'
 import { Hint } from './Hint'
 
 export class Website extends React.Component {
@@ -29,18 +28,11 @@ export class Website extends React.Component {
             />
           </div>
 
-          <CanvasController
-            mobileFrames={this.props.mobileFrames}
-            keyframes={this.props.keyframes}
-            enableRecord={this.props.enableRecord}
-            opacity={0.97}
-          >
-            <Browser
-              title={title}
-              background={background}
-              video={this.props.video}
-            />
-          </CanvasController>
+          <Browser
+            title={title}
+            background={background}
+            video={this.props.video}
+          />
         </div>
         <div className="Website__content">
           <h6>Task</h6>

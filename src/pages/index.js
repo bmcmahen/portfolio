@@ -7,8 +7,8 @@ import { Website } from '../components/Portfolio/Website'
 import eugenicsImage from '../components/Portfolio/eugenics.png'
 import watershedImage from '../components/Portfolio/watershed.png'
 import { Github } from '../components/Github'
-import { ListSummary } from '../components/ListSummary'
-import blur from '../components/Portfolio/blur.png'
+
+import blur from '../components/Portfolio/blur-bright.jpg'
 import { graphql } from 'gatsby'
 import { ListItem } from '../components/ListItem'
 import { Contact, Social } from '../components/Contact'
@@ -18,6 +18,7 @@ import eugenicsVideo from './eugenics-archive.mp4'
 import damme from '../images/damme-thumbs.jpg'
 import { Hint } from '../components/Portfolio/Hint'
 import { LeftArrow } from '../components/Dividers'
+import { ListSummary } from '../components/ListSummary'
 // import { CanvasController } from '../components/Canvas/CanvasController'
 // import clouds from '../components/Portfolio/clouds.svg'
 
@@ -90,24 +91,39 @@ class IndexPage extends React.Component {
                   width: '200px',
                   borderRadius: '50%',
                 }}
-              >
-                {/*
-                <CanvasController opacity={0.99}>
-                    <div style={{}}
-                </CanvasController>
-              */}
-              </div>
+              />
             </div>
 
             <h5 className="Index__center-header">Some recent projects</h5>
 
             <div className="Index__websites">
               <Website
+                key="captioner"
+                title="Captioner"
+                linkLabel="captioner.app"
+                primaryLink="http://captioner.app"
+                subtitle="Create captions directly in your web browser."
+                task={`To build an elegant and intuitive way to create captions for local mp4 videos, YouTube videos, or Vimeo videos, and be able to export these captions to SRT files.`}
+                solution={
+                  'Captioner loops through segments of videos until you have captioned it. The interface makes it intuitive to switch between captions, alter their start and end time, and create new ones. The timeline offers an interactive visualization of the entire project, providing a visual indication as to the word per minute ratio of each caption, warning authors when this ratio is too high.'
+                }
+                technology={
+                  <span>
+                    I use my design system,{' '}
+                    <a href="http://www.sancho-ui.com">Sancho-UI</a>, to achieve
+                    an accessible and interactive design. React and Typescript
+                    are used on the front-end code, while I make use of Firebase
+                    for its authorization and database features.
+                  </span>
+                }
+                background={require('../components/Portfolio/captioner.jpg')}
+              />
+              <Website
                 key="watershed"
                 title="Watershed"
                 linkLabel="watershed-ed.org"
                 primaryLink="http://www.watershed-ed.org"
-                video={watershedVideo}
+                // video={watershedVideo}
                 subtitle="A collaborative and interactive course delivery platform."
                 task={
                   <span>
@@ -129,12 +145,34 @@ class IndexPage extends React.Component {
               />
 
               <Website
+                key="julienne"
+                title="Julienne"
+                linkLabel="julienne.app"
+                primaryLink="http://julienne.app"
+                subtitle="The easiest way to share recipes with family and friends."
+                task={`To build an elegant way to maintain a shared recipe collection with family and friends.`}
+                solution={
+                  'Each user of Julienne can maintain their own recipe collection, but they can also follow other users. You can then view the recipe collection of each user, or you can search the entire collection of recipes for all of the users you are following. The user interface is responsive, and works well on both mobile and desktop devices.'
+                }
+                technology={
+                  <span>
+                    Julienne uses my design system,{' '}
+                    <a href="http://www.sancho-ui.com">Sancho-UI</a> to create a
+                    responsive and accessible design. Firebase is used to manage
+                    authorization and data persistence. React and Typescript are
+                    used to build all of the front-end code.
+                  </span>
+                }
+                background={require('../components/Portfolio/julienne.jpg')}
+              />
+
+              <Website
                 primaryLink="http://www.eugenicsarchive.ca"
                 title="Eugenics archive"
                 key="eugenics"
                 enableRecord
                 linkLabel="eugenicsarchive.ca"
-                video={eugenicsVideo}
+                // video={eugenicsVideo}
                 subtitle="An exploratory database about the history of eugenics."
                 task="The Living Archives on Eugenics project wanted to create a database of eugenics related information pertaining to its history in Canada and around the world and its continued significance today."
                 solution={
@@ -190,7 +228,39 @@ class IndexPage extends React.Component {
             className="Index__lists"
           >
             <LeftArrow top />
-            <LeftArrow />
+            <LeftArrow fill="rgb(43, 63, 86)" />
+
+            <h5 className="Index__center-header">Open source</h5>
+            <Website
+              primaryLink="http://www.sancho-ui.com"
+              title="Sancho-UI"
+              key="sancho"
+              linkLabel="sancho-ui.com"
+              subtitle="A design system built with React, Typescript, and Emotion"
+              task="To create an accessible, responsive and beautiful design system to quickly prototype React-based applications."
+              solution={
+                <span>
+                  Sancho aims to treat the mobile experience as a first-class
+                  citizen, and therefore offers a set of components that work
+                  equally well on all devices. Accessibilty is also a priority.
+                  All components are fully keyboard accessible and follow
+                  wai-aria guidelines. The visual appearance of Sancho is based
+                  upon my individual preferences, and incorporates my favourite
+                  aspects of Material UI, Bootstrap, and Evergreen.
+                </span>
+              }
+              technology={
+                <span>
+                  Sancho is built using Typescript, React, and Emotion. Emotion
+                  (a popular CSS-in-JS library) provides predictable
+                  composition, allowing users to easily customize components. We
+                  also make heavy use of{' '}
+                  <a href="react-spring.io">react-spring</a> for building fluid,
+                  performant animations.
+                </span>
+              }
+              background={require('../components/Portfolio/sancho.jpg')}
+            />
             <Github
               username="bmcmahen"
               repos={
@@ -198,8 +268,23 @@ class IndexPage extends React.Component {
                   .edges
               }
             />
+          </section>
 
-            <ListSummary id="blog" title="Blogging">
+          <section
+            style={{
+              position: 'relative',
+              background: 'rgb(43, 63, 86)',
+            }}
+            className="Index__lists"
+          >
+            <LeftArrow />
+            <h5
+              style={{ marginTop: 0, color: 'white' }}
+              className="Index__center-header"
+            >
+              Recent blog posts
+            </h5>
+            <ListSummary>
               {data.allMarkdownRemark.edges
                 .slice(0, this.state.renderTotal)
                 .map(({ node }) => {
@@ -209,37 +294,17 @@ class IndexPage extends React.Component {
                       key={node.fields.slug}
                       title={title}
                       to={node.fields.slug}
-                      subtitle={node.excerpt}
+                      subtitle={node.frontmatter.spoiler || node.excerpt}
+                      date={node.frontmatter.date}
                     />
                   )
                 })}
-              {data.allMarkdownRemark.edges.length > 5 && (
-                <div className="Index__show-more-container">
-                  <button
-                    onClick={() =>
-                      this.setState({
-                        renderTotal: this.state.renderTotal + 5,
-                      })
-                    }
-                    className="Index__show_more"
-                  >
-                    Show more
-                  </button>
-                </div>
-              )}
             </ListSummary>
-
-            {/*
-            <LeftArrow
-              style={{
-                position: 'absolute',
-                left: 0,
-                fill: '#60617b',
-                width: '100%',
-                bottom: 0,
-              }}
-            />
-            */}
+            <div style={{ textAlign: 'center' }}>
+              <a href="/blog" className="Index__show_more">
+                Show more
+              </a>
+            </div>
           </section>
 
           <section id="contact">
@@ -331,6 +396,7 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM D, YYYY")
             title
+            spoiler
           }
         }
       }

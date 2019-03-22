@@ -11,22 +11,13 @@ export class Github extends React.Component {
 
   render() {
     return (
-      <ListSummary title="Open source">
-        <div className="Github">{this.renderContent()}</div>
+      <div>
         <div className="Index__show-more-container">
-          <a
-            href="http://github.com/bmcmahen"
-            onClick={() =>
-              this.setState({
-                renderTotal: this.state.renderTotal + 10,
-              })
-            }
-            className="Index__show_more"
-          >
+          <a href="http://github.com/bmcmahen" className="Index__show_more">
             More on GitHub
           </a>
         </div>
-      </ListSummary>
+      </div>
     )
   }
 

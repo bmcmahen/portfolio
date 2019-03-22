@@ -8,6 +8,7 @@ export const ListItem = ({
   to,
   children,
   title,
+  date,
   subtitle,
   image,
   className,
@@ -17,7 +18,7 @@ export const ListItem = ({
   if (href) {
     return (
       <a href={href} className={cs}>
-        <Content title={title} subtitle={subtitle} image={image} />
+        <Content title={title} date={date} subtitle={subtitle} image={image} />
         {children}
       </a>
     )
@@ -25,15 +26,25 @@ export const ListItem = ({
 
   return (
     <Link to={to} className={cs}>
-      <Content title={title} subtitle={subtitle} image={image} />
+      <Content date={date} title={title} subtitle={subtitle} image={image} />
       {children}
     </Link>
   )
 }
 
-const Content = ({ title, subtitle, image }) => (
+const Content = ({ date, title, subtitle, image }) => (
   <div className="ListItem__meta">
     <strong>{title}</strong>
+    <div
+      style={{
+        color: 'rgba(0,0,0,0.65)',
+        marginBottom: '0.25rem',
+        marginTop: '0.25rem',
+      }}
+      className="Blog_date"
+    >
+      {date}
+    </div>
     {subtitle && <div>{subtitle}</div>}
   </div>
 )
