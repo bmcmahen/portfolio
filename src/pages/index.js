@@ -236,7 +236,7 @@ class IndexPage extends React.Component {
               title="Sancho-UI"
               key="sancho"
               linkLabel="sancho-ui.com"
-              subtitle="A design system built with React, Typescript, and Emotion"
+              subtitle="A design system built with React, Typescript, and Emotion."
               task="To create an accessible, responsive and beautiful design system to quickly prototype React-based applications."
               solution={
                 <span>
