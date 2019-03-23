@@ -131,9 +131,11 @@
 .Blog_meta_bottom {
   /* text-align: center; */
   padding-bottom: 2rem;
+  line-height: 1.75;
   max-width: 700px;
   margin: 0 auto;
   padding: 1rem;
+  font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
 }
 
 .Blog_bottom_border {
