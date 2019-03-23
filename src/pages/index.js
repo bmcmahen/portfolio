@@ -226,7 +226,7 @@ class IndexPage extends React.Component {
             <div
               style={{
                 position: 'absolute',
-                top: '0',
+                top: '-1px',
                 left: 0,
                 pointerEvents: 'none',
                 transform: 'rotate(180deg)',
