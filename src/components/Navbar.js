@@ -1,9 +1,8 @@
 import React from 'react'
 import './Navbar.css'
 import cx from 'classnames'
-import { Social } from './Contact'
 import { Link } from 'gatsby'
-import { Divider3, LeftArrow } from './Dividers'
+import { LeftArrow } from './Dividers'
 import blur from './Portfolio/blur.jpg'
 
 export const Navbar = ({ dark, breadcrumb }) => (
@@ -19,21 +18,21 @@ export const Navbar = ({ dark, breadcrumb }) => (
         <div>
           <div className="Navbar--brand">
             <Link to="/">Ben McMahen</Link>
-            <a href="/#contact" className="Navbar--hire">
+            <Link to="/#contact" className="Navbar--hire">
               Available for hire
-            </a>
+            </Link>
           </div>
           <ul>
             <li>
-              <a className="hide-mobile" href="/#portfolio">
+              <Link className="hide-mobile" to="/">
                 Portfolio
-              </a>
+              </Link>
             </li>
             <li className="hide-mobile">
               <Link to="/blog">Blog</Link>
             </li>
             <li>
-              <a href="/#contact">Contact</a>
+              <Link to="/#contact">Contact</Link>
             </li>
           </ul>
         </div>
