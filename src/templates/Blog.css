@@ -1,12 +1,12 @@
 .Blog_container {
-  max-width: 630px;
+  max-width: 700px;
   margin: 0 auto;
   font-weight: 400;
   font-size: 1rem;
   padding: 0 1rem;
   line-height: 1.75;
   padding-top: 1rem;
-  /* font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif; */
+  font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
   text-rendering: optimizeLegibility;
 }
 
@@ -32,12 +32,12 @@
 }
 
 .Blog_container h3 {
-  margin-top: 3rem;
-  margin-bottom: 1.45rem;
+  margin-top: 3.5rem;
+  margin-bottom: 1.75rem;
 }
 
 .Blog_heading .Blog_date {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
 }
 
 .Blog_date {
@@ -78,7 +78,7 @@
 }
 
 .Blog_container .gatsby-highlight {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
 }
 
 .Blog_heading {
@@ -87,18 +87,17 @@
 }
 
 .Blog_heading > div {
-  max-width: 800px;
-
+  max-width: 700px;
+  padding: 0 1rem;
   margin: 0 auto;
 }
 
 .Blog_heading h1 {
-  font-size: 2.25rem;
-  font-weight: 900;
-  font-style: italic;
+  font-size: 2rem;
+  font-weight: bold;
 
   margin-top: 3rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
   /* font-family: 'Roboto', 'Merriweather', 'Times New Roman', Times, serif; */
 }
 
@@ -130,11 +129,11 @@
 }
 
 .Blog_meta_bottom {
-  text-align: center;
+  /* text-align: center; */
   padding-bottom: 2rem;
-  max-width: 450px;
+  max-width: 700px;
   margin: 0 auto;
-  padding-top: 1rem;
+  padding: 1rem;
 }
 
 .Blog_bottom_border {
@@ -143,8 +142,8 @@
 
 .Blog_meta_bottom .Blog_meta {
   /* flex-direction: column; */
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  /* justify-content: center; */
   margin-bottom: 1rem;
 }
 
@@ -167,12 +166,8 @@ pre {
   margin-top: 3rem;
 }
 
-.Blog_container {
-  line-height: 1.5;
-}
-
 .Blog_container p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
 }
 
 .Blog_container ul {
@@ -214,13 +209,16 @@ pre {
 .Blog_container h4,
 .Blog_container h5,
 .Blog_container h6 {
-  margin-top: 3rem;
-  margin-bottom: 1.5rem;
+  margin-top: 3.5rem;
+  font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: 1.75rem;
 }
 
 @media (min-width: 768px) {
   .Blog_heading .Blog_date {
-    text-align: center;
+    /* text-align: center; */
+    font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.75;
   }
 
   .Blog_pagination {
@@ -230,7 +228,9 @@ pre {
 
   .Blog_heading h1 {
     font-size: 2.75rem;
-    text-align: center;
+    /* text-align: center; */
+    margin-top: 3.5rem;
+    font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
   }
 
   .gatsby-highlight {
@@ -245,14 +245,12 @@ pre {
   .Blog_meta {
     display: flex;
     text-align: left;
-    max-width: 500px;
+    max-width: 700px;
+    line-height: 1.75;
+    font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
   }
 
   .Blog_meta img {
-    margin-right: 0.75rem;
-  }
-
-  .Blog_heading h1 {
-    text-align: center;
+    margin-right: 1rem;
   }
 }

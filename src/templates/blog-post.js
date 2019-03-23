@@ -41,13 +41,16 @@ class BlogPostTemplate extends React.Component {
             with any thoughts or questions.
             <br />
             I'd love to hear from you.
+            <br />
+            <br />
+            <a href="/rss.xml">Subscribe via RSS</a>
             <div className="Blog_meta">
               <img alt="Ben" src={require('../components/me.jpg')} />
               <div>
                 <div className="Blog_attribution">
                   <Link to="/">Ben McMahen</Link>
                 </div>
-                <div className="Blog_date">
+                <div style={{ maxWidth: '500px' }} className="Blog_date">
                   I'm a web and mobile developer based in British Columbia. I
                   love creating beautiful, fun, and interactive tools.
                   <Social />

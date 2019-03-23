@@ -28,7 +28,7 @@ class BlogIndex extends React.Component {
             return (
               <article style={{ marginBottom: '3rem' }} key={node.fields.slug}>
                 <header>
-                  <h3 style={{ fontStyle: 'italic', marginBottom: '0.5rem' }}>
+                  <h3>
                     <Link to={node.fields.slug} rel="bookmark">
                       {title}
                     </Link>

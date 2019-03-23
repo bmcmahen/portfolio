@@ -43,7 +43,7 @@ Styled-components uses the `styled.button` style API combined with template lite
 
 In contrast, with Emotion we can add styles to an element using the `css` prop much as you'd use the `style` prop.
 
-```jsx
+```jsx{6-10}
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core'
 
@@ -103,7 +103,7 @@ function Example() {
 
 Consider our `Button` component. What if we want to provide a margin to it?
 
-```jsx
+```jsx{4}
 function Example() {
   return (
     <>
