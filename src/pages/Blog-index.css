@@ -1,0 +1,29 @@
+.Blog-index {
+  line-height: 1.75;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 150px;
+  margin-top: 3rem;
+}
+
+.Blog-index h3 {
+  margin-bottom: 0;
+  font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
+}
+
+.Blog-index article {
+  margin-bottom: 3rem;
+}
+
+.Blog-index__head {
+  padding: 0.5rem 0;
+
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.Blog-index p {
+  font-size: 0.875rem;
+  font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
+}

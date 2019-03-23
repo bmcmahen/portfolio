@@ -5,6 +5,7 @@ import SEO from '../components/seo'
 import get from 'lodash.get'
 import { formatReadingTime, formatPostDate } from '../util/helpers'
 import { Navbar } from '../components/Navbar'
+import './Blog-index.css'
 
 class BlogIndex extends React.Component {
   render() {
@@ -15,33 +16,29 @@ class BlogIndex extends React.Component {
       <Layout>
         <Navbar dark />
         <SEO title="Blog" />
-        <main
-          style={{
-            maxWidth: '600px',
-            margin: '0 auto',
-            paddingTop: '150px',
-            marginTop: '3rem',
-          }}
-        >
+        <main className="Blog-index">
+          <div className="Blog-index__head">
+            <a href="/rss.xml">Subscribe via RSS</a>
+          </div>
           {posts.map(({ node }) => {
             const title = get(node, 'frontmatter.title') || node.fields.slug
             return (
-              <article style={{ marginBottom: '3rem' }} key={node.fields.slug}>
+              <article key={node.fields.slug}>
                 <header>
-                  <h3>
+                  <h4>
                     <Link to={node.fields.slug} rel="bookmark">
                       {title}
                     </Link>
-                  </h3>
-                  <small style={{ color: 'rgba(0,0,0,0.6)' }}>
-                    {formatPostDate(node.frontmatter.date, 'en')}
-                    {` • ${formatReadingTime(node.timeToRead)}`}
-                  </small>
+                  </h4>
                 </header>
                 <p
                   style={{ margin: 0 }}
                   dangerouslySetInnerHTML={{ __html: node.frontmatter.spoiler }}
                 />
+                <p style={{ color: 'rgba(0,0,0,0.6)' }}>
+                  {formatPostDate(node.frontmatter.date, 'en')}
+                  {` • ${formatReadingTime(node.timeToRead)}`}
+                </p>
               </article>
             )
           })}
