@@ -43,7 +43,7 @@ export class Browser extends React.Component {
                   className="embed-responsive-item"
                 />
 
-                <video
+                {/* <video
                   loop
                   onCanPlay={this.onCanPlay}
                   style={{
@@ -53,7 +53,7 @@ export class Browser extends React.Component {
                   autoPlay
                   muted
                   src={this.props.video}
-                />
+                /> */}
               </div>
               {children}
             </div>
