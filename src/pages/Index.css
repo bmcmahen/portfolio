@@ -60,7 +60,12 @@
   position: relative;
   margin: 0 auto;
   padding-top: 72px;
+  max-width: 1000px;
   padding-bottom: 72px;
+}
+
+.Index__contact img {
+  display: none;
 }
 
 .Index__contact > div {
@@ -148,6 +153,12 @@
 
 #portfolio {
   position: relative;
+}
+
+@media (min-width: 992px) {
+  .Index__contact img {
+    display: inline-block;
+  }
 }
 
 @media (min-width: 992px) {

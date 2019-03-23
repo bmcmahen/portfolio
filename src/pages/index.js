@@ -10,12 +10,13 @@ import { Github } from '../components/Github'
 import blur from '../components/Portfolio/blur-bright.jpg'
 import { graphql } from 'gatsby'
 import { ListItem } from '../components/ListItem'
-import { Contact, Social } from '../components/Contact'
+import { Social } from '../components/Contact'
 import { Dialog } from '@reach/dialog'
 import damme from '../images/damme-thumbs.jpg'
 import { Hint } from '../components/Portfolio/Hint'
 import { LeftArrow, Divider3 } from '../components/Dividers'
 import { ListSummary } from '../components/ListSummary'
+import buddy from '../components/Portfolio/buddy.jpg'
 
 class IndexPage extends React.Component {
   state = {
@@ -337,6 +338,17 @@ class IndexPage extends React.Component {
             <div className="Index__contact">
               <div>
                 <div className="Index__contact-boxes">
+                  <div>
+                    <img
+                      style={{
+                        height: 'auto',
+                        borderRadius: '1rem',
+                        width: '400px',
+                      }}
+                      src={buddy}
+                      alt="Me and buddy, a dog"
+                    />
+                  </div>
                   <div className="Index__contact-social">
                     <h3>I'm available for hire</h3>
                     <p>
@@ -364,13 +376,12 @@ class IndexPage extends React.Component {
                       Above all, I love building innovative and intuitive
                       products that help people learn and connect. If you share
                       a similar passion, please contact me through social media,{' '}
-                      <a href="mailto:ben.mcmahen@gmail.com">email me</a>, or
-                      use the contact form.
+                      or <a href="mailto:ben.mcmahen@gmail.com">email me</a>.
                     </p>
                     <Social />
                   </div>
 
-                  <Contact />
+                  {/* <Contact /> */}
                 </div>
               </div>
             </div>
