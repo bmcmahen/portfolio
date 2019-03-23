@@ -13,14 +13,10 @@ import { graphql } from 'gatsby'
 import { ListItem } from '../components/ListItem'
 import { Contact, Social } from '../components/Contact'
 import { Dialog } from '@reach/dialog'
-import watershedVideo from './watershed.mp4'
-import eugenicsVideo from './eugenics-archive.mp4'
 import damme from '../images/damme-thumbs.jpg'
 import { Hint } from '../components/Portfolio/Hint'
-import { LeftArrow } from '../components/Dividers'
+import { LeftArrow, Divider2, Divider3 } from '../components/Dividers'
 import { ListSummary } from '../components/ListSummary'
-// import { CanvasController } from '../components/Canvas/CanvasController'
-// import clouds from '../components/Portfolio/clouds.svg'
 
 class IndexPage extends React.Component {
   state = {
@@ -227,8 +223,17 @@ class IndexPage extends React.Component {
             }}
             className="Index__lists"
           >
-            <LeftArrow top />
-            <LeftArrow fill="rgb(43, 63, 86)" />
+            <div
+              style={{
+                position: 'absolute',
+                top: '0',
+                left: 0,
+                transform: 'rotate(180deg)',
+                width: '100%',
+              }}
+            >
+              <LeftArrow fill="white" />
+            </div>
 
             <h5 className="Index__center-header">Open source</h5>
             <Website
@@ -277,7 +282,16 @@ class IndexPage extends React.Component {
             }}
             className="Index__lists"
           >
-            <LeftArrow />
+            <div
+              style={{
+                position: 'absolute',
+                bottom: '100%',
+                left: 0,
+                width: '100%',
+              }}
+            >
+              <LeftArrow fill="#263f58" />
+            </div>
             <h5
               style={{ marginTop: 0, color: 'white' }}
               className="Index__center-header"
@@ -304,6 +318,16 @@ class IndexPage extends React.Component {
               <a href="/blog" className="Index__show_more">
                 Show more
               </a>
+            </div>
+            <div
+              style={{
+                position: 'absolute',
+                bottom: '-1px',
+                left: 0,
+                width: '100%',
+              }}
+            >
+              <Divider3 fill="white" />
             </div>
           </section>
 

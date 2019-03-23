@@ -25,7 +25,6 @@
 
 @media (hover: hover) {
   .ListItem:hover {
-    transform: scale(0.97);
     background-color: #d7d3f1f5;
   }
 }
@@ -37,6 +36,6 @@
   line-height: 1.2;
   font-family: var(--heading-font);
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   display: block;
 }

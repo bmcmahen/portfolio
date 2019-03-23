@@ -10,7 +10,8 @@
 .Header__text {
   height: 100%;
   width: 100%;
-  padding-top: 3rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
   position: relative;
   display: flex;
   color: white;
