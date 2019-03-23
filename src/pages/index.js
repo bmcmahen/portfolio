@@ -363,8 +363,9 @@ class IndexPage extends React.Component {
                     <p>
                       Above all, I love building innovative and intuitive
                       products that help people learn and connect. If you share
-                      a similar passion, please contact me through social media
-                      or the contact form.
+                      a similar passion, please contact me through social media,{' '}
+                      <a href="mailto:ben.mcmahen@gmail.com">email me</a>, or
+                      use the contact form.
                     </p>
                     <Social />
                   </div>
