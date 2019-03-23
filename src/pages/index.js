@@ -7,7 +7,6 @@ import { Website } from '../components/Portfolio/Website'
 import eugenicsImage from '../components/Portfolio/eugenics.png'
 import watershedImage from '../components/Portfolio/watershed.png'
 import { Github } from '../components/Github'
-
 import blur from '../components/Portfolio/blur-bright.jpg'
 import { graphql } from 'gatsby'
 import { ListItem } from '../components/ListItem'
@@ -15,7 +14,7 @@ import { Contact, Social } from '../components/Contact'
 import { Dialog } from '@reach/dialog'
 import damme from '../images/damme-thumbs.jpg'
 import { Hint } from '../components/Portfolio/Hint'
-import { LeftArrow, Divider2, Divider3 } from '../components/Dividers'
+import { LeftArrow, Divider3 } from '../components/Dividers'
 import { ListSummary } from '../components/ListSummary'
 
 class IndexPage extends React.Component {

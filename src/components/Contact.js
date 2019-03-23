@@ -6,10 +6,11 @@ export class Contact extends React.Component {
     return (
       <div className="Contact">
         <form
+          name="contact"
           method="post"
           action="/?success=true"
           data-netlify="true"
-          data-netlify-honeypot="bot-field"
+          netlify-honeypot="bot-field"
         >
           <input type="hidden" name="bot-field" />
           <div className="field half first">
