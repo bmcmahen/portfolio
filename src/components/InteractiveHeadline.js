@@ -12,6 +12,7 @@ export class InteractiveHeader extends React.Component {
       <section
         className="Header"
         style={{
+          backgroundSize: 'cover',
           backgroundImage: `url(${blur})`,
         }}
       >
