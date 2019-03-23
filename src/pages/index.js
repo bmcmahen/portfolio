@@ -228,6 +228,7 @@ class IndexPage extends React.Component {
                 position: 'absolute',
                 top: '0',
                 left: 0,
+                pointerEvents: 'none',
                 transform: 'rotate(180deg)',
                 width: '100%',
               }}
@@ -287,6 +288,7 @@ class IndexPage extends React.Component {
                 position: 'absolute',
                 bottom: '100%',
                 left: 0,
+                pointerEvents: 'none',
                 width: '100%',
               }}
             >
@@ -324,6 +326,7 @@ class IndexPage extends React.Component {
                 position: 'absolute',
                 bottom: '-1px',
                 left: 0,
+                pointerEvents: 'none',
                 width: '100%',
               }}
             >

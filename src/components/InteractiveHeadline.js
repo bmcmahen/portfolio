@@ -30,6 +30,7 @@ export class InteractiveHeader extends React.Component {
               position: 'absolute',
               bottom: '-1px',
               left: 0,
+              pointerEvents: 'none',
               zIndex: 333,
               width: '100%',
             }}
