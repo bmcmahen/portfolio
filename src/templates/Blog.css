@@ -90,6 +90,13 @@
   padding-top: 150px;
 }
 
+.twitter-tweet {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center;
+  margin-bottom: 1.75rem !important;
+}
+
 .Blog_heading h1 {
   font-size: 2rem;
   font-weight: bold;
