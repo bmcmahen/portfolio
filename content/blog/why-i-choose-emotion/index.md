@@ -1,5 +1,5 @@
 ---
-title: The Benefits of Writing CSS with Emotion
+title: Writing your CSS with Emotion
 date: '2019-03-01T21:53:20.098Z'
 spoiler: Once you're on the CSS-in-JS bandwagon, which library do you choose?
 ---
