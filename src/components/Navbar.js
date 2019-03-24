@@ -42,7 +42,7 @@ export const Navbar = ({ dark, breadcrumb }) => (
       style={{
         position: 'absolute',
         pointerEvents: 'none',
-        bottom: 0,
+        bottom: '-1px',
         left: 0,
         width: '100%',
         display: dark ? 'block' : 'none',

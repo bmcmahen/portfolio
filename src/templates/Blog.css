@@ -1,11 +1,12 @@
 .Blog_container {
   max-width: 700px;
   margin: 0 auto;
+
   font-weight: 400;
   font-size: 1rem;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
   line-height: 1.75;
-  padding-top: 1rem;
+
   font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
   text-rendering: optimizeLegibility;
 }
@@ -86,7 +87,6 @@
 }
 
 .Blog_heading {
-  padding: 0 1rem 0 1rem;
   padding-top: 150px;
 }
 

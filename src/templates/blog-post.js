@@ -27,10 +27,7 @@ class BlogPostTemplate extends React.Component {
         >
           <div>
             <h1>{post.frontmatter.title}</h1>
-            <div className="Blog_date">
-              Posted by Ben McMahen <br />
-              {post.frontmatter.date}
-            </div>
+            <p>{post.frontmatter.date}</p>
           </div>
         </div>
         <div className="Blog_container">

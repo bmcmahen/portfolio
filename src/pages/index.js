@@ -11,8 +11,6 @@ import blur from '../components/Portfolio/blur-bright.jpg'
 import { graphql } from 'gatsby'
 import { ListItem } from '../components/ListItem'
 import { Social } from '../components/Contact'
-import { Dialog } from '@reach/dialog'
-import damme from '../images/damme-thumbs.jpg'
 import { Hint } from '../components/Portfolio/Hint'
 import { LeftArrow, Divider3 } from '../components/Dividers'
 import { ListSummary } from '../components/ListSummary'
@@ -22,14 +20,6 @@ class IndexPage extends React.Component {
   state = {
     renderTotal: 5,
     successMessage: false,
-  }
-
-  componentDidMount() {
-    const urlParams = new URLSearchParams(window.location.search)
-    const success = urlParams.get('success')
-    if (success) {
-      this.setState({ successMessage: true })
-    }
   }
 
   render() {
@@ -53,30 +43,7 @@ class IndexPage extends React.Component {
 
         <Layout>
           <div className="Index" />
-          <Dialog
-            onDismiss={() => this.setState({ successMessage: false })}
-            isOpen={this.state.successMessage}
-          >
-            <div className="Index__success">
-              <div
-                style={{
-                  backgroundImage: `url(${damme})`,
-                }}
-              />
-              <div>
-                Thanks for your enquiry!
-                <br /> I'll get back to you soon.
-                <div>
-                  <button
-                    onClick={() => this.setState({ successMessage: false })}
-                    className="Index__show_more"
-                  >
-                    Close
-                  </button>
-                </div>
-              </div>
-            </div>
-          </Dialog>
+
           <InteractiveHeader disableAnimation={this.state.successMessage} />
 
           <section id="portfolio">
@@ -286,7 +253,7 @@ class IndexPage extends React.Component {
             <div
               style={{
                 position: 'absolute',
-                bottom: '100%',
+                bottom: 'calc(100% - 1px)',
                 left: 0,
                 pointerEvents: 'none',
                 width: '100%',
@@ -380,8 +347,6 @@ class IndexPage extends React.Component {
                     </p>
                     <Social />
                   </div>
-
-                  {/* <Contact /> */}
                 </div>
               </div>
             </div>

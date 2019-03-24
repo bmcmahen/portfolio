@@ -9,7 +9,6 @@ import './Blog-index.css'
 
 class BlogIndex extends React.Component {
   render() {
-    const title = this.props.data.site.siteMetadata.title
     const posts = this.props.data.allMarkdownRemark.edges
 
     return (
@@ -17,9 +16,6 @@ class BlogIndex extends React.Component {
         <Navbar dark />
         <SEO title="Blog" />
         <main className="Blog-index">
-          <div className="Blog-index__head">
-            <a href="/rss.xml">Subscribe via RSS</a>
-          </div>
           {posts.map(({ node }) => {
             const title = get(node, 'frontmatter.title') || node.fields.slug
             return (

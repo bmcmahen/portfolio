@@ -2,11 +2,12 @@
   line-height: 1.75;
   max-width: 600px;
   margin: 0 auto;
+  padding: 0 1rem;
   padding-top: 150px;
   margin-top: 3rem;
 }
 
-.Blog-index h3 {
+.Blog-index h4 {
   margin-bottom: 0;
   font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
 }
