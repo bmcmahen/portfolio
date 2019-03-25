@@ -48,7 +48,7 @@ Don't get me wrong - performance has improved, or at least the devices that we u
 
 #### Mobile is a challenge
 
-Building a good mobile experience is still difficult. Thankfully we not longer needs hacks to overcome touch delays, but adapting hover and focus states for touch interfaces still feels cumbersome. It's almost impossible to fully emulate the feel and functionality of a native application using web technologies, and because of this, I'd generally recommend not even trying.
+Building a good mobile experience is still difficult. Thankfully we no longer needs hacks to overcome touch delays, but adapting hover and focus states for touch interfaces still feels cumbersome. It's almost impossible to fully emulate the feel and functionality of a native application using web technologies, and because of this, I'd generally recommend not even trying.
 
 Focus on building a mobile website that is simple and performant, which relies on native elements (hello, select menu), and makes use of a combination of vertical and horizontal scrolling with fixed or sticky elements. You can make a pleasant, functional experience, but it's hard to make a truly beautiful and fluid experience which matches native.
 
