@@ -1,5 +1,3 @@
-const config = require('./config')
-
 module.exports = {
   siteMetadata: {
     title: `Ben McMahen - Freelance web and mobile developer`,
@@ -76,31 +74,31 @@ module.exports = {
         fonts: [`lato\:400,400i,700,700i`, `merriweather\:400,400i,700,700i`],
       },
     },
-    {
-      // https://developer.github.com/v4/explorer/
-      // https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/
-      resolve: 'gatsby-source-github-api',
-      options: {
-        token: config.GITHUB_API,
-        graphQLQuery: `query { 
-          viewer { 
-            login
-            pinnedRepositories(first: 6) {
-              edges {
-                node {
-                  name
-                  url
-                  description
-                  stargazers {
-                    totalCount
-                  }
-                }
-              }
-            }
-          }
-        }`,
-      },
-    },
+    // {
+    //   // https://developer.github.com/v4/explorer/
+    //   // https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/
+    //   resolve: 'gatsby-source-github-api',
+    //   options: {
+    //     token: config.GITHUB_API,
+    //     graphQLQuery: `query {
+    //       viewer {
+    //         login
+    //         pinnedRepositories(first: 6) {
+    //           edges {
+    //             node {
+    //               name
+    //               url
+    //               description
+    //               stargazers {
+    //                 totalCount
+    //               }
+    //             }
+    //           }
+    //         }
+    //       }
+    //     }`,
+    //   },
+    // },
     // taken from dan's blog
     {
       resolve: `gatsby-plugin-feed`,

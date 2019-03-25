@@ -234,13 +234,7 @@ class IndexPage extends React.Component {
               }
               background={require('../components/Portfolio/sancho.jpg')}
             />
-            <Github
-              username="bmcmahen"
-              repos={
-                data.allGithubData.edges[0].node.data.viewer.pinnedRepositories
-                  .edges
-              }
-            />
+            <Github username="bmcmahen" />
           </section>
 
           <section
@@ -364,28 +358,6 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-      }
-    }
-    allGithubData {
-      edges {
-        node {
-          data {
-            viewer {
-              pinnedRepositories {
-                edges {
-                  node {
-                    name
-                    description
-                    url
-                    stargazers {
-                      totalCount
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
       }
     }
 
