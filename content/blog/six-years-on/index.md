@@ -30,7 +30,7 @@ Meteor was great at the time because it made you feel like you had access to a r
 
 #### Better tooling, like Webpack
 
-Tools like Webpack (and before that, browserify) make organizing our code is easier than before. Remember when there weren’t modules? Remember when you couldn’t easily “import” or “export” code? Remember require.js? It wasn’t that long ago that this functionality either didn’t exist, or was in its infancy. We loooove to bitch and moan about configuring webpack, but bundlers like this (plus tools built on top of it, like create-react-app or next.js) make building complex, large applications possible.
+Tools like Webpack (and before that, browserify) make organizing our code much easier than before. Remember when there weren’t modules? Remember when you couldn’t easily “import” or “export” code? Remember require.js? It wasn’t that long ago that this functionality either didn’t exist, or was in its infancy. We loooove to bitch and moan about configuring webpack, but bundlers like this (plus tools built on top of it, like create-react-app or next.js) make building complex, large applications possible.
 
 #### Good design is easier
 
