@@ -1,1 +1,5 @@
-To deploy the website just push to master. It should deploy automatically using netfliy.
+Built using gatsby. To run locally:
+
+```
+yarn run start
+```
