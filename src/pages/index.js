@@ -215,7 +215,7 @@ class IndexPage extends React.Component {
                 <span>
                   Sancho aims to treat the mobile experience as a first-class
                   citizen, and therefore offers a set of components that work
-                  equally well on all devices. Accessibilty is also a priority.
+                  equally well on all devices. Accessibility is also a priority.
                   All components are fully keyboard accessible and follow
                   wai-aria guidelines. The visual appearance of Sancho is based
                   upon my individual preferences, and incorporates my favourite
