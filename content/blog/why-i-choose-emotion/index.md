@@ -93,9 +93,9 @@ function Example() {
 }
 ```
 
-#### Colocating styles with elements
+#### You colocate styles with elements.
 
-With the `css` prop, what you see is what you get. It's a small point, but not having to scroll away from your element to find your style definition really improves my workflow. It feels more efficient and keeps me in the flow when writing my components. Need to delete an element? You don't need to hunt down the orphaned style definition.
+With the `css` prop, what you see is what you get. It's a small point, but not having to scroll away from an element to find your style definition really improves my workflow. It feels more efficient and keeps me in the flow when writing my components. Need to delete an element? There's no need to hunt down the orphaned style definition.
 
 #### Composition is dead easy.
 
