@@ -117,3 +117,9 @@ This passes the styles defined in our example to the `Button` element and compos
 #### Both are great, but I choose Emotion
 
 Styled-components is a wonderful tool and combined with something like [styled-system](https://github.com/styled-system/styled-system) you can get the benefits of functional style css which can alleviate some of the naming issues. But I've found that using the `css` prop, especially with typescript, reduces the need for something like styled-system and generally provides the most flexible means of writing your styles in Javascript.
+
+**Suggested links**:
+
+[Emotion](https://emotion.sh/docs/introduction)
+[Using the css prop](https://emotion.sh/docs/css-prop)
+[Sancho-UI - Components built with Emotion](https://sancho-ui.com/)
