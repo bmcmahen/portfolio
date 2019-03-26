@@ -1,26 +1,20 @@
 ---
 title: Writing your CSS with Emotion
 date: '2019-03-01T21:53:20.098Z'
-spoiler: Once you're on the CSS-in-JS bandwagon, which library do you choose?
+spoiler: I have tried almost every way to write css for the web, and Emotion's css prop is easily my favourite.
 ---
 
-There have been many [great](https://www.youtube.com/watch?v=R1_nGU0x3Wk) [articles](<(https://mxstbr.com/thoughts/css-in-js/)>) and [videos](https://vimeo.com/116209150) about the benefits of writing css in Javascript. In brief, the benefits are:
-
-- It's easier to alter and delete styles with uninteded consequences.
-
-- You get the benefits of using a full programming language to manage variables, colour alterations, and calculations.
-
-- It generally plays nicer in React. Instead of combining strings of classNames depending on the props supplied to a component, you can combine objects of styles and alter individual attributes.
-
-But once you're on the CSS-in-JS bandwagon, which library do you choose?
+I have written css for the web in just about every way imaginable. I've used css modules, preprocessors including Sass, Less, and Stylus, BEM, functional css (using Tachyons), and I've used numerous CSS-in-JS libraries including Styled-components, and react-native stylesheets. I've tried all of this, and using Emotion's css prop is easily my favourite. I'll try to explain why.
 
 #### Emotion vs Styled-components
+
+Let's assume that you're already on the CSS-in-JS bandwagon. If you're not, it's worth perusing the many [great](https://www.youtube.com/watch?v=R1_nGU0x3Wk) [articles](<(https://mxstbr.com/thoughts/css-in-js/)>) and [videos](https://vimeo.com/116209150) about the benefits of writing css in Javascript.
 
 My main task here is to argue that using [Emotion](https://emotion.sh) is the best library with which to style your apps. In truth, Emotion shares much with the other behomoth in the CSS-in-JS realm, [Styled-components](https://www.styled-components.com/). It even exposes a `styled` api that basically mimics how styled-components works. But in comparing the two libraries, I'm really comparing two distinct options for styling your components.
 
 One is the `styled-components` way:
 
-```jsx
+```jsx{3-8}
 import styled from 'styled-components'
 
 const Button = styled.button`
@@ -98,6 +92,10 @@ function Example() {
   )
 }
 ```
+
+#### Colocating styles with elements
+
+With the `css` prop, what you see is what you get. It's a small point, but not having to scroll away from your element to find your style definition really improves my workflow. It feels more efficient and keeps me in the flow when writing my components. Need to delete an element? You don't need to hunt down the orphaned style definition.
 
 #### Composition is dead easy.
 
