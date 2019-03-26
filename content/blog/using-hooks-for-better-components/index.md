@@ -159,7 +159,7 @@ So here's what's happening: We create two refs: our `elementRef` is binding to o
 
 This hook doesn't create any additional dom elements and it's incredibly easy to reuse within different components when you need to manage focus for accessibility reasons. I've used it in a popover, modal, and dropdown menu. I recommend being consistent in using a bind object which includes things like `ref` but which can also include additional functions such as `onKeyDown`, `onMouseOver`, etc.
 
-You can see the full implementation of the `useFocusHook` in [sancho-ui](https://github.com/bmcmahen/sancho/blob/master/src/Hooks/focus.ts), and see how it's used in the [Popover](https://github.com/bmcmahen/sancho/blob/master/src/Popover.tsx) implementation.
+You can see the full implementation of the `useFocus` hook in [sancho-ui](https://github.com/bmcmahen/sancho/blob/master/src/Hooks/focus.ts), and see how it's used in the [Popover](https://github.com/bmcmahen/sancho/blob/master/src/Popover.tsx) implementation.
 
 #### Tip 3: useState takes a callback
 
