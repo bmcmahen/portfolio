@@ -120,6 +120,4 @@ Styled-components is a wonderful tool and combined with something like [styled-s
 
 **Suggested links**:
 
-[Emotion](https://emotion.sh/docs/introduction)
-[Using the css prop](https://emotion.sh/docs/css-prop)
-[Sancho-UI - Components built with Emotion](https://sancho-ui.com/)
+[Emotion.sh](https://emotion.sh/docs/introduction)
