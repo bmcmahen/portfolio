@@ -10,7 +10,7 @@ This article provides three ways in which you can replace various old React comp
 
 **You can often replace instances of cloneElement, higher order components, or render props with hooks.**
 
-The motivation of using one of the above techniques is almost always to provide either some contextual information to child components or to expose some additional logic to components. React's `cloneElement` function is probably the oldest means to achieve this end, but to me it's always had some downsides: 1) It's usage is dependent on the child of being the correct type. 2) It can overrwrite props, necessitating in wrapping potential props to ensure that each one is applied correctly. 3) It's a bit muddied about how to properly type child components when using something like Typescript.
+The motivation of using one of the above techniques is almost always to provide either some contextual information to child components or to expose some additional logic to components. React's `cloneElement` function is probably the oldest means to achieve this end, but to me it's always had some downsides: 1) It's usage is dependent on the child being of the correct type. 2) It can overrwrite props, necessitating that you wrap potential props to ensure that each one is applied correctly. 3) It's difficult to properly type child components when using something like Typescript.
 
 Let's explore a better solution using hooks. Let's say we want to make a child component aware of which parent it's in when developing a table so that we can use the correct tagName, either an `td` or `th`. Consider the `cloneElement` way to achieve this:
 
