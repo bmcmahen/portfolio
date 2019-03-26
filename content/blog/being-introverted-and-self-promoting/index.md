@@ -29,7 +29,7 @@ You know you have the tendency to lurk so create concrete goals that require you
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Every night for 20 mins I send a personal DM to every new follower. I have now sent 16,427 DMs this way. It has led to: <br><br>👨‍👨‍👧‍👧 Incredible friendships and discussions with amazing people.<br><br>❤️ Incredible community love for <a href="https://twitter.com/twentyminutevc?ref_src=twsrc%5Etfw">@twentyminutevc</a> <br><br>💵 $100K+ in sponsors. <br><br>Go the extra mile.</p>&mdash; Harry Stebbings (@HarryStebbings) <a href="https://twitter.com/HarryStebbings/status/1107084236434096128?ref_src=twsrc%5Etfw">March 17, 2019</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-People follow you because you’re interested in what they have to say. Reach out and thank them - ask them some questions based upon their profile and follow them back! Do the same when you follow someone. Explain how you value their work, and let them know that you appreciate their opinions.
+People follow you because they're interested in what you have to say. Reach out and thank them - ask them some questions based upon their profile and follow them back! Do the same when you follow someone. Explain how you value their work, and let them know that you appreciate their opinions.
 
 **3. Make a list of social news indexes like hacker news, reddit, and digg (is that still a thing?) and post every single thing you make to them. Don’t make exceptions.** Just do it. Force yourself. Remember - even if just two or three people benefit from whatever you post, it’s worth it!
 
