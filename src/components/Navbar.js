@@ -18,9 +18,9 @@ export const Navbar = ({ dark, breadcrumb }) => (
         <div>
           <div className="Navbar--brand">
             <Link to="/">Ben McMahen</Link>
-            <Link to="/#contact" className="Navbar--hire">
+            {/* <Link to="/#contact" className="Navbar--hire">
               Available for hire
-            </Link>
+            </Link> */}
           </div>
           <ul>
             <li>
