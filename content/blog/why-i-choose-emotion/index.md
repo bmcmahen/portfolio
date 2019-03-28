@@ -70,7 +70,7 @@ Especially when working with typescript, I consider this beneficial. You type a 
 
 #### Object styles are easier to work with.
 
-When working with typescript, I love that all of my css is typechecked and provides robust autocompletion. And I generally find it easier to insert theme variables into objects instead of using the `${theme.color.red}` style notation. The small downside to objects is that they are slightly more cumbersome to write and aren't easily copied from browsers.
+When working with typescript, I love that all of my css is typechecked and provides robust autocompletion. And I generally find it easier to insert theme variables into objects instead of using the `${theme.color.red}` style notation. The small downside to objects is that they are slightly more cumbersome to write and aren't easily copied from browsers. (Note that as of v4 Styled-components also [supports objects](https://www.styled-components.com/docs/advanced#style-objects)).
 
 #### Naming things is hard. And I'm lazy.
 
