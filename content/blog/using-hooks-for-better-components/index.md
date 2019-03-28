@@ -10,7 +10,7 @@ This article provides three ways in which you can replace various old React comp
 
 **You can often replace instances of cloneElement, higher order components, or render props with hooks.**
 
-The motivation of using one of the above techniques is almost always to provide either some contextual information to child components or to expose some additional logic to components. React's `cloneElement` function is probably the oldest means to achieve this end, but to me it's always had some downsides: 1) It's usage is dependent on the child being of the correct type. 2) It can overrwrite props, necessitating that you wrap potential props to ensure that each one is applied correctly. 3) It's difficult to properly type child components when using something like Typescript.
+The motivation of using one of the above techniques is almost always to provide either some contextual information to child components or to expose some additional logic to components. React's `cloneElement` function is probably the oldest means to achieve this end, but it's always had some downsides: 1) It's usage is dependent on the child being of the correct type. 2) It can overrwrite props, necessitating that you wrap potential props to ensure that each one is applied correctly. 3) It's difficult to properly type child components when using something like Typescript.
 
 Let's explore a better solution using hooks. Let's say we want to make a child component aware of which parent it's in when developing a table so that we can use the correct tagName, either an `td` or `th`. Consider the `cloneElement` way to achieve this:
 
@@ -163,15 +163,32 @@ You can see the full implementation of the `useFocus` hook in [sancho-ui](https:
 
 #### Tip 3: useState takes a callback
 
-When you use a callback with `useState` it only runs on the initial mount. The react docs state that it should be used for expensive computations that you don't want to run multiple times, but I've found it useful in other occassions where I want to persist a value to that instance of a component. Consider the following example:
+When using `useState` with a callback, the callback is run only on the initial mount. This is useful for running expensive computations. Compare these two examples:
 
-```jsx{4}
-let uid = 0
+```jsx
+let counter = 0
 
-const Tooltip = () => {
-  const [id] = React.useState(() => uid++)
-  return <div id={id}>Tooltip with {id}</div>
+function Component() {
+  const [number] = useState(counter++)
+  return <div>{number}</div>
 }
 ```
 
-In this case, we need to initialize an `id` and we want it to remain constant throughout the lifecycle of the tooltip. I find I use this in cases where I'd previously use class properties defined in the class constructor.
+With this example, any time our `Component` updates our `counter` will be incremented. Note that this will _not_ update our `number` state, since default state values can only ever be set once on the initial mount of the component.
+
+Let's convert `useState` to use a callback.
+
+```jsx
+let counter = 0
+
+function Component() {
+  const [number] = useState(() => counter++)
+  return <div>{number}</div>
+}
+```
+
+This will only increment our uid once during the entire lifespan of that component, even if it rerenders. Like the above example, our `number` will remain constant.
+
+The sandbox below demonstrates these differences:
+
+<iframe src="https://codesandbox.io/embed/jl99rjq6v?fontsize=14" title="jl99rjq6v" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
