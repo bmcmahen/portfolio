@@ -1,16 +1,14 @@
 ---
 title: How to be Introverted and Successfully Self-Promote
 date: '2019-03-26T05:33:07.311Z'
-spoiler: Honestly, I don't know. But I do have a plan. Let me share it with you.
+spoiler: If you're introverted like me, self-promotion seems completely anithetical to your nature. But I have a plan. Let me share it with you.
 ---
-
-Honestly, I don’t know.
 
 Being an introverted self-promoter is difficult because everything about self-promotion seems antithetical to your nature. It feels like needlessly exposing yourself to risk. When you say, “hey - look at this cool thing I built!” - people... god forbid, can become aware of your work and they can judge it. And when they judge it, you think they are implicitly judging you and your abilities. Have you ever read the hacker news comment section? What introvert (indeed, what human) would want to subject themselves to that?
 
 When you’re introverted, you naturally tend to fade into the background. The spotlight is your enemy. You know it’d probably do you some good to be in it, but you kinda hope it just passively finds you amongst the crowd (Yeah, right….). So the introvert tends to passively “like” things on twitter without replying with messages of their own. The introvert tends to lurk on sites like Reddit, sitting back and observing the situation, letting others do the talking.
 
-Really, I’m pretty terrible at self-promoting, or networking, or whatever you want to call it.
+Honestly, I'm terrible at self-promoting, or networking, or whatever you want to call it.
 
 But I do have a plan. Let me share it with you.
 

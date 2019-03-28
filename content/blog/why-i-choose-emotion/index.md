@@ -6,13 +6,13 @@ spoiler: I have tried almost every way to write css for the web, and Emotion's c
 
 I have written css for the web in just about every way imaginable. I've used css modules, preprocessors including Sass, Less, and Stylus, BEM, functional css (using Tachyons), and I've used numerous CSS-in-JS libraries including Styled-components, and react-native stylesheets. I've tried all of this, and using Emotion's css prop is easily my favourite. I'll try to explain why.
 
-#### Emotion vs Styled-components
+#### CSS prop vs Styled
 
 Let's assume that you're already on the CSS-in-JS bandwagon. If you're not, it's worth perusing the many [great](https://www.youtube.com/watch?v=R1_nGU0x3Wk) [articles](<(https://mxstbr.com/thoughts/css-in-js/)>) and [videos](https://vimeo.com/116209150) about the benefits of writing css in Javascript.
 
-My main task here is to argue that using [Emotion](https://emotion.sh) is the best library with which to style your apps. In truth, Emotion shares much with the other behomoth in the CSS-in-JS realm, [Styled-components](https://www.styled-components.com/). It even exposes a `styled` api that basically mimics how styled-components works. But in comparing the two libraries, I'm really comparing two distinct options for styling your components.
+My main task here is to argue that using the `css` prop from [Emotion](https://emotion.sh) is the best way to style your apps. In truth, Emotion shares much with the other behomoth in the CSS-in-JS realm, [Styled-components](https://www.styled-components.com/). Both Emotion and Styled-components allow you to style components using a `css` attribute (Styled-components [added this](https://www.styled-components.com/docs/api#css-prop) in version 4). Emotion even exposes a `styled` api that basically mimics how styled-components works. But in comparing the two libraries, I'm really comparing two distinct options for styling your components.
 
-One is the `styled-components` way:
+One is the `styled` way:
 
 ```jsx{3-8}
 import styled from 'styled-components'
@@ -33,9 +33,9 @@ function Example() {
 }
 ```
 
-Styled-components uses the `styled.button` style API combined with template literals to create buttons with styles. You can see why it's popular. With examples like this, it's a beautiful API.
+The styled method uses the `styled.button` style API combined with template literals to create buttons with styles. You can see why it's popular. With examples like this, it's a beautiful API.
 
-In contrast, with Emotion we can add styles to an element using the `css` prop much as you'd use the `style` prop.
+In contrast, with the css prop we can add styles much as you'd use the `style` prop.
 
 ```jsx{6-10}
 /** @jsx jsx */
@@ -62,7 +62,7 @@ function Example() {
 }
 ```
 
-On first glance, the styled-component example seems more elegant. But I've found that over the long run, I generally prefer the `css` style api for the following reasons:
+On first glance, the styled example seems more elegant. But I've found that over the long run, I generally prefer the `css` style api for the following reasons:
 
 #### You're still writing regular React components.
 
@@ -74,7 +74,7 @@ When working with typescript, I love that all of my css is typechecked and provi
 
 #### Naming things is hard. And I'm lazy.
 
-When working with styled-components you generally need to create names for components with distinct styles. This results in many components which lack obvious semantic importance which nevertheless require distinct names. Naming these components with a meaningful descriptor can be tough. Furthermore, the boilerplate often feels burdensome when applying small custom styles, such as altering margins or padding. So, because I'm lazy, I find myself often resorting to using the `style` prop for quick adjustments.
+When working with the styled api you generally need to create names for components with distinct styles. This results in many components which lack obvious semantic importance which nevertheless require distinct names. Naming these components with a meaningful descriptor can be tough. Furthermore, the boilerplate often feels burdensome when applying small custom styles, such as altering margins or padding. So, because I'm lazy, I find myself often resorting to using the `style` prop for quick adjustments.
 
 But using the `css` prop avoids these pitfalls, while still providing the opportunity to wrap styles into a component if it's worth reusing and semantically meaningful.
 
@@ -114,9 +114,9 @@ function Example() {
 
 This passes the styles defined in our example to the `Button` element and composes the styles for us, applying the custom margin.
 
-#### Both are great, but I choose Emotion
+#### Choosing Emotion
 
-Styled-components is a wonderful tool and combined with something like [styled-system](https://github.com/styled-system/styled-system) you can get the benefits of functional style css which can alleviate some of the naming issues. But I've found that using the `css` prop, especially with typescript, reduces the need for something like styled-system and generally provides the most flexible means of writing your styles in Javascript.
+The styled api is wonderful and combined with something like [styled-system](https://github.com/styled-system/styled-system) you can get the benefits of functional style css which can alleviate some of the naming issues. But I've found that using the `css` prop, especially with typescript, reduces the need for something like styled-system and generally provides the most flexible means of writing your styles in Javascript.
 
 **Suggested links**:
 
