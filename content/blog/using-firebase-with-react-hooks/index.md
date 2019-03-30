@@ -46,7 +46,7 @@ export const useAuth = () => {
   })
 
   function onChange(user) {
-    setUser({ initializing: false, user })
+    setState({ initializing: false, user })
   }
 
   React.useEffect(() => {
