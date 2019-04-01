@@ -4,7 +4,7 @@ date: '2019-03-24T06:59:52.170Z'
 spoiler: How do you explain explain your value when your skillset doesn't typically fall in one category?
 ---
 
-Recently Henrik Joreteg tweeted about the difficulty describing the value he brings to a team when no one particular role encompasses his skillset.
+Recently Henrik Joreteg tweeted about the difficulty describing his role on a project when no one particular label encompasses his skillset.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Don&#39;t know how to describe the role I play on most projects.<br><br>It&#39;s some mixture of dev, tech lead,  solutions architect, UX design, user advocate, and product manager.<br><br>I build products.<br><br>Do we have to have to slice that into 10 different roles? Can I just be a product developer?</p>&mdash; Henrik Joreteg (@HenrikJoreteg) <a href="https://twitter.com/HenrikJoreteg/status/1108251924879437825?ref_src=twsrc%5Etfw">March 20, 2019</a></blockquote>
 
