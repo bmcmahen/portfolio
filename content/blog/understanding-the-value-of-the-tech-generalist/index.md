@@ -44,7 +44,7 @@ Let's not forget about marketing and growth. Good design isn't just about creati
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Wait, why did I come to this site again? <a href="https://t.co/9rHce97Nvu">pic.twitter.com/9rHce97Nvu</a></p>&mdash; Nicholas C. Zakas (@slicknet) <a href="https://twitter.com/slicknet/status/1097584328962240512?ref_src=twsrc%5Etfw">February 18, 2019</a></blockquote>
 
-This is a really horrible user experience, and it can mostly be avoided through good communication between teams. The generalist can help mediate these subtly incongruous goals while creating a solution that benefits both product and user.
+This is a pretty bad user experience and is likely a byproduct of having teams not properly communicating with eachother. The generalist can help mediate these subtly incongruous goals while creating a solution that benefits both product and user.
 
 #### Calling all Webmasters
 
