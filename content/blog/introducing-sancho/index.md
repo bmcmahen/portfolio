@@ -18,7 +18,7 @@ Sancho tries to replicate Bootstrap in this regard. Its design isn't particularl
 
 #### Responsive design is really hard. Sancho makes it easier.
 
-For various reasons, many of the react based design systems don't make responsive design a priority. Sancho does it's best to make mobile designs and touch interactions as good as possible. This comes out in some of the smaller details:
+For various reasons, many of the react based design systems don't make responsive design a priority. Sancho does its best to make mobile designs and touch interactions as good as possible. This comes out in some of the smaller details:
 
 Sancho provides scroll locking in the appropriate context.
 
