@@ -18,11 +18,9 @@ Sancho tries to replicate Bootstrap in this regard. Its design isn't particularl
 
 #### Responsive design is really hard. Sancho makes it easier.
 
-For various reasons, many of the react based design systems don't make responsive design a priority. Sancho does its best to make mobile designs and touch interactions as good as possible. This comes out in some of the smaller details:
+For various reasons, many of the react based design systems don't make responsive design a priority. Sancho does its best to make mobile designs and touch interactions as good as possible. This comes out in some of the smaller details.
 
-Sancho provides scroll locking in the appropriate context.
-
-Here's an example of scrolling within a `Sheet`.
+Sancho provides scroll locking in the appropriate context. Here's an example of scrolling within a `Sheet`.
 
 <div class='video'>
 <video autoplay="true" loop="true">
@@ -55,7 +53,7 @@ Sancho provides a dark mode for all of its components which makes it relatively 
 <img src='./dark-light.jpg' alt='dark and light mode' />
 <br />
 
-But perhaps more importantly, dark and light mode can be utilized at the same time on different portions of your website. This makes it easy to convert something like a navigation bar with a dark background to have light themed components and text.
+But perhaps more importantly, dark and light mode can be utilized at the same time on different portions of your website. This makes it easy to build something like a navigation bar which has a dark background and light themed components and text.
 
 ```jsx
 import { DarkMode } from 'sancho'
@@ -91,6 +89,7 @@ function App() {
     <div
       css={{
         background: theme.colors.background.tint1,
+        fontSize: theme.sizes.giant, // typescript will tell you this doesn't exist
       }}
     >
       Hello world
@@ -99,7 +98,7 @@ function App() {
 }
 ```
 
-With Emotion, we have the full power of the `css` prop and the ability to compose styles. This means we can easily alter the style of existing components.
+I've found that using Emotion's `css` prop in combination with typescript's typing and VSCode's autocomplete largely renders a `Box` component or something like [styled-system](https://github.com/styled-system/styled-system) unnecessary. Emotion's `css` prop also makes it easy to compose styles and alter existing components.
 
 ```jsx
 /** @jsx jsx */
