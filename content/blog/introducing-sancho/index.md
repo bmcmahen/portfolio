@@ -4,8 +4,8 @@ date: '2019-04-13T18:40:09.269Z'
 spoiler: Sancho is a responsive and accessible design system built with React, Typescript and Emotion. Named after the ever-faithful, hilariously acerbic sidekick of Don Quixote, Sancho is designed to help you no matter how quixotic your dreams may be.
 ---
 
-<p style='max-width: 32rem; text-align: center'><a href='http://sancho-ui.com'>Sancho</a> is an <a href='https://github.com/bmcmahen/sancho'>open source</a> responsive and accessible design system built with React, Typescript and Emotion.</p>
-
+<p style='max-width: 32rem; text-align: center'>Sancho is an open source responsive and accessible design system built with React, Typescript and Emotion. View the <a href='http://sancho-ui.com'>documentation</a> or check the code on <a href='https://github.com/bmcmahen/sancho'>Github</a>.</p> 
+<br />
 <img src='./preview.jpg' alt='Sancho preview' style='margin-bottom: 1.5rem;' />
 
 #### Sancho aims to provide a beautiful, generic set of components that you can make your own.
@@ -133,15 +133,13 @@ If you import `Text` and `IconArrowRight` into a `create-react-app` bundled appl
 
 #### We've provided two open source projects built with Sancho.
 
-[Julienne](http://julienne.app) is a little app for sharing recipes with family and friends. View the [source](https://github.com/bmcmahen/julienne) on Github.
+[Julienne.app](http://julienne.app) is a little app for sharing recipes with family and friends. View the [source](https://github.com/bmcmahen/julienne).
 
 ![Julienne in action](./julienne-screenshot.jpg)
 
-[Captioner](https://captioner.app/) provides a way to create subtitles for videos in your web browser. View the [source](https://github.com/bmcmahen/captioner) on Github.
+[Captioner.app](https://captioner.app/) provides a way to create subtitles for videos in your web browser. View the [source](https://github.com/bmcmahen/captioner).
 
 ![Captioner in action](./captioner-screenshot.jpg)
-
-Interested in trying Sancho? Your best best is to start with the [documentation](http://sancho-ui.com) and then check out some of the links below.
 
 #### Further resources
 
