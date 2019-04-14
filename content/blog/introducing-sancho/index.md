@@ -1,5 +1,5 @@
 ---
-title: Introducing Sancho UI
+title: Say Hello to Sancho
 date: '2019-04-13T18:40:09.269Z'
 spoiler: Sancho is a responsive and accessible design system built with React, Typescript and Emotion. Named after the ever-faithful, hilariously acerbic sidekick of Don Quixote, Sancho is designed to help you no matter how quixotic your dreams may be.
 ---
