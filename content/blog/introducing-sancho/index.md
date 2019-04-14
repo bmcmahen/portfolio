@@ -76,7 +76,7 @@ You can see this in action on the [toasted-notes](https://toasted-notes.netlify.
 
 #### Sancho is built with Typescript, Emotion and React.
 
-Sancho is fully typed because it's built with Typescript. Even your theme is typed which ensures that you only access a value that exists on your theme object.
+Sancho is fully typed because it's built with Typescript. This means that your theme is typed which ensures that you only access a value that exists on your theme object.
 
 ```jsx
 /** @jsx jsx */
@@ -124,7 +124,7 @@ function MyCustomAlert() {
 }
 ```
 
-#### Sancho is tree shakable. Bundle only the components that you need.
+#### Sancho supports tree shaking. Bundle only the components that you need.
 
 It's unlikely that you'll need to use all of the components provided Sancho. Sancho is fully tree shakable which means that only those components that you use will be included in your final build.
 
