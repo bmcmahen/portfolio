@@ -25,6 +25,8 @@
   display: flex;
   background: #f3f3f7;
   margin-left: -1.5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   width: calc(100% + 3rem);
   align-items: center;
   margin-bottom: 1.75rem;
