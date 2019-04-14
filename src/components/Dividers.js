@@ -3,33 +3,29 @@ import './Dividers.css'
 import cx from 'classnames'
 
 export const Divider3 = ({ fill }) => (
-  <svg
+  <div
     style={{
-      pointerEvents: 'none',
-      display: 'block',
+      width: '100%',
+      overflow: 'hidden',
     }}
-    viewBox="0 0 1920 120"
   >
-    <g
-      id="Page-1"
-      stroke="none"
-      stroke-width="1"
-      fill="none"
-      fill-rule="evenodd"
+    <svg
+      className="Divider3"
+      style={{
+        pointerEvents: 'none',
+        display: 'block',
+        marginLeft: '-1rem', // laame hack, wtf?
+        marginRight: '-1rem',
+        padding: 0,
+        overflow: 'hidden',
+      }}
+      viewBox="0 0 1920 120"
     >
-      <g id="divider1" fill={fill} fill-rule="nonzero">
-        <path
-          d="M1920,119.855 L0,119.855 L0,1.42108547e-14 C35.2099809,13 89,59.107 242,69.855 C395,80.603 557.045733,49.7364018 702.545733,49.7364018 C1070.65028,58.4277623 1256,170.855 1920,37.624 L1920,119.855 Z"
-          id="Path"
-        />
-        {/* <path
-          d="M95.3996308,29.8420237 C103.363419,44.7775757 151.696551,50.978233 231.196551,58.478233 C310.696551,65.978233 357.648136,57.3848296 357.648136,51.5742018 C357.648136,40.1967469 227.033898,42.8804741 175.774422,34.0787349 C124.514946,25.2769957 87.4358429,14.9064716 95.3996308,29.8420237 Z"
-          id="Path-2"
-          transform="translate(225.984694, 41.851186) rotate(1.000000) translate(-225.984694, -41.851186) "
-        /> */}
+      <g fill={fill}>
+        <path d="M1920,119.855 L0,119.855 L0,1.42108547e-14 C35.2099809,13 89,59.107 242,69.855 C395,80.603 557.045733,49.7364018 702.545733,49.7364018 C1070.65028,58.4277623 1256,170.855 1920,37.624 L1920,119.855 Z" />
       </g>
-    </g>
-  </svg>
+    </svg>
+  </div>
 )
 //   <svg
 //     fill-rule="evenodd"
