@@ -8,6 +8,15 @@
   text-rendering: optimizeLegibility;
 }
 
+.gatsby-resp-image-figcaption {
+  text-align: center;
+  display: block;
+  margin-top: 1.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .Blog_container p,
 .Blog_container h1,
 .Blog_container h2,

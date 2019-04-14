@@ -6,7 +6,7 @@ spoiler: Sancho is a responsive and accessible design system built with React, T
 
 <p style='max-width: 32rem; text-align: center'>Sancho is an open source responsive and accessible design system built with React, Typescript and Emotion. View the <a href='http://sancho-ui.com'>documentation</a> or check the code on <a href='https://github.com/bmcmahen/sancho'>Github</a>.</p> 
 <br />
-<img src='./preview.jpg' alt='Sancho preview' style='margin-bottom: 1.5rem;' />
+<img title='Images of Julienne.app and Captioner.app, both built with Sancho.' src='./preview.jpg' alt='Sancho preview' style='margin-bottom: 1.5rem;' />
 
 #### Sancho aims to provide a beautiful, generic set of components that you can make your own.
 
@@ -48,9 +48,9 @@ The goal is to ensure that Sancho looks and _feels_ as good on touch devices as 
 
 #### Sancho has a dark mode.
 
-Sancho provides a dark mode for all of its components which makes it relatively easy to build a dark and light mode version of your website. The [documentation](http://sancho-ui.com) page shows this in action.
+Sancho provides a dark mode for all of its components which makes it relatively easy to build a dark and light mode version of your website.
 
-<img src='./dark-light-docs.jpg' alt='dark and light mode' />
+<img title='The documentation demonstrates both light and dark mode' src='./dark-light-docs.jpg' alt='dark and light mode' />
 <br />
 
 But perhaps more importantly, dark and light mode can be utilized at the same time on different portions of your website. This makes it easy to build something like a navigation bar which has a dark background and light themed components and text. Just wrap the relevant elements with the `DarkMode` component:
@@ -130,7 +130,7 @@ It's unlikely that you'll need to use all of the components provided Sancho. San
 
 If you import `Text` and `IconArrowRight` into a `create-react-app` bundled application, the final Sancho related build size is `8.4kb minified`.
 
-#### We've provided two open source projects built with Sancho.
+#### Two open source projects built with Sancho.
 
 [Julienne.app](http://julienne.app) is a little app for sharing recipes with family and friends. View the [source](https://github.com/bmcmahen/julienne).
 

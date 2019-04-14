@@ -311,7 +311,8 @@ class IndexPage extends React.Component {
                     />
                   </div>
                   <div className="Index__contact-social">
-                    <h3>I'm available for hire</h3>
+                    <h3>A bit about me</h3>
+
                     <p>
                       Having spent much of my time working with small teams,
                       I've had to wear many hats and develop many different
