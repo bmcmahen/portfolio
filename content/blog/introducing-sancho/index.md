@@ -12,13 +12,13 @@ spoiler: Sancho is a responsive and accessible design system built with React, T
 
 The primary goal of Sancho's design is to provide a set of UI components which are beautiful and functional but generic enough to be used in most contexts, and extensible enough to be made your own.
 
-I've found that many recent design systems are built with a particular project in mind with a unique, distinctive style, which makes it difficult to use without your project looking like an existing project. Something like Material-UI is really great, but its style is very much identifiable with the Google brand. Bootstrap has always struck me as different in this regard - it provides a beautiful, somewhat generic set of styles and components which work great out of the box but which can easily be altered. It feels like Bootstrap was made for you.
+I've found that many recent design systems are built with a particular project in mind with a unique, distinctive style, which makes it difficult to use without your work looking like an existing project. Something like Material-UI is really great, but its style is very much identifiable with the Google brand. Bootstrap has always struck me as different in this regard - it provides a beautiful, somewhat generic set of styles and components which work great out of the box but which can easily be altered. It feels like Bootstrap was made for you.
 
-Sancho tries to replicate Bootstrap in this regard. Its design isn't particularly distinctive and it implements many of my favourite ideas from existing design systems. It's also meant to be extensible through a combination of theming variables and component composition techniques.
+Sancho tries to replicate Bootstrap in this regard. Its design isn't particularly distinctive and it implements many of my favourite ideas from existing design systems. It's also meant to be extensible through a combination of [theming variables](https://sancho-ui.com/#theme) and component [composition techniques](https://sancho-ui.com/#styling%20and%20emotion).
 
 #### Responsive design is really hard. Sancho makes it easier.
 
-For various reasons, many of the react based design systems don't make responsive design a priority. Sancho does its best to make mobile designs and touch interactions as good as possible. This comes out in some of the smaller details.
+For various reasons, many react based design systems don't make responsive design a priority. Sancho does its best to make mobile designs and touch interactions as good as possible. This comes out in some of the smaller details.
 
 Sancho provides scroll locking in the appropriate context. Here's an example of scrolling within a `Sheet`.
 
@@ -44,16 +44,16 @@ Sancho's tabs scroll into view on smaller screens.
 </video>
 </div>
 
-The goal is to ensure that Sancho looks and _feels_ as good on touch devices as it does on the desktop, a goal which is often surprisingly and frustratingly difficult to achieve.
+The goal is to ensure that Sancho looks and _feels_ as good on touch devices as it does on the desktop, a goal which is often surprisingly and frustratingly difficult to achieve. Using Sancho components will hopefully make your life a bit easier.
 
 #### Sancho has a dark mode.
 
-Sancho provides a dark mode for all of its components which makes it relatively easy to build a dark and light mode version of your website.
+Sancho provides a dark mode for all of its components which makes it relatively easy to build a dark and light mode version of your website. The [documentation](http://sancho-ui.com) page shows this in action.
 
-<img src='./dark-light.jpg' alt='dark and light mode' />
+<img src='./dark-light-docs.jpg' alt='dark and light mode' />
 <br />
 
-But perhaps more importantly, dark and light mode can be utilized at the same time on different portions of your website. This makes it easy to build something like a navigation bar which has a dark background and light themed components and text.
+But perhaps more importantly, dark and light mode can be utilized at the same time on different portions of your website. This makes it easy to build something like a navigation bar which has a dark background and light themed components and text. Just wrap the relevant elements with the `DarkMode` component:
 
 ```jsx
 import { DarkMode } from 'sancho'
@@ -72,7 +72,7 @@ function App() {
 }
 ```
 
-You can see this in action on the [toasted-notes](https://toasted-notes.netlify.com/) website which has a dark hero with light text. Even buttons are subtly altered to provide greater contrast on dark backgrounds.
+You can see this in action on the [toasted-notes](https://toasted-notes.netlify.com/) website which has a hero with a dark background and light text. Even buttons are subtly altered to provide greater contrast on dark backgrounds.
 
 #### Sancho is built with Typescript, Emotion and React.
 

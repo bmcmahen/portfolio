@@ -99,7 +99,7 @@ class IndexPage extends React.Component {
                     observation.
                   </span>
                 }
-                solution="Our course delivery system operates as a collaborative canvas in which the user is encouraged to actively engage with course materials and their peers. As you engage with video, documents and images, you are asked questions and encouraged to create annotation. We use timeline visualizations that mark course progress and highlight interactions with your collaborators. The result is a highly dynamic, interactive course taking experience that visually reflects your contributions to the course."
+                solution="Our course delivery system operates as a collaborative canvas in which the user is encouraged to actively engage with course materials and their peers. As you engage with video, documents and images, you are asked questions and encouraged to create annotations. We use timeline visualizations that mark course progress and highlight interactions with your collaborators. The result is a highly dynamic, interactive course taking experience that visually reflects your contributions to the course."
                 technology="Watershed uses React on the front-end and consumes an Express
         delivered GraphQL API on the backend. We utilize websockets to
         provide real-time chat functionality, Postgres and Redis for databases, and we use styled-components to
