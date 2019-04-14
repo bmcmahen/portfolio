@@ -34,7 +34,7 @@
 .Blog_container .video > video {
   border-radius: 0;
   overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 1px 3px 10px 9px #00000008;
 }
 
 .Blog_container video {

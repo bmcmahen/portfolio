@@ -40,7 +40,7 @@ Sancho's tabs scroll into view on smaller screens.
 
 <div class='video'>
 <video autoplay="true" loop="true">
-  <source type="video/mp4" src="./tab-slide-again.m4v"></source>
+  <source type="video/mp4" src="./tabs-scroll.m4v"></source>
 </video>
 </div>
 
