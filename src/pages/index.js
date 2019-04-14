@@ -302,6 +302,7 @@ class IndexPage extends React.Component {
                   <div>
                     <img
                       style={{
+                        marginTop: '3rem',
                         height: 'auto',
                         borderRadius: '1rem',
                         width: '400px',
@@ -314,32 +315,38 @@ class IndexPage extends React.Component {
                     <h3>A bit about me</h3>
 
                     <p>
-                      Having spent much of my time working with small teams,
-                      I've had to wear many hats and develop many different
-                      skillsets. I specialize in{' '}
-                      <strong>front end development</strong> with technologies
-                      like <strong>react</strong>, but I also have experience
-                      working on the <strong>server</strong> having used node.js
-                      to host <strong>express</strong> applications, build{' '}
-                      <strong>graphql apis</strong>, and interface with{' '}
-                      <strong>mongodb</strong> and <strong>postgres</strong>.
-                      I've also built numerous iOS and Android applications
-                      using <strong>react native</strong>.
+                      Hey folks, I’m a developer and designer currently living
+                      in British Columbia, Canada. My primary education is
+                      actually in history and philosophy, having gained a
+                      masters degree in philosophy from the University of
+                      Alberta, but my most <em>employable</em> skill is as a
+                      coder and designer. I love dogs, peanut butter, coffee,
+                      plaid, mountain biking, and pretty much anything design
+                      related.
                     </p>
                     <p>
-                      Beyond that, I also have experience creating{' '}
-                      <strong>design systems</strong>, working with{' '}
-                      <strong>html</strong> and <strong>css</strong>, in
-                      addition to improving <strong>seo</strong>,{' '}
-                      <strong>accessibility</strong>, and{' '}
-                      <strong>writing copy</strong>.
+                      As a result of having spent most of my career working with
+                      smaller teams, I’ve had to wear many hats and develop
+                      different skillsets. I specialize in front-end development
+                      and design, in particular anything React related, but my
+                      skillset more broadly includes server-side technologies
+                      (like node.js, Postgres, and GraphQL) and I’ve built
+                      numerous iOS and android applications using react-native.
+                    </p>
+                    <p>
+                      Beyond that, I have experience developing design systems,
+                      working with html and css, and I’m familiar with best
+                      practices with regards to seo and accessibility.{' '}
                     </p>
                     <p>
                       Above all, I love building innovative and intuitive
                       products that help people learn and connect. If you share
-                      a similar passion, please contact me through social media,{' '}
-                      or <a href="mailto:ben.mcmahen@gmail.com">email me</a>.
+                      a similar passion, please contact me through{' '}
+                      <a href="https://twitter.com/BenMcMahen">twitter</a> or{' '}
+                      <a href="mailto:ben.mcmahen@gmail.com">email me</a>. I’m
+                      always happy to grab a coffee or beer. I’ll buy!
                     </p>
+
                     <Social />
                   </div>
                 </div>
