@@ -83,7 +83,7 @@ Finally, within child components we can use our `useSession` hook to gain access
 
 ```jsx{2}
 function UserProfile() {
-  const { user } = useSession()
+  const user = useSession()
   return <div>Hello, {user.displayName}</div>
 }
 ```
