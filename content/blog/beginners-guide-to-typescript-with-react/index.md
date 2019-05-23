@@ -6,9 +6,15 @@ spoiler: The basics to getting started developing react applications with typesc
 
 Having spent the last few months developing React applications and libraries using Typescript, I thought I'd share some of the things I've learned along the way. These are the patterns I use with Typescript and React about 80% of the time.
 
-Is it worth learning Typescript for developing React applications? Absolutely. I've found that having robust typing has led to more reliable code and faster iteration especially within a larger codebase. You're likely to be frustrated at first, but as you work through it you'll find that the minimal extra boilderplate is very much worth it.
+Is it worth learning Typescript for developing React applications? Absolutely. I've found that having robust typing has led to more reliable code and faster iteration especially within a larger codebase. You're likely to be frustrated at first, but as you work through it you'll find that the minimal extra boilderplate is very much worth it. And if you get stuck on something, remember that you can always type something as `any`. Any is your friend!
 
-And if you get stuck on something, remember that you can always type something as `any`. Any is your friend!
+To bootstrap a react typescript project I recommend using [create-react-app](https://facebook.github.io/create-react-app/docs/adding-typescript).
+
+```
+yarn create react-app my-app --typescript
+```
+
+Alternatively, you can use [codesandbox](https://codesandbox.io/s/new).
 
 Let's get to the examples.
 
@@ -56,7 +62,7 @@ export function StandardComponent({
 }
 ```
 
-Pretty similar, eh? We've replaced our propTypes with a typescript interface. Our title prop remains optional, while a children prop is required. We've exported our interface in case another component needs reference to it.
+Pretty similar, eh? We've replaced our propTypes with a typescript interface. Our title prop remains optional, while a children prop is required and we've exported our interface in case another component needs reference to it.
 
 #### Extending standard HTML attributes
 
