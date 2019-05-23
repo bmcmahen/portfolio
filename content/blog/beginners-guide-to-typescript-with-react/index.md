@@ -329,3 +329,7 @@ These examples should get you 80% of the way there. If you get stuck, it's often
 [Sancho UI](https://github.com/bmcmahen/sancho) is a set of react components built with typescript and emotion.
 
 [Blueprint](https://github.com/palantir/blueprint) is another set of react components built with typescript.
+
+And here's a CodeSandBox with most of the above examples:
+
+<iframe src="https://codesandbox.io/embed/staging-silence-bm97c?fontsize=14" title="typescript-by-example" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
