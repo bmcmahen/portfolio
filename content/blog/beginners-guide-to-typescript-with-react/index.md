@@ -1,7 +1,7 @@
 ---
 title: A Beginners Guide to using Typescript with React
 date: '2019-05-23T20:03:01.414Z'
-spoiler: The basics to getting started developing react applications with typescript.
+spoiler: Having spent the last few months developing React applications and libraries using Typescript, I thought I'd share some of the things I've learned along the way.
 ---
 
 Having spent the last few months developing React applications and libraries using Typescript, I thought I'd share some of the things I've learned along the way. These are the patterns I use with Typescript and React about 80% of the time.
