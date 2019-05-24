@@ -1,5 +1,5 @@
 ---
-title: A Beginners Guide to using Typescript with React
+title: A Beginner's Guide to using Typescript with React
 date: '2019-05-23T20:03:01.414Z'
 spoiler: Having spent the last few months developing React applications and libraries using Typescript, I thought I'd share some of the things I've learned along the way.
 ---
