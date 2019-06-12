@@ -6,7 +6,7 @@ spoiler: Are you a React developer that wants to learn SwiftUI? I'll be walking 
 
 If you've been working with React for a while and you take a quick glance at Swift UI you can probably spot the similarities almost immediately. Both are declarative UI frameworks which emphasize a separation between state and the templates used to generate views. Both emphasize reactivity - update your state to update your views. And both emphasize the creation of components which can be composed together to create reusable, complex views.
 
-Honestly, your biggest hurdle in picking up SwiftUI will probably be learning Swift itself and working with a typed language. Having some experience with typed languages, including Typescript, is useful.
+Honestly, your biggest hurdle in picking up SwiftUI will probably be [learning Swift itself](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html) and working with a typed language. Having some experience with typed languages, including Typescript, is useful.
 
 In this article I'll be walking through some very basic SwiftUI design patterns from the perspective of a React and Javascript developer. You can find more of these patterns in the [react-meets-swiftui](https://github.com/bmcmahen/react-meets-swiftui) github repository.
 
