@@ -13,12 +13,7 @@ export class Github extends React.Component {
   render() {
     return (
       <div>
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-evenly',
-          }}
-        >
+        <div className="Github__more">
           <Repo
             image={require('./repos/gesture-responder.png')}
             name="React Gesture Responder"
@@ -29,29 +24,24 @@ export class Github extends React.Component {
           <Repo
             image={require('./repos/toasted-notes.png')}
             name="Toasted Notes"
-            url="https://react-gesture-responder.netlify.com/"
+            url="https://toasted-notes.netlify.com/"
             description="Beautiful, simple, & configurable toast notifications with an imperative API."
           />
 
           <Repo
             image={require('./repos/grid-dnd.png')}
             name="React Grid DND"
-            url="https://react-gesture-responder.netlify.com/"
+            url="https://github.com/bmcmahen/react-grid-dnd"
             description="Drag and drop, grid edition. Supports multiple drop zones and touch devices."
           />
 
           <Repo
             image={require('./repos/gesture-gallery.png')}
             name="Gesture Gallery"
-            url="https://react-gesture-responder.netlify.com/"
+            url="https://github.com/bmcmahen/react-gesture-gallery"
             description="An image gallery that supports touch gestures and lazy loading."
           />
         </div>
-        {/* <div className="Index__show-more-container">
-          <a href="http://github.com/bmcmahen" className="Index__show_more">
-            More on GitHub
-          </a>
-        </div> */}
       </div>
     )
   }

@@ -3,6 +3,17 @@
   color: inherit;
 }
 
+.Github__more {
+  display: block;
+}
+
+@media (min-width: 1000px) {
+  .Github__more {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
 .Github__intro {
   margin-bottom: 1rem;
 }
