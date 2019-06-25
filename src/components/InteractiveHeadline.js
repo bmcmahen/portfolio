@@ -21,8 +21,8 @@ export class InteractiveHeader extends React.Component {
             <img alt="Ben's profile" src={me} />
             <div>Hello, my name is Ben.</div>
             <div>
-              I'm a full-stack developer and love building interactive
-              experiences for the web and mobile.
+              I'm a product developer and love building interactive experiences
+              for the web and mobile.
             </div>
           </div>
           <Navbar />
