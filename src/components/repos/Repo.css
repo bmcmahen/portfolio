@@ -1,0 +1,14 @@
+.Repo {
+  width: 300px;
+  height: 300px;
+  display: block;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.Repo img {
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
