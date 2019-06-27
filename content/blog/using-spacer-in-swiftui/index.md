@@ -6,7 +6,7 @@ spoiler: VStack, HStack, and Spacer are simple views that can be used to create 
 
 If you're coming from a web background like me, the SwiftUI primitives for handling layouts will seem rather... primitive. Really, you have `HStack`, `VStack`, `Spacer` and not much more. Using `Spacer` might even remind you of hacking layouts together using `br` tags in html.
 
-But it's a testament to SwiftUI's design that so much can be accomplished with these three views. Let's explore how to combine them to create differrent layouts.
+But it's a testament to SwiftUI's design that so much can be accomplished with these three views. Let's explore how to combine them to create different layouts.
 
 #### Basic usage of Spacer
 
