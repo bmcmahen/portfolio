@@ -31,7 +31,7 @@ FirebaseApp.configure()
 
 Here's our basic strategy:
 
-We want to create a `SessionStore` class which adheres to the [BindableObject](https://github.com/bmcmahen/react-meets-swiftui/blob/master/Redux.md) protocol. This class listens for authentication state changes and updates our session information accordingly. Our Views will monitor these changes and update when our authentication state changes. Depending upon our authentication state, we will either render our primary app view or our authentication forms.
+We want to create a `SessionStore` class which adheres to the [BindableObject](https://github.com/bmcmahen/react-meets-swiftui/blob/master/Redux.md) protocol. This class listens for authentication state changes (using a Firebase provided function) and updates our session information accordingly. Our views will monitor changes in our `SessionStore` and rerender when our authentication state changes. Depending upon our authentication state, we will either render our primary app view or our authentication forms.
 
 Let's start by implementing our `SessionStore`:
 
