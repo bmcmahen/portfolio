@@ -1,7 +1,7 @@
 ---
 title: Using Firebase Authentication with SwiftUI
 date: '2019-06-28T18:29:18.601Z'
-spoiler: You can use Firebase to add authentication to your SwiftUI app. This tutorial explains how.
+spoiler: You can use Firebase to add authentication to your SwiftUI iOS app. This tutorial explains how.
 ---
 
 Most iOS applications will probably require some form of authentication, and using Firebase is probably the easiest way to acheive this. This article will explain how you can add basic authentication to an app built with SwiftUI.
