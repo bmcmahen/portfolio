@@ -4,21 +4,27 @@ date: '2019-07-10T19:35:56.796Z'
 spoiler: Learn how to load and display firebase storage images with SwiftUI
 ---
 
-This tutorial assumes that you've installed the Firebase sdk as [indicated here](https://firebase.google.com/docs/ios/setup) and initalized the sdk as indicated [here](https://firebase.google.com/docs/auth/ios/start). Finally, you'll need to set up cloud storage using the [instructions](https://firebase.google.com/docs/storage/ios/start) provided in the firebase documentation.
-
-Okay, phew! Now the fun part... Let's load an image!
+This tutorial assumes that you've installed the Firebase sdk as [indicated here](https://firebase.google.com/docs/ios/setup) and initalized the sdk as indicated [here](https://firebase.google.com/docs/auth/ios/start). Finally, you'll need to set up cloud storage using the [instructions](https://firebase.google.com/docs/storage/ios/start) provided in the firebase documentation. Annnd now, finally, the fun part! Let's load an image from Firebase and render it in SwiftUI!
 
 #### Creating a Reusable FirebaseImage View
 
-We are going to create a reusable `FirebaseImage` view which will help us load and render a Firebase image wherever we need it. It will accept an `id` argument which will contain the storage id of the image. So go ahead and create a new SwiftUI View and name it `FirebaseImage`.
+Let's aim to create a reusable `FirebaseImage` view which will help us load and render a Firebase image wherever we need it. It will accept an `id` argument which will contain the storage id of the image. We want our API to look something like the following:
 
-Our basic strategy here is:
+```swift
+FirebaseImage(id: 'sdfsdf').resizable()
+```
 
-1. Attempt to load the image from Firebase.
-2. While loading, display a placeholder image.
-3. Once the image has loaded, display the image.
+Nice and simple, eh? Let's go ahead and create a new SwiftUI View and name it `FirebaseImage`.
 
-Our `FirebaseImage` view will always return an `Image` (whether the actual image or placeholder) and thus will accept `Image` view modifiers, like `resizable` and `aspectRatio`. So you'll be able to use `FirebaseImage` just as you would any other image.
+Our basic strategy here is to:
+
+- **Attempt to load the image from Firebase.**
+
+- **While loading, display a placeholder image.**
+
+- **Once the image has loaded, display the image.**
+
+Our `FirebaseImage` view will always return an `Image` (whether the actual image or our placeholder image) and thus will always accept `Image` view modifiers, like `resizable` and `aspectRatio`. You'll be able to use `FirebaseImage` just as you would any other image.
 
 Here's our basic `FirebaseImage` view:
 
@@ -42,13 +48,13 @@ struct FirebaseImage : View {
 }
 ```
 
-We initalize our view by creating a new `Loader` given the supplied `id` argument (We will get to our Loader class soon). We use `@ObjectBinding` to listen to loading changes within our `Loader`. We define `image` as an optional value which instantiates a `UIImage` with data fetched from Firebase if it exists. Finally, our `View` renders an image which accepts a `uiImage` as an argument - either our Firebase image, if it has loaded, or our placeholder image.
+We initalize our view by creating a new `Loader` given the supplied `id` argument (we will get to our Loader class soon). We use `@ObjectBinding` to listen to loading changes within our `Loader`. We define `image` as an optional value which instantiates a `UIImage` with data fetched from Firebase if it exists. Finally, our `View` renders an image which accepts a `uiImage` as an argument - either our Firebase image, if it has loaded, or our placeholder image.
 
 #### Adding a Placeholder Image
 
-A placeholder image is simply a UIImage that refers to an existing, pre-loaded image that exists in your asset catalog. In my case, I've simply created a blank square jpeg and dragged it into the `assets` catalog. I think create a `placeholder` UIImage which can be used in the `FirebaseImage` view.
+A placeholder image is simply a UIImage that refers to an existing, pre-loaded image that exists in your asset catalog. In my case, I've simply created a blank square jpeg and dragged it into the `assets` catalog. I then create a `placeholder` UIImage which can be used in the `FirebaseImage` view.
 
-```swift
+```swift{1}
 let placeholder = UIImage(named: "placeholder.jpg")!
 
 struct FirebaseImage : View {
@@ -71,7 +77,7 @@ struct FirebaseImage : View {
 
 #### Loading the Image from Firebase
 
-Finally, let's create our `Loader` class which adheres to the `BindableObject` protocol.
+Finally, let's create our `Loader` class which adheres to the `BindableObject` protocol. You'll need to import `Combine` and `FirebaseStorage` to make this happen. I've added this class to our existing file.
 
 ```swift
 import SwiftUI
