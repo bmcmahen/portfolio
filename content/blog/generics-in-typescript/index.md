@@ -1,5 +1,5 @@
 ---
-title: A Beginner's Guide to Understanding Generics in Typescript
+title: A Beginner's Guide to Generics in Typescript
 date: '2019-07-12T18:36:24.131Z'
 spoiler: What are generics and how do you use them?
 ---
