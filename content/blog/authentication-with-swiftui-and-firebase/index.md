@@ -6,6 +6,11 @@ spoiler: You can use Firebase to add authentication to your SwiftUI iOS app. Thi
 
 Most iOS applications will probably require some form of authentication, and using Firebase is probably the easiest way to acheive this. This article will explain how you can add basic authentication to an app built with SwiftUI.
 
+This article is part of an ongoing series on Firebase and SwiftUI:
+
+- **[Using Firebase Authentication with SwiftUI](https://benmcmahen.com/authentication-with-swiftui-and-firebase/)**
+- **[Displaying Firebase Images wih SwiftUI](https://benmcmahen.com/firebase-image-in-swiftui/)**
+
 #### Setting up the Firebase SDK
 
 As a prerequisite, you'll need to install the Firebase sdk as [indicated here](https://firebase.google.com/docs/ios/setup). You'll then need to follow the first few instructions [here](https://firebase.google.com/docs/auth/ios/start) to initialize the SDK. Namely, you'll need to install the required dependencies in your pod file:

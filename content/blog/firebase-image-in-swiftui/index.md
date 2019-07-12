@@ -111,3 +111,8 @@ final class Loader : BindableObject {
 Upon initialization, we take the supplied `id` of the image and we attempt to load it. If it loads successfully, we assign its value to our `data` attribute. This, in turn, rerenders our `FirebaseImage` now using the firebase image instead of the placeholder.
 
 You can see the entire code in the [julienne-swift](https://github.com/bmcmahen/julienne-swift/blob/master/julienne/FirebaseImage.swift) example repo.
+
+This article is part of an ongoing series on Firebase and SwiftUI:
+
+- **[Using Firebase Authentication with SwiftUI](https://benmcmahen.com/authentication-with-swiftui-and-firebase/)**
+- **[Displaying Firebase Images wih SwiftUI](https://benmcmahen.com/firebase-image-in-swiftui/)**
