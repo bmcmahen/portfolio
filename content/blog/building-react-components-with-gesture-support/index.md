@@ -261,7 +261,7 @@ function Slider({ children }) {
     },
     onRelease: state => {
       if (shouldLike(state.delta[0])) {
-        cosole.log('User has liked!)
+        console.log('User has liked!)
       }
 
       set({ x: 0, immediate: false })
@@ -310,6 +310,7 @@ You can see both of these in the final version:
 
 I've created a few open source components that respond to gestures which might be useful for learning.
 
+- [react-gesture-stack](https://github.com/bmcmahen/react-gesture-stack) provides an iOS style navigation view for the web.
 - [react-gesture-view](https://github.com/bmcmahen/react-gesture-view) offers swipeable views that animate left and right.
 - [Sancho-UI](https://github.com/bmcmahen/sancho) offers a number of components which accept gestures, notably [sheet](https://sancho-ui.com/components/sheet/). You can view the [source here](https://github.com/bmcmahen/sancho/blob/master/src/Sheet.tsx).
 - React-spring has some absolutely killer [examples](https://www.react-spring.io/docs/hooks/examples) including the [slider](https://codesandbox.io/embed/zrj66y8714) that our example is based on.
