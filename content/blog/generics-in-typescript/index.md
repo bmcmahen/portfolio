@@ -17,8 +17,6 @@ function courier(package: string): string {
 
 // delivery is typed as a string
 const delivery = courier('book')
-
-console.log(delivery)
 ```
 
 But presumably we want our courier function to be able to handle more than just strings. We should be able to handle numbers, objects, or anything...
@@ -32,8 +30,6 @@ function courier(package: any): any {
 
 // delivery is typed as any
 const delivery = courier('book')
-
-console.log(delivery)
 ```
 
 This works, but now our `delivery` value is typed as `any`. But shouldn't the caller of the function - the person sending the package - know the type of the package returned? In other words, wouldn't it be nice if our `delivery` value retained whatever type the `package` was initially assigned? If our `package` is a string, our `delivery` should be a string. If it's a number, our `delivery` should be a number... and so on.
