@@ -7,7 +7,7 @@ In this tutorial I'm going to demonstrate how you can use `firebase`, `react` an
 
 <div class="video">
 <video autoplay="true" loop="true">
-  <source type="video/mp4" src="./demo.m4v"></source>
+  <source type="video/mp4" muted src="./demo.m4v"></source>
 </video>
 </div>
 
