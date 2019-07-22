@@ -136,6 +136,6 @@ const server = {
 
 There we have it. It's relatively complicated, but we have a lot of functionality here, including progress updates and image previews. Filepond will pass the image to firebase, which will then upload it to our server. We can also load images from firebase by retrieving the download url and fetching a blob of the image.
 
-You can see this code in action on a quick recipe sharing app I built called [allofmy.recipes](http://allofmy.recipes).
+You can see this code in action on a quick recipe sharing app I built called [Julienne.app](http://julienne.app). The full source code is available on [Github](https://github.com/bmcmahen/julienne).
 
 Stay tuned for more posts that show how you can resize images using firebase functions and efficiently load images using a custom image component.
