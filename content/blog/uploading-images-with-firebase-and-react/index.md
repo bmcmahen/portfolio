@@ -5,9 +5,11 @@ date: '2019-02-08T20:37:14.808Z'
 
 In this tutorial I'm going to demonstrate how you can use `firebase`, `react` and `filepond` to create a fully functional image uploading service on your website. By the end of this tutorial, you should be able to upload an image and display it on your website. This tutorial assumes that you have a functioning react application and have set up firebase with the correct configuration. You'll end up with something like this:
 
+<div class="video">
 <video autoplay="true" loop="true">
   <source type="video/mp4" src="./demo.m4v"></source>
 </video>
+</div>
 
 First up, install the necessary dependencies. We will be using [filepond](https://pqina.nl/filepond/), a seriously slick file upload widget plus a few plugins to handle the UI for the image uploads.
 
@@ -39,9 +41,9 @@ const storage = firebase.storage().ref();
 
 Next, we are going to create a basic react component to handle our uploads. We want this component:
 
-1. Accept a reference to an existing image, used when editing documents that contain uploaded images.
-2. Provide a callback for saving an image.
-3. Provide a callback for clearing an image.
+- Accept a reference to an existing image, used when editing documents that contain uploaded images.
+- Provide a callback for saving an image. `onRequestSave` will be called when a new image has been uploaded. We may want to attach the id of this image to a parent document, such as a recipe, profile, etc., so that we can save it.
+- Provide a callback for clearing an image. `onRequestClear` will be used when a user removes the image. We may want to disassociate the image from its parent document.
 
 ```javascript
 export function ImageUpload({
