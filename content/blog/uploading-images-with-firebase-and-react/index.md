@@ -39,7 +39,7 @@ registerPlugin(FilePondPluginImageExifOrientation, FilePondPluginImagePreview);
 const storage = firebase.storage().ref();
 ```
 
-Next, we are going to create a basic react component to handle our uploads. We want this component:
+Next, we are going to create a basic react component to handle our uploads. We want this component to:
 
 - Accept a reference to an existing image, used when editing documents that contain uploaded images.
 - Provide a callback for saving an image. `onRequestSave` will be called when a new image has been uploaded. We may want to attach the id of this image to a parent document, such as a recipe, profile, etc., so that we can save it.
