@@ -197,9 +197,9 @@ class IndexPage extends React.Component {
                     contains past recordings. Users can enter tasting notes,
                     reviews, and favourite successful roasts. A user can
                     reference past recordings and their variations to help
-                    improve future roasts. A user account isn't necessary, but
-                    if a user does decide to create an account their content
-                    will be synced across devices.
+                    improve future roasts. An account isn't necessary, but if a
+                    user does decide to create an account their content will be
+                    synced across devices.
                   </span>
                 }
                 technology={
