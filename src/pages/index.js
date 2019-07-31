@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { InteractiveHeader } from '../components/InteractiveHeadline'
 import { Website } from '../components/Portfolio/Website'
-import eugenicsImage from '../components/Portfolio/eugenics.png'
+import eugenicsImage from '../components/Portfolio/eugenics-2.jpg'
 import watershedImage from '../components/Portfolio/watershed.png'
 import { Github } from '../components/Github'
 import blur from '../components/Portfolio/blur-bright.jpg'
@@ -15,6 +15,7 @@ import { Hint } from '../components/Portfolio/Hint'
 import { LeftArrow, Divider3 } from '../components/Dividers'
 import { ListSummary } from '../components/ListSummary'
 import buddy from '../components/Portfolio/buddy.jpg'
+import roastBuddyImage from '../components/Portfolio/roast-buddy.jpg'
 
 class IndexPage extends React.Component {
   state = {
@@ -140,10 +141,9 @@ class IndexPage extends React.Component {
                 task="The Living Archives on Eugenics project wanted to create a database of eugenics related information pertaining to its history in Canada and around the world and its continued significance today."
                 solution={
                   <span>
-                    Our highly extensible and interactive database encourages
-                    users to explore the topic of eugenics in their own way.
-                    Content in the database can partake in different modules,
-                    like a{' '}
+                    Our extensible and interactive database encourages users to
+                    explore the topic of eugenics in their own way. Content in
+                    the database can partake in different modules, like a{' '}
                     <a href="http://eugenicsarchive.ca/discover/timeline">
                       Timeline
                     </a>
@@ -179,6 +179,42 @@ class IndexPage extends React.Component {
                   </span>
                 }
                 background={eugenicsImage}
+              />
+
+              <Website
+                primaryLink="https://github.com/bmcmahen/roast-buddy-react-native"
+                title="Roast Buddy"
+                key="roastbuddy"
+                useBrowser={false}
+                linkLabel="github.com"
+                // video={eugenicsVideo}
+                subtitle="Your coffee roasting companion."
+                task="To introduce people to roasting their own coffee and help them perfect recipes."
+                solution={
+                  <span>
+                    Roast Buddy provides two primary functions: a recorder used
+                    to document various roast experiments, and a database which
+                    contains past recordings. Users can enter tasting notes,
+                    reviews, and favourite successful roasts. A user can
+                    reference past recordings and their variations to help
+                    improve future roasts. A user account isn't necessary, but
+                    if a user does decide to create an account their content
+                    will be synced across devices.
+                  </span>
+                }
+                technology={
+                  <span>
+                    Roast Buddy is built using react-native and redux, and it
+                    works on both iOS and android devices. It's designed using
+                    my{' '}
+                    <a href="https://github.com/panza-org/panza">
+                      react-native design system
+                    </a>{' '}
+                    to help emulate iOS appearances. The server architecture is
+                    a simple express based node.js REST api.
+                  </span>
+                }
+                background={roastBuddyImage}
               />
             </div>
           </section>

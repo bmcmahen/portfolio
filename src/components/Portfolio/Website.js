@@ -4,8 +4,19 @@ import './Website.css'
 import { Hint } from './Hint'
 
 export class Website extends React.Component {
+  static defaultProps = {
+    useBrowser: true,
+  }
+
   render() {
-    const { background, title, subtitle, primaryLink, linkLabel } = this.props
+    const {
+      useBrowser,
+      background,
+      title,
+      subtitle,
+      primaryLink,
+      linkLabel,
+    } = this.props
 
     return (
       <div className="Website">
@@ -28,11 +39,15 @@ export class Website extends React.Component {
             />
           </div>
 
-          <Browser
-            title={title}
-            background={background}
-            video={this.props.video}
-          />
+          {useBrowser ? (
+            <Browser
+              title={title}
+              background={background}
+              video={this.props.video}
+            />
+          ) : (
+            <img style={{}} alt={title} src={background} />
+          )}
         </div>
         <div className="Website__content">
           <h6>Task</h6>
