@@ -6,38 +6,89 @@ import get from 'lodash.get'
 import { formatReadingTime, formatPostDate } from '../util/helpers'
 import { Navbar } from '../components/Navbar'
 import './Blog-index.css'
+import groupby from 'lodash.groupby'
 
 class BlogIndex extends React.Component {
   render() {
     const posts = this.props.data.allMarkdownRemark.edges
+
+    const years = groupby(posts, ({ node }) => {
+      return new Date(node.frontmatter.date).getFullYear()
+    })
+
+    console.log(years)
 
     return (
       <Layout>
         <Navbar dark />
         <SEO title="Blog" />
         <main className="Blog-index">
-          {posts.map(({ node }) => {
+          {Object.keys(years).map(year => {
+            return (
+              <div>
+                <div
+                  style={{
+                    padding: '0.5rem 0',
+                    fontSize: '0.875rem',
+                    borderBottom: '1px',
+                    color: 'rgba(0,0,0,0.6)',
+                    fontFamily: 'Merriweather',
+                  }}
+                >
+                  {year}
+                </div>
+                {years[year].map(({ node }) => {
+                  const title =
+                    get(node, 'frontmatter.title') || node.fields.slug
+
+                  return (
+                    <article key={node.fields.slug}>
+                      <header>
+                        <h6>
+                          <Link
+                            style={{ color: 'rgba(0,0,0,0.875)' }}
+                            to={node.fields.slug}
+                            rel="bookmark"
+                          >
+                            {title}
+                          </Link>
+                        </h6>
+                      </header>
+
+                      <p style={{ color: 'rgba(0,0,0,0.6)' }}>
+                        {new Date(node.frontmatter.date).toLocaleDateString(
+                          'en',
+                          { day: 'numeric', month: 'long' }
+                        )}
+                      </p>
+                    </article>
+                  )
+                })}
+              </div>
+            )
+          })}
+          {/* {posts.map(({ node }) => {
             const title = get(node, 'frontmatter.title') || node.fields.slug
             return (
               <article key={node.fields.slug}>
                 <header>
-                  <h4>
-                    <Link to={node.fields.slug} rel="bookmark">
+                  <h6>
+                    <Link
+                      style={{ color: 'rgba(0,0,0,0.6)' }}
+                      to={node.fields.slug}
+                      rel="bookmark"
+                    >
                       {title}
                     </Link>
-                  </h4>
+                  </h6>
                 </header>
-                <p
-                  style={{ margin: 0 }}
-                  dangerouslySetInnerHTML={{ __html: node.frontmatter.spoiler }}
-                />
+
                 <p style={{ color: 'rgba(0,0,0,0.6)' }}>
                   {formatPostDate(node.frontmatter.date, 'en')}
-                  {` • ${formatReadingTime(node.timeToRead)}`}
                 </p>
               </article>
             )
-          })}
+          })} */}
         </main>
       </Layout>
     )

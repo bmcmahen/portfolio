@@ -1,3 +1,9 @@
+.Blog-index article {
+  display: flex;
+  line-height: 1.75;
+  max-width: 600px;
+  margin: 0 auto;
+}
 .Blog-index {
   line-height: 1.75;
   max-width: 600px;
@@ -5,15 +11,26 @@
   padding: 0 1rem;
   padding-top: 150px;
   margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
-.Blog-index h4 {
-  margin-bottom: 0.5rem;
+.Blog-index header {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.Blog-index h6 {
+  margin-bottom: 0;
+  padding: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.75;
   font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
 }
 
 .Blog-index article {
-  margin-bottom: 3rem;
+  padding: 0.5rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
 }
 
 .Blog-index__head {
@@ -26,5 +43,7 @@
 
 .Blog-index p {
   font-size: 0.875rem;
+  margin: 0;
+  line-height: 1.75;
   font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
 }
