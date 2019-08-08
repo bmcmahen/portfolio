@@ -239,9 +239,7 @@ class IndexPage extends React.Component {
               <LeftArrow fill="white" />
             </div>
 
-            <h5 className="Index__center-header">
-              Open source <a href="http://github.com/bmcmahen">on GitHub</a>
-            </h5>
+            <h5 className="Index__center-header">Open source</h5>
 
             <Website
               primaryLink="http://www.sancho-ui.com"

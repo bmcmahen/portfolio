@@ -5,12 +5,28 @@
 
 .Github__more {
   display: block;
+  max-width: 300px;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
+@media (min-width: 600px) {
+  .Github__more {
+    display: grid;
+    max-width: 700px;
+    grid-column-gap: 3rem;
+    grid-row-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (min-width: 1000px) {
   .Github__more {
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    max-width: none;
+    grid-row-gap: 5rem;
+    grid-column-gap: 0rem;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

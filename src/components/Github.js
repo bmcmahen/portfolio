@@ -22,7 +22,7 @@ export class Github extends React.Component {
           />
 
           <Repo
-            image={require('./repos/toasted-notes.png')}
+            image={require('./repos/toasted-notes.jpg')}
             name="Toasted Notes"
             url="https://toasted-notes.netlify.com/"
             description="Beautiful, simple, & configurable toast notifications with an imperative API."
@@ -41,6 +41,35 @@ export class Github extends React.Component {
             url="https://github.com/bmcmahen/react-gesture-gallery"
             description="An image gallery that supports touch gestures and lazy loading."
           />
+
+          <Repo
+            image={require('./repos/zoom.jpg')}
+            name="React Image Enlarger"
+            url="https://github.com/bmcmahen/react-image-enlarger"
+            description="Medium.com style image zooming with gesture dismissals."
+          />
+
+          {/* <Repo
+            image={require('./repos/pager.jpg')}
+            name="React Page Controller"
+            url="https://github.com/bmcmahen/react-page-controller"
+            description="Swipeable views for creating carousels, galleries, or tab content."
+          /> */}
+
+          <Repo
+            image={require('./repos/stack.jpg')}
+            name="React Gesture Stack"
+            url="https://github.com/bmcmahen/react-gesture-stack"
+            description="iOS style stack navigation built for the web."
+          />
+        </div>
+        <div
+          style={{ margin: '7rem 0 3rem 0' }}
+          className="Index__show-more-container"
+        >
+          <a href="http://github.com/bmcmahen" className="Index__show_more">
+            More on GitHub
+          </a>
         </div>
       </div>
     )

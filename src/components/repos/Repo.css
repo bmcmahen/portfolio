@@ -1,13 +1,39 @@
 .Repo {
-  max-width: 350px;
   margin: 0 auto;
   height: auto;
   display: block;
-  padding: 1rem;
+  padding: 0;
+  padding-top: 300px;
   margin-bottom: 2rem;
   text-align: center;
+  overflow: hidden;
   text-decoration: none;
+  border-radius: 2rem;
+  box-shadow: 0 0 20px #a3a2c070;
   color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  justify-content: flex-end;
+}
+
+.Repo > div {
+  background: white;
+  padding: 1rem;
+  box-shadow: 0 -2px 2px #0000001f;
+}
+
+.Repo:nth-child(2) {
+  background-position-y: -35px;
+}
+
+.Repo:nth-child(4) {
+  background-position-y: -70px;
+}
+
+.Repo:nth-child(5) {
+  background-position-y: -40px;
+  background-position-x: -10px;
 }
 
 .Repo img {
@@ -18,12 +44,11 @@
 
 @media (min-width: 1000px) {
   .Repo {
-    width: 300px;
-    height: 300px;
     margin-bottom: 0;
+    max-width: 300px;
   }
 
   .Repo img {
-    max-width: 100%;
+    max-width: 200px;
   }
 }

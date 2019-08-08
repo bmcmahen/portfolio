@@ -3,10 +3,18 @@ import './Repo.css'
 
 export function Repo({ image, name, url, description }) {
   return (
-    <a href={url} className="Repo">
-      <h4>{name}</h4>
-      <p>{description}</p>
-      <img src={image} />
+    <a
+      href={url}
+      style={{
+        backgroundImage: `url(${image})`,
+      }}
+      className="Repo"
+    >
+      <div>
+        <h4>{name}</h4>
+        <p>{description}</p>
+      </div>
+      {/* <img src={image} /> */}
     </a>
   )
 }
