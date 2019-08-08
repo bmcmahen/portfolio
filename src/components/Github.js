@@ -64,7 +64,7 @@ export class Github extends React.Component {
           />
         </div>
         <div
-          style={{ margin: '7rem 0 3rem 0' }}
+          style={{ margin: '5rem 0 3rem 0' }}
           className="Index__show-more-container"
         >
           <a href="http://github.com/bmcmahen" className="Index__show_more">
